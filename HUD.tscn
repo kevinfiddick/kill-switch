@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg2j6hgvxv842"]
+
+[ext_resource type="FontFile" uid="uid://bbwgbeipobag8" path="res://IBMPlexMono-Regular.ttf" id="1_i6xgb"]
+
+[node name="Control" type="CanvasLayer"]
+
+[node name="Label2" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_i6xgb")
+theme_override_font_sizes/font_size = 48
+text = "HEALTH 100
+"
+horizontal_alignment = 2
