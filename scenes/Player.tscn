@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_6ykmx"]
 [ext_resource type="Texture2D" uid="uid://bo7xm7gmyj48p" path="res://icon.svg" id="2_m53a3"]
-[ext_resource type="PackedScene" uid="uid://ducuap6fxn2su" path="res://scenes/Weapon.tscn" id="3_xwcbc"]
+[ext_resource type="PackedScene" uid="uid://ducuap6fxn2su" path="res://scenes/weapons/primary/PrimaryWeapon.tscn" id="3_xwcbc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yq888"]
 radius = 100.0
