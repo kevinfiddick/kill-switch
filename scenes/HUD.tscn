@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cg2j6hgvxv842"]
 
-[ext_resource type="FontFile" uid="uid://bbwgbeipobag8" path="res://IBMPlexMono-Regular.ttf" id="1_i6xgb"]
+[ext_resource type="FontFile" uid="uid://bbwgbeipobag8" path="res://assets/fonts/IBMPlexMono-Regular.ttf" id="1_i6xgb"]
 
 [node name="Control" type="CanvasLayer"]
 
