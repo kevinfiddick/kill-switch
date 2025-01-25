@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://livwjhvch2l5"]
+
+[node name="EnemyLamp" type="CharacterBody2D"]
