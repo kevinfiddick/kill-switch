@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ducuap6fxn2su"]
+
+[ext_resource type="Texture2D" uid="uid://bo7xm7gmyj48p" path="res://icon.svg" id="1_fh6in"]
+[ext_resource type="Script" path="res://scripts/Weapon.gd" id="1_rvrym"]
+
+[node name="Weapon" type="Node2D"]
+script = ExtResource("1_rvrym")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(13, -12)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_fh6in")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(44, -11)
