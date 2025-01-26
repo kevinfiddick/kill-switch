@@ -15,3 +15,9 @@ func _physics_process(delta: float) -> void:
 	position += transform.x * SPEED * delta
 	
 	ticks += 1
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.has_method("take_stun_damage"):
+		body.take_stun_damage()
+	pass # Replace with function body.
