@@ -1,12 +1,10 @@
 extends Node2D
 
-const SPEED: int = 300
-const TICKS_TO_EXPIRE = 120
+const SPEED: int = 600
+const TICKS_TO_EXPIRE = 60
 
-var ticks
+var ticks = 0
 
-func _ready() -> void:
-	ticks = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
