@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://ci5hcs8ndfpeb"]
+[gd_scene load_steps=3 format=3 uid="uid://ci5hcs8ndfpeb"]
 
 [ext_resource type="Script" path="res://scripts/weapons/grenade/GrenadeShrapnel.gd" id="1_x1wcg"]
+[ext_resource type="Texture2D" uid="uid://bo7xm7gmyj48p" path="res://icon.svg" id="2_daia5"]
 
 [node name="Grenade Shrapnel" type="Node2D"]
 script = ExtResource("1_x1wcg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_daia5")

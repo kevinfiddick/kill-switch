@@ -1,11 +1,18 @@
 extends Node2D
 
+const SPEED: int = 600
+const TICKS_TO_EXPIRE = 12
+const PIERCE = 1
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var ticks = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _physics_process(delta: float) -> void:
+	if ticks >= TICKS_TO_EXPIRE:
+		queue_free()
+		pass
+		
+	position += transform.x * SPEED * delta
+	
+	ticks += 1

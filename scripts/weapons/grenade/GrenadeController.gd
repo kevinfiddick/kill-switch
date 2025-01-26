@@ -1,10 +1,14 @@
 extends Node2D
 
 const PROJECTILE = preload("res://scenes/weapons/grenade/GrenadeProjectile.tscn")
-const BASE_ATTACK_SPEED = 300 # ticks between shots
-const RANGE = 100 # px ?
+const BASE_ATTACK_SPEED: int = 300 # ticks between shots
+const RANGE: float = 100.0 # px ?
 
-var last_shot = BASE_ATTACK_SPEED
+signal grenade_thrown
+
+@export var attack_speed: int = BASE_ATTACK_SPEED
+
+var last_shot = attack_speed
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,7 +27,7 @@ func _process(_delta: float) -> void:
 	
 	# Releasing secondary fire throws grenade projectile
 	if Input.is_action_just_released("secondary_fire"):
-		if last_shot < BASE_ATTACK_SPEED: return
+		if last_shot < attack_speed: return
 		else: last_shot = 0
 		
 		var projectile_instance = PROJECTILE.instantiate()
@@ -35,6 +39,8 @@ func _process(_delta: float) -> void:
 			projectile_instance.scale.y = -1
 		else:
 			projectile_instance.scale.y = 1
+		
+		grenade_thrown.emit()
 		
 
 func _physics_process(_delta: float) -> void:

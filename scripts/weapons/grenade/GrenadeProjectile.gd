@@ -1,9 +1,12 @@
 extends Node2D
 
-@export var end_position: Vector2
+const SHRAPNEL = preload("res://scenes/weapons/grenade/GrenadeShrapnel.tscn")
 
 const SPEED: int = 300
 const TICKS_TO_EXPIRE: int = 600
+const NUMBER_SHRAPNEL: int = 10
+
+@export var end_position: Vector2
 
 var ticks = 0
 
@@ -23,7 +26,22 @@ func _physics_process(delta: float) -> void:
 		y_direction = 1
 	else: y_direction = -1
 	
+	# If grenade position passes end position
 	if (position.x * x_direction > end_position.x * x_direction) and (position.y * y_direction > end_position.y * y_direction):
+		# Spawn shrapnel
+		for i in NUMBER_SHRAPNEL:
+			var shrapnel_instance = SHRAPNEL.instantiate()
+			get_tree().root.add_child(shrapnel_instance)
+			shrapnel_instance.global_position = global_position
+			
+			# Create full circle of shrapnel, but randomize rotation within segments
+			var degree = 360 / NUMBER_SHRAPNEL * i
+			shrapnel_instance.rotation_degrees = degree + (randf() * (360 / NUMBER_SHRAPNEL))
+			
+			if shrapnel_instance.rotation_degrees > 90 and shrapnel_instance.rotation_degrees < 270:
+				shrapnel_instance.scale.y = -1
+			else:
+				shrapnel_instance.scale.y = 1
 		queue_free()
 		pass
 	
