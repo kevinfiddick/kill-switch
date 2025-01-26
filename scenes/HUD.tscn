@@ -3,7 +3,8 @@
 [ext_resource type="FontFile" uid="uid://bbwgbeipobag8" path="res://assets/fonts/IBMPlexMono-Regular.ttf" id="1_i6xgb"]
 [ext_resource type="Script" path="res://scripts/Hud.gd" id="1_jjve7"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jbu7q"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7dovn"]
+bg_color = Color(0.17811, 0.192527, 0.210549, 0.376471)
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_jjve7")
@@ -13,11 +14,14 @@ offset_right = 192.0
 offset_bottom = 123.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_jbu7q")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7dovn")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
@@ -50,6 +54,7 @@ offset_top = -25.0
 offset_right = 12.5
 grow_horizontal = 2
 grow_vertical = 0
+pivot_offset = Vector2(12.5, 25)
 size_flags_horizontal = 0
 size_flags_vertical = 0
 

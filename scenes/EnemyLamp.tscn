@@ -10,6 +10,7 @@ radius = 8.0
 height = 29.0
 
 [node name="EnemyLamp" type="CharacterBody2D"]
+collision_layer = 4
 script = ExtResource("1_e8ihl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
