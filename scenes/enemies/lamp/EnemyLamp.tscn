@@ -1,8 +1,8 @@
 [gd_scene load_steps=32 format=3 uid="uid://livwjhvch2l5"]
 
-[ext_resource type="Script" path="res://scripts/enemy-lamp/EnemyLamp.gd" id="1_e8ihl"]
+[ext_resource type="Script" path="res://scripts/enemies/lamp/EnemyLamp.gd" id="1_e8ihl"]
 [ext_resource type="PackedScene" uid="uid://c4d2o7kq4cvo8" path="res://scenes/state-machine/StateMachine.tscn" id="2_cty6b"]
-[ext_resource type="Script" path="res://scripts/enemy-lamp/FollowState.gd" id="3_3fokr"]
+[ext_resource type="Script" path="res://scripts/enemies/lamp/FollowState.gd" id="3_3fokr"]
 [ext_resource type="Texture2D" uid="uid://3xj1lqb6opqu" path="res://assets/lamp_enemy_dead.png" id="4_ql0gg"]
 [ext_resource type="Texture2D" uid="uid://deqeshrbxvjm1" path="res://assets/enemy lamp.png" id="5_trwxq"]
 [ext_resource type="Texture2D" uid="uid://bvfd5bffdwg0m" path="res://assets/enemy lamp stunned.png" id="6_35s7i"]
@@ -189,6 +189,10 @@ height = 100.0
 z_index = 1
 collision_layer = 4
 script = ExtResource("1_e8ihl")
+SPEED = 75.0
+STUN_SPEED = 30.0
+STUN_DMG = 4.0
+HEALTH = 30.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
