@@ -8,7 +8,6 @@ extends CanvasLayer
 
 func _process(delta: float) -> void:
 	if !grenade_cd_timer.is_stopped():
-		print(grenade_cd_timer.time_left)
 		grenade_cd.scale.x = 1 - (grenade_cd_timer.time_left / (300 / 60))
 		if grenade_cd.get_color() != Color("#FFFFFF"):
 			grenade_cd.set_color("#FFFFFF")
