@@ -30,6 +30,7 @@ animations = [{
 }]
 
 [node name="EnemyLamp" type="CharacterBody2D"]
+z_index = 1
 collision_layer = 4
 script = ExtResource("1_e8ihl")
 

@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 	if current_health == 0:
 		SPRITE.play("dead")
 		COLLISION_SHAPE.set_disabled(true)
+		z_index = 0
 	elif stunned:
 		if current_health > 0:
 			current_health -= STUN_DMG * delta
