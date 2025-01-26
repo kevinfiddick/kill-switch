@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://livwjhvch2l5"]
+[gd_scene load_steps=32 format=3 uid="uid://livwjhvch2l5"]
 
 [ext_resource type="Script" path="res://scripts/enemy-lamp/EnemyLamp.gd" id="1_e8ihl"]
 [ext_resource type="PackedScene" uid="uid://c4d2o7kq4cvo8" path="res://scenes/state-machine/StateMachine.tscn" id="2_cty6b"]
@@ -181,6 +181,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4bil"]
+radius = 50.0
+height = 100.0
+
 [node name="EnemyLamp" type="CharacterBody2D"]
 z_index = 1
 collision_layer = 4
@@ -200,10 +204,20 @@ script = ExtResource("3_3fokr")
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_ti0nb")
 animation = &"idle"
-frame_progress = 0.105119
+frame_progress = 0.151391
 
 [node name="Tail" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jwxi1")
 frame = 5
 frame_progress = 0.240472
 offset = Vector2(-35, 5)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_k4bil")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var player_reference : Node2D 
-@export var SPEED = 60.0
+@export var SPEED = 75.0
 @export var STUN_TIMEOUT = 0.75
 @export var STUN_SPEED = 30.0
 @export var STUN_DMG = 4.0
@@ -76,3 +76,10 @@ func _on_timer_timeout():
 	if stunned_timer and stunned_timer.is_connected("timeout", _on_timer_timeout):
 		stunned_timer.queue_free()
 		stunned_timer = null
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print_debug("AREA ENTERED")
+	if body == player_reference:
+		body.on_take_damage(5)
+	pass # Replace with function body.

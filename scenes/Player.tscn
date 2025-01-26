@@ -31,4 +31,7 @@ position = Vector2(31, 54)
 
 [node name="HUD" parent="." instance=ExtResource("5_urac5")]
 
+[node name="InvincibilityCD" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="grenade_thrown" from="GrenadeController" to="HUD" method="_on_grenade_controller_grenade_thrown"]
