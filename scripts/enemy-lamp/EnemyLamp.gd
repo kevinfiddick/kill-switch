@@ -8,37 +8,52 @@ extends CharacterBody2D
 @export var HEALTH = 30.0
 
 @onready var SPRITE = $AnimatedSprite2D
+@onready var TAIL = $Tail
 @onready var COLLISION_SHAPE = $CollisionShape2D
 
 var current_health: float = HEALTH
 var stunned: bool = false
 var stunned_timer: Timer = null
+var dead: bool = false
 
 func _ready() -> void:
 	SPRITE.play("idle")
+	TAIL.play("default")
 
 # Function to handle movement and velocity
 func movement_and_velocity(move_direction):
-	if current_health == 0:
-		velocity = 0 * move_direction
-	elif stunned:
-		velocity = STUN_SPEED * move_direction
-	else:
-		velocity = SPEED * move_direction
-	move_and_slide()  # Apply the calculated velocity to the character\
+	if not dead:
+		if current_health == 0:
+			velocity = 0 * move_direction
+		elif stunned:
+			velocity = STUN_SPEED * move_direction
+		else:
+			velocity = SPEED * move_direction
+		TAIL.set_rotation(velocity.angle())
+		move_and_slide()  # Apply the calculated velocity to the character
 
 func _process(delta: float) -> void:
-	if current_health == 0:
-		SPRITE.play("dead")
-		COLLISION_SHAPE.set_disabled(true)
-		z_index = 0
-	elif stunned:
-		if current_health > 0:
-			current_health -= STUN_DMG * delta
-			print_debug('ENEMY HEALTH REMAINING: ' + str(current_health) )
+	if not dead:
+		if current_health == 0:
+			dead = true
+			SPRITE.play("dead")
+			SPRITE.z_index = 0
+			COLLISION_SHAPE.set_disabled(true)
+			TAIL.queue_free()
+			z_index = 0
+		elif stunned:
+			if SPRITE.get_animation() != "stunned":
+				SPRITE.play("stunned")
+			if current_health > 0:
+				current_health -= STUN_DMG * delta
+				print_debug('ENEMY HEALTH REMAINING: ' + str(current_health) )
+			else:
+				current_health = 0
+				print_debug('ENEMY DEAD: ' + str(current_health) )
 		else:
-			current_health = 0
-			print_debug('ENEMY DEAD: ' + str(current_health) )
+			if SPRITE.get_animation() != "idle":
+				SPRITE.play("idle")
+		
 
 # Function for taking stun damage from player
 func take_stun_damage():
