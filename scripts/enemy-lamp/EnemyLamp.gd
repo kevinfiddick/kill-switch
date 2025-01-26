@@ -2,20 +2,39 @@ extends CharacterBody2D
 
 @export var player_reference : Node2D 
 @export var SPEED = 60.0
+@export var STUN_TIMEOUT = 0.75
 @export var STUN_SPEED = 30.0
+@export var STUN_DMG = 4.0
 @export var HEALTH = 30.0
-@export var STUN_TIMEOUT = 2
 
+@onready var SPRITE = $AnimatedSprite2D
+@onready var COLLISION_SHAPE = $CollisionShape2D
+
+var current_health: float = HEALTH
 var stunned: bool = false
 var stunned_timer: Timer = null
 
 # Function to handle movement and velocity
 func movement_and_velocity(move_direction):
-	if stunned:
+	if current_health == 0:
+		velocity = 0 * move_direction
+	elif stunned:
 		velocity = STUN_SPEED * move_direction
 	else:
 		velocity = SPEED * move_direction
 	move_and_slide()  # Apply the calculated velocity to the character\
+
+func _process(delta: float) -> void:
+	if current_health == 0:
+		SPRITE.play("dead")
+		COLLISION_SHAPE.set_disabled(true)
+	elif stunned:
+		if current_health > 0:
+			current_health -= STUN_DMG * delta
+			print_debug('ENEMY HEALTH REMAINING: ' + str(current_health) )
+		else:
+			current_health = 0
+			print_debug('ENEMY DEAD: ' + str(current_health) )
 
 # Function for taking stun damage from player
 func take_stun_damage():

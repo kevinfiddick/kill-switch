@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bio0cehn3s4gk"
-path="res://.godot/imported/Simple interior sprite sheet.png-1a67f9d07b7f110cf2b559d76312d64c.ctex"
+uid="uid://bqmvguygq62mq"
+path="res://.godot/imported/lamp_enemy_dead1.png-ce4b590df1bdb36c677222aaf8ee43b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Simple interior sprite sheet.png"
-dest_files=["res://.godot/imported/Simple interior sprite sheet.png-1a67f9d07b7f110cf2b559d76312d64c.ctex"]
+source_file="res://scenes/context/lamp_enemy_dead1.png"
+dest_files=["res://.godot/imported/lamp_enemy_dead1.png-ce4b590df1bdb36c677222aaf8ee43b1.ctex"]
 
 [params]
 

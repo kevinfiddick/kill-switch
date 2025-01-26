@@ -1,20 +1,37 @@
-[gd_scene load_steps=6 format=3 uid="uid://livwjhvch2l5"]
+[gd_scene load_steps=8 format=3 uid="uid://livwjhvch2l5"]
 
 [ext_resource type="Script" path="res://scripts/enemy-lamp/EnemyLamp.gd" id="1_e8ihl"]
-[ext_resource type="Texture2D" uid="uid://ciipvnn7hl8ka" path="res://lamp_enemy_1.png" id="1_jdv2o"]
 [ext_resource type="PackedScene" uid="uid://c4d2o7kq4cvo8" path="res://scenes/state-machine/StateMachine.tscn" id="2_cty6b"]
 [ext_resource type="Script" path="res://scripts/enemy-lamp/FollowState.gd" id="3_3fokr"]
+[ext_resource type="Texture2D" uid="uid://3xj1lqb6opqu" path="res://assets/lamp_enemy_dead.png" id="4_ql0gg"]
+[ext_resource type="Texture2D" uid="uid://ceo4fg8lq4rqy" path="res://assets/lamp_enemy_1.png" id="5_pkl7l"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_snlun"]
 radius = 8.0
 height = 29.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ti0nb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ql0gg")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_pkl7l")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
 [node name="EnemyLamp" type="CharacterBody2D"]
 collision_layer = 4
 script = ExtResource("1_e8ihl")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_jdv2o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
@@ -25,3 +42,7 @@ initial_state = NodePath("FollowState")
 
 [node name="FollowState" type="Node" parent="StateMachine"]
 script = ExtResource("3_3fokr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ti0nb")
+animation = &"idle"

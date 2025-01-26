@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=4 uid="uid://c0h1yc846ndk2"]
 
-[ext_resource type="Texture2D" uid="uid://bio0cehn3s4gk" path="res://Simple interior sprite sheet.png" id="1_osbuq"]
+[ext_resource type="Texture2D" uid="uid://bio0cehn3s4gk" path="res://assets/Simple interior sprite sheet.png" id="1_osbuq"]
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="2_juyo5"]
 [ext_resource type="PackedScene" uid="uid://livwjhvch2l5" path="res://scenes/EnemyLamp.tscn" id="3_tf5gl"]
 
