@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2160l6nbot3u"]
+[gd_scene load_steps=8 format=3 uid="uid://c2160l6nbot3u"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_6ykmx"]
 [ext_resource type="Texture2D" uid="uid://bo7xm7gmyj48p" path="res://icon.svg" id="2_m53a3"]
 [ext_resource type="PackedScene" uid="uid://ducuap6fxn2su" path="res://scenes/weapons/primary/PrimaryWeapon.tscn" id="3_xwcbc"]
 [ext_resource type="PackedScene" uid="uid://dhee5osoh26s3" path="res://scenes/weapons/grenade/GrenadeController.tscn" id="4_r2l2v"]
 [ext_resource type="PackedScene" uid="uid://cg2j6hgvxv842" path="res://scenes/HUD.tscn" id="5_urac5"]
+[ext_resource type="PackedScene" uid="uid://bwcmymg5jeeko" path="res://scenes/Shader.tscn" id="6_ehh3v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yq888"]
 radius = 100.0
@@ -28,5 +29,9 @@ position = Vector2(31, 54)
 [node name="GrenadeController" parent="." instance=ExtResource("4_r2l2v")]
 
 [node name="HUD" parent="." instance=ExtResource("5_urac5")]
+
+[node name="Shader" parent="." instance=ExtResource("6_ehh3v")]
+
+[node name="LightSource" type="Marker2D" parent="." groups=["light"]]
 
 [connection signal="grenade_thrown" from="GrenadeController" to="HUD" method="_on_grenade_controller_grenade_thrown"]

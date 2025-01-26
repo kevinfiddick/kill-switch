@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwcmymg5jeeko"]
+
+[ext_resource type="Script" path="res://scripts/Shader.gd" id="1_1skqs"]
+[ext_resource type="Shader" path="res://lighting.gdshader" id="1_kumrc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7qhfa"]
+shader = ExtResource("1_kumrc")
+shader_parameter/lights = null
+shader_parameter/number_of_lights = 1
+shader_parameter/modulate_color = Color(0, 0, 0, 1)
+shader_parameter/light_radius = 92.0
+
+[node name="Shader" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_7qhfa")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_1skqs")
