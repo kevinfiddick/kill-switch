@@ -14,6 +14,9 @@ var current_health: float = HEALTH
 var stunned: bool = false
 var stunned_timer: Timer = null
 
+func _ready() -> void:
+	SPRITE.play("idle")
+
 # Function to handle movement and velocity
 func movement_and_velocity(move_direction):
 	if current_health == 0:
