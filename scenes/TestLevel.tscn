@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://c0h1yc846ndk2"]
+[gd_scene load_steps=10 format=4 uid="uid://b0u3qd5uxyoln"]
 
 [ext_resource type="Texture2D" uid="uid://bio0cehn3s4gk" path="res://Simple interior sprite sheet.png" id="1_osbuq"]
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="2_juyo5"]
+[ext_resource type="PackedScene" uid="uid://livwjhvch2l5" path="res://scenes/EnemyLamp.tscn" id="3_tf5gl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7g37r"]
 texture = ExtResource("1_osbuq")
@@ -223,3 +224,7 @@ tile_set = SubResource("TileSet_knp6d")
 
 [node name="Player" parent="." instance=ExtResource("2_juyo5")]
 position = Vector2(320, 242)
+
+[node name="EnemyLamp" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("3_tf5gl")]
+position = Vector2(469, 89)
+player_reference = NodePath("../Player")

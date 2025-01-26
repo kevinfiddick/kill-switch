@@ -1,15 +1,16 @@
 [gd_scene load_steps=6 format=3 uid="uid://livwjhvch2l5"]
 
+[ext_resource type="Script" path="res://scripts/enemy-lamp/EnemyLamp.gd" id="1_e8ihl"]
 [ext_resource type="Texture2D" uid="uid://ciipvnn7hl8ka" path="res://lamp_enemy_1.png" id="1_jdv2o"]
 [ext_resource type="PackedScene" uid="uid://c4d2o7kq4cvo8" path="res://scenes/state-machine/StateMachine.tscn" id="2_cty6b"]
-[ext_resource type="PackedScene" uid="uid://fihh6gvlogox" path="res://scenes/state-machine/State.tscn" id="3_07tbm"]
-[ext_resource type="Script" path="res://scripts/state-machine/State.gd" id="4_51doq"]
+[ext_resource type="Script" path="res://scripts/enemy-lamp/FollowState.gd" id="3_3fokr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_snlun"]
 radius = 8.0
 height = 29.0
 
 [node name="EnemyLamp" type="CharacterBody2D"]
+script = ExtResource("1_e8ihl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_jdv2o")
@@ -18,7 +19,8 @@ texture = ExtResource("1_jdv2o")
 position = Vector2(0, 0.5)
 shape = SubResource("CapsuleShape2D_snlun")
 
-[node name="StateMachine" parent="." instance=ExtResource("2_cty6b")]
+[node name="StateMachine" parent="." node_paths=PackedStringArray("initial_state") instance=ExtResource("2_cty6b")]
+initial_state = NodePath("FollowState")
 
-[node name="State" parent="StateMachine" instance=ExtResource("3_07tbm")]
-script = ExtResource("4_51doq")
+[node name="FollowState" type="Node" parent="StateMachine"]
+script = ExtResource("3_3fokr")
