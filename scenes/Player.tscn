@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ducuap6fxn2su" path="res://scenes/weapons/primary/PrimaryWeapon.tscn" id="3_xwcbc"]
 [ext_resource type="PackedScene" uid="uid://dhee5osoh26s3" path="res://scenes/weapons/grenade/GrenadeController.tscn" id="4_r2l2v"]
 [ext_resource type="PackedScene" uid="uid://cg2j6hgvxv842" path="res://scenes/HUD.tscn" id="5_urac5"]
-[ext_resource type="Texture2D" uid="uid://dg3p4mql38kox" path="res://GradientLighting.tres" id="6_du2i2"]
+[ext_resource type="Texture2D" uid="uid://72va8r5k8s2q" path="res://GradientLighting.tres" id="6_du2i2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yq888"]
 radius = 100.0

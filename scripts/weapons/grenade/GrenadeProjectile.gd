@@ -5,8 +5,10 @@ const SHRAPNEL = preload("res://scenes/weapons/grenade/GrenadeShrapnel.tscn")
 const SPEED: int = 300
 const TICKS_TO_EXPIRE: int = 600
 const NUMBER_SHRAPNEL: int = 10
+@export var ROTATION_SPEED: float = 15.0
 
 @export var end_position: Vector2
+@onready var SPRITE = $Sprite2D
 
 var ticks = 0
 
@@ -45,6 +47,7 @@ func _physics_process(delta: float) -> void:
 		queue_free()
 		pass
 	
+	SPRITE.set_rotation(ROTATION_SPEED * delta)
 	position += transform.x * SPEED * delta
 	
 	ticks += 1
