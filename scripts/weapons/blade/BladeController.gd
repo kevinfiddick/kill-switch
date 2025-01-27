@@ -32,6 +32,8 @@ func _process(delta: float) -> void:
 			projectile_instance.scale.y = -1
 		else:
 			projectile_instance.scale.y = 1
+			
+		projectile_instance.controller_parent = get_parent()
 		
 		blade_thrown.emit()
 
