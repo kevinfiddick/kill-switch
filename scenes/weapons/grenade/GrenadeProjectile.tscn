@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bm4q6vcpqdgdo"]
+[gd_scene load_steps=6 format=3 uid="uid://bm4q6vcpqdgdo"]
 
 [ext_resource type="Script" path="res://scripts/weapons/grenade/GrenadeProjectile.gd" id="1_xdhrd"]
 [ext_resource type="Texture2D" uid="uid://dogk5q66gyfrh" path="res://assets/Light Bulb.png" id="2_wohu6"]
+[ext_resource type="Script" path="res://scripts/weapons/grenade/RotateSprite.gd" id="3_hb15k"]
 
 [sub_resource type="Gradient" id="Gradient_lxara"]
 offsets = PackedFloat32Array(0, 0.0222222, 1)
@@ -18,6 +19,8 @@ script = ExtResource("1_xdhrd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_wohu6")
+script = ExtResource("3_hb15k")
+ROTATION_DEGREES_PER_SEC = 360.0
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 texture = SubResource("GradientTexture2D_7ifre")

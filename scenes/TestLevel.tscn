@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://c0h1yc846ndk2"]
+[gd_scene load_steps=11 format=4 uid="uid://c0h1yc846ndk2"]
 
 [ext_resource type="Texture2D" uid="uid://bio0cehn3s4gk" path="res://assets/Simple interior sprite sheet.png" id="1_osbuq"]
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="2_juyo5"]
 [ext_resource type="PackedScene" uid="uid://livwjhvch2l5" path="res://scenes/EnemyLamp.tscn" id="3_tf5gl"]
+[ext_resource type="PackedScene" uid="uid://bm4q6vcpqdgdo" path="res://scenes/weapons/grenade/GrenadeProjectile.tscn" id="4_1ptnf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7g37r"]
 texture = ExtResource("1_osbuq")
@@ -232,3 +233,7 @@ player_reference = NodePath("../Player")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
+
+[node name="GrenadeProjectile" parent="." instance=ExtResource("4_1ptnf")]
+position = Vector2(297, 81)
+DEBUG_DO_NOT_EXPLODE = true
