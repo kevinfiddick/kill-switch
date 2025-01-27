@@ -41,7 +41,7 @@ func _process(_delta: float) -> void:
 			projectile_instance.scale.y = 1
 		
 		grenade_thrown.emit()
-		
+	
 
 func _physics_process(_delta: float) -> void:
 	last_shot += 1

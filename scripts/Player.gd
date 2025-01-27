@@ -8,8 +8,23 @@ var current_health = MAX_HEALTH
 @onready var HUD = $HUD
 @onready var invincibility_timer = $InvincibilityCD
 
+
+func _process(delta: float) -> void:
+	# Debug -- switch primary weapon to whip (press 1)
+	if OS.is_debug_build() and Input.is_action_just_pressed("debug_switch_primary"):
+		pass
+		
+	# Debug -- switch secondary weapon to blade (press 2)
+	if OS.is_debug_build() and Input.is_action_just_pressed("debug_switch_secondary"):
+		var grenade_controller = get_node_or_null("GrenadeController")
+		if grenade_controller != null:
+			print_debug("Switching to blade")
+			var blade_controller = load("res://scenes/weapons/blade/BladeController.tscn")
+			remove_child(grenade_controller)
+			add_child(blade_controller.instantiate())
+
+
 func _physics_process(_delta):
-	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_vector("left", "right", "up", "down")

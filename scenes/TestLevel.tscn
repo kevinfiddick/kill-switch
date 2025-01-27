@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://livwjhvch2l5" path="res://scenes/enemies/lamp/EnemyLamp.tscn" id="3_tf5gl"]
 [ext_resource type="PackedScene" uid="uid://bm4q6vcpqdgdo" path="res://scenes/weapons/grenade/GrenadeProjectile.tscn" id="4_1ptnf"]
 
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7g37r"]
 texture = ExtResource("1_osbuq")
 0:0/0 = 0
