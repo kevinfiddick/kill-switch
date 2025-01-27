@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ci5hcs8ndfpeb"]
+[gd_scene load_steps=6 format=3 uid="uid://ci5hcs8ndfpeb"]
 
 [ext_resource type="Script" path="res://scripts/weapons/grenade/GrenadeShrapnel.gd" id="1_x1wcg"]
 [ext_resource type="Texture2D" uid="uid://cfknml4lya6k6" path="res://assets/Light Bulb Shrapnel.png" id="2_xjrew"]
@@ -12,6 +12,9 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.958716, 0.5)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7kver"]
+radius = 6.0
+
 [node name="Grenade Shrapnel" type="Node2D"]
 script = ExtResource("1_x1wcg")
 
@@ -21,3 +24,11 @@ texture = ExtResource("2_xjrew")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = SubResource("GradientTexture2D_rly8c")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_7kver")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

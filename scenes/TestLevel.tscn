@@ -2,8 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bio0cehn3s4gk" path="res://assets/Simple interior sprite sheet.png" id="1_osbuq"]
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="2_juyo5"]
-[ext_resource type="PackedScene" uid="uid://livwjhvch2l5" path="res://scenes/EnemyLamp.tscn" id="3_tf5gl"]
+[ext_resource type="PackedScene" uid="uid://livwjhvch2l5" path="res://scenes/enemies/lamp/EnemyLamp.tscn" id="3_tf5gl"]
 [ext_resource type="PackedScene" uid="uid://bm4q6vcpqdgdo" path="res://scenes/weapons/grenade/GrenadeProjectile.tscn" id="4_1ptnf"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7g37r"]
 texture = ExtResource("1_osbuq")
