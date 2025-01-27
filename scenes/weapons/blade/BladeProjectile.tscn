@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://nopvv78qfx45"]
+
+[ext_resource type="Script" path="res://scripts/weapons/blade/BladeProjectile.gd" id="1_4wlsf"]
+[ext_resource type="Texture2D" uid="uid://bo7xm7gmyj48p" path="res://icon.svg" id="2_g8k1h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7wwsj"]
+radius = 90.0617
+
+[sub_resource type="Gradient" id="Gradient_wqsyk"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3423l"]
+gradient = SubResource("Gradient_wqsyk")
+fill = 1
+fill_from = Vector2(0.504587, 0.5)
+fill_to = Vector2(0.96789, 0.495413)
+
+[node name="BladeProjectile" type="Node2D"]
+script = ExtResource("1_4wlsf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_g8k1h")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_7wwsj")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(1.53125, 1.53125)
+texture = SubResource("GradientTexture2D_3423l")

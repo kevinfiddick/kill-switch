@@ -189,10 +189,6 @@ height = 100.0
 z_index = 1
 collision_layer = 4
 script = ExtResource("1_e8ihl")
-SPEED = 75.0
-STUN_SPEED = 30.0
-STUN_DMG = 4.0
-HEALTH = 30.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)

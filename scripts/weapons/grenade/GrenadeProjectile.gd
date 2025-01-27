@@ -4,8 +4,8 @@ const SHRAPNEL = preload("res://scenes/weapons/grenade/GrenadeShrapnel.tscn")
 
 const SPEED: int = 300
 const TICKS_TO_EXPIRE: int = 600
-const NUMBER_SHRAPNEL: int = 10
 @export var DEBUG_DO_NOT_EXPLODE: bool = false
+const NUMBER_SHRAPNEL: int = 16
 
 @export var end_position: Vector2
 @onready var SPRITE = $Sprite2D

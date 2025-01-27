@@ -2,6 +2,7 @@ extends Node2D
 
 const SPEED: int = 600
 const TICKS_TO_EXPIRE = 60
+const DAMAGE = 1.0
 const PIERCE = 0
 
 var ticks = 0
@@ -21,7 +22,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.has_method("take_damage"):
-		body.take_damage(1.0, ["shock"])
+		body.take_damage(DAMAGE, ["shock"])
 		hits += 1
 		
 		if hits > PIERCE:
