@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
+const SPEED = 100.0
 
 @export var MAX_HEALTH = 100.0
 var current_health = MAX_HEALTH

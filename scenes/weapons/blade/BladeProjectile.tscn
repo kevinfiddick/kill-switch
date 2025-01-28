@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://nopvv78qfx45"]
+[gd_scene load_steps=7 format=3 uid="uid://nopvv78qfx45"]
 
 [ext_resource type="Script" path="res://scripts/weapons/blade/BladeProjectile.gd" id="1_4wlsf"]
-[ext_resource type="Texture2D" uid="uid://bo7xm7gmyj48p" path="res://icon.svg" id="2_g8k1h"]
+[ext_resource type="Texture2D" uid="uid://dls042obbp82k" path="res://assets/Blade.png" id="2_vsy7o"]
+[ext_resource type="Script" path="res://scripts/weapons/grenade/RotateSprite.gd" id="3_vocht"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7wwsj"]
-radius = 90.0617
+radius = 30.1846
 
 [sub_resource type="Gradient" id="Gradient_wqsyk"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
@@ -19,8 +20,8 @@ fill_to = Vector2(0.96789, 0.495413)
 script = ExtResource("1_4wlsf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_g8k1h")
+texture = ExtResource("2_vsy7o")
+script = ExtResource("3_vocht")
 
 [node name="Area2D" type="Area2D" parent="."]
 scale = Vector2(0.3, 0.3)

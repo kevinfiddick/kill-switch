@@ -1,0 +1,89 @@
+[gd_scene load_steps=13 format=3 uid="uid://b00lwkjbjs7xc"]
+
+[ext_resource type="Texture2D" uid="uid://4i50ijum181x" path="res://assets/blender_enemy.png" id="1_d4x5o"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ykfy7"]
+radius = 15.0
+height = 46.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpeve"]
+atlas = ExtResource("1_d4x5o")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdfdy"]
+atlas = ExtResource("1_d4x5o")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7cnp"]
+atlas = ExtResource("1_d4x5o")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wi543"]
+atlas = ExtResource("1_d4x5o")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28nav"]
+atlas = ExtResource("1_d4x5o")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0lg2"]
+atlas = ExtResource("1_d4x5o")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j03wb"]
+atlas = ExtResource("1_d4x5o")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cx7ac"]
+atlas = ExtResource("1_d4x5o")
+region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q65aj"]
+atlas = ExtResource("1_d4x5o")
+region = Rect2(384, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6oosm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpeve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdfdy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7cnp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wi543")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28nav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0lg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j03wb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cx7ac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q65aj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="EnemyBlender" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_ykfy7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6oosm")
+animation = &"idle"
+frame_progress = 0.791409
