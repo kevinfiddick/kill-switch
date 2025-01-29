@@ -8,6 +8,14 @@ var current_health = MAX_HEALTH
 @onready var HUD = $HUD
 @onready var invincibility_timer = $InvincibilityCD
 
+var primary_weapon: Node2D
+var secondary_weapon: Node2D
+
+
+func _ready() -> void:
+	primary_weapon = $PrimaryWeapon
+	secondary_weapon = $GrenadeController
+
 
 func _process(delta: float) -> void:
 	# Debug -- switch primary weapon to whip (press 1)
@@ -16,12 +24,19 @@ func _process(delta: float) -> void:
 		
 	# Debug -- switch secondary weapon to blade (press 2)
 	if OS.is_debug_build() and Input.is_action_just_pressed("debug_switch_secondary"):
-		var grenade_controller = get_node_or_null("GrenadeController")
-		if grenade_controller != null:
+		if secondary_weapon.name != "BladeController":
 			print_debug("Switching to blade")
 			var blade_controller = load("res://scenes/weapons/blade/BladeController.tscn")
-			grenade_controller.queue_free()
+			secondary_weapon.queue_free()
 			add_child(blade_controller.instantiate())
+			secondary_weapon = $BladeController
+		
+	# Debug -- freeze or unfreeze player input
+	if OS.is_debug_build() and Input.is_action_just_pressed("debug_freeze_unfreeze"):
+		if is_physics_processing():
+			freeze_input()
+		else:
+			resume_input()
 
 
 func _physics_process(_delta):
@@ -49,3 +64,22 @@ func on_take_damage(damage: float) -> void:
 	print_debug(current_health)
 	print_debug(MAX_HEALTH)
 	HUD.set_health_percent(current_health / MAX_HEALTH)
+
+func freeze_input() -> void:
+	set_physics_process(false)
+	
+	primary_weapon.set_process(false)
+	primary_weapon.set_physics_process(false)
+	
+	secondary_weapon.set_process(false)
+	secondary_weapon.set_physics_process(false)
+	
+
+func resume_input() -> void:
+	set_physics_process(true)
+	
+	primary_weapon.set_process(true)
+	primary_weapon.set_physics_process(true)
+	
+	secondary_weapon.set_process(true)
+	secondary_weapon.set_physics_process(true)
