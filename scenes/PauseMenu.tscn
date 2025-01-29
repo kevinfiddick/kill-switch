@@ -60,7 +60,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 0.8]
+"values": [0.0, 0.5]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dqjtr"]
@@ -81,11 +81,12 @@ script = ExtResource("1_mjl6j")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_w0u7x")
-layout_mode = 2
-offset_left = 270.0
-offset_top = 190.0
-offset_right = 370.0
-offset_bottom = 291.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
