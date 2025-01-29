@@ -17,14 +17,6 @@ func _ready() -> void:
 	controller_ref.connect("secondary_used", _on_secondary_used)
 
 func _process(delta: float) -> void:
-	if !secondary_cd_timer.is_stopped():
-		secondary_cd.scale.x = 1 - (secondary_cd_timer.time_left / (300 / 60))
-		if secondary_cd.get_color() != Color("#FFFFFF"):
-			secondary_cd.set_color("#FFFFFF")
-	else: 
-		if secondary_cd.get_color() != Color("#FFDE21"):
-			secondary_cd.set_color("#FFDE21")
-		
 	if controller_ref == null:
 		for weapon in WEAPON_CONTROLLERS:
 			var controller = get_node_or_null(weapon)
@@ -33,6 +25,14 @@ func _process(delta: float) -> void:
 				controller_ref.connect("secondary_used", _on_secondary_used)
 				break
 	
+	if !secondary_cd_timer.is_stopped():
+		secondary_cd.scale.x = 1 - (secondary_cd_timer.time_left / (controller_ref.attack_speed / 60))
+		if secondary_cd.get_color() != Color("#FFFFFF"):
+			secondary_cd.set_color("#FFFFFF")
+	else: 
+		if secondary_cd.get_color() != Color("#FFDE21"):
+			secondary_cd.set_color("#FFDE21")
+
 
 func set_health_percent(percent: float) -> void:
 	health_bar.scale.x = percent
