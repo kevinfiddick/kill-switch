@@ -3,7 +3,7 @@ extends Node2D
 const PROJECTILE = preload("res://scenes/weapons/blade/BladeProjectile.tscn")
 const BASE_ATTACK_SPEED = 300 # ticks between shots
 
-signal blade_thrown
+signal secondary_used
 
 @export var attack_speed: int = BASE_ATTACK_SPEED
 
@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 			
 		projectile_instance.controller_parent = get_parent()
 		
-		blade_thrown.emit()
+		secondary_used.emit()
 
 
 func _physics_process(_delta: float) -> void:

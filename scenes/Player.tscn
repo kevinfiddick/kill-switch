@@ -47,5 +47,3 @@ texture = ExtResource("6_du2i2")
 
 [node name="PrimaryWeapon" parent="." instance=ExtResource("3_xwcbc")]
 position = Vector2(1, -2)
-
-[connection signal="grenade_thrown" from="GrenadeController" to="HUD" method="_on_grenade_controller_grenade_thrown"]

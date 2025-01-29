@@ -4,7 +4,7 @@ const PROJECTILE = preload("res://scenes/weapons/grenade/GrenadeProjectile.tscn"
 const BASE_ATTACK_SPEED: int = 300 # ticks between shots
 const RANGE: float = 100.0 # px ?
 
-signal grenade_thrown
+signal secondary_used
 
 @export var attack_speed: int = BASE_ATTACK_SPEED
 
@@ -40,7 +40,7 @@ func _process(_delta: float) -> void:
 		else:
 			projectile_instance.scale.y = 1
 		
-		grenade_thrown.emit()
+		secondary_used.emit()
 	
 
 func _physics_process(_delta: float) -> void:

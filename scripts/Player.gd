@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 		if grenade_controller != null:
 			print_debug("Switching to blade")
 			var blade_controller = load("res://scenes/weapons/blade/BladeController.tscn")
-			remove_child(grenade_controller)
+			grenade_controller.queue_free()
 			add_child(blade_controller.instantiate())
 
 

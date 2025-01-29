@@ -1,23 +1,42 @@
 extends CanvasLayer
 
-@onready var grenade_controller: Node2D = $"../GrenadeController"
-@onready var grenade_cd: ColorRect = $PanelContainer/MarginContainer/VBoxContainer/ReferenceRect/GrenadeCD
-@onready var grenade_cd_timer: Timer = $PanelContainer/MarginContainer/VBoxContainer/ReferenceRect/GrenadeCD/GrenadeCDTimer
+const WEAPON_CONTROLLERS = [
+	"../GrenadeController",
+	"../BladeController",
+]
+
+@onready var secondary_cd: ColorRect = $PanelContainer/MarginContainer/VBoxContainer/SecondaryCDRef/SecondaryCD
+@onready var secondary_cd_timer: Timer = $PanelContainer/MarginContainer/VBoxContainer/SecondaryCDRef/SecondaryCD/SecondaryCDTimer
 
 @onready var health_bar: ColorRect = $PanelContainer/MarginContainer/VBoxContainer/HealthBarRef/HealthBar
 
+var controller_ref: Node2D
+
+func _ready() -> void:
+	controller_ref = $"../GrenadeController"
+	controller_ref.connect("secondary_used", _on_secondary_used)
+
 func _process(delta: float) -> void:
-	if !grenade_cd_timer.is_stopped():
-		grenade_cd.scale.x = 1 - (grenade_cd_timer.time_left / (300 / 60))
-		if grenade_cd.get_color() != Color("#FFFFFF"):
-			grenade_cd.set_color("#FFFFFF")
+	if !secondary_cd_timer.is_stopped():
+		secondary_cd.scale.x = 1 - (secondary_cd_timer.time_left / (300 / 60))
+		if secondary_cd.get_color() != Color("#FFFFFF"):
+			secondary_cd.set_color("#FFFFFF")
 	else: 
-		if grenade_cd.get_color() != Color("#FFDE21"):
-			grenade_cd.set_color("#FFDE21")
+		if secondary_cd.get_color() != Color("#FFDE21"):
+			secondary_cd.set_color("#FFDE21")
+		
+	if controller_ref == null:
+		for weapon in WEAPON_CONTROLLERS:
+			var controller = get_node_or_null(weapon)
+			if controller != null:
+				controller_ref = controller
+				controller_ref.connect("secondary_used", _on_secondary_used)
+				break
+	
 
 func set_health_percent(percent: float) -> void:
 	health_bar.scale.x = percent
 	
-
-func _on_grenade_controller_grenade_thrown() -> void:
-	grenade_cd_timer.start(300 / 60)
+	
+func _on_secondary_used() -> void:
+	secondary_cd_timer.start(300 / 60)

@@ -3,7 +3,7 @@ extends Node2D
 const SPEED: int = 450
 const TICKS_TO_EXPIRE = 3600
 const DAMAGE = 30
-const RANGE = 100 # pixels
+const RANGE = 120 # pixels
 const TICKS_TO_ACCELERATE = 20 # ticks
 
 @export var controller_parent : CharacterBody2D
@@ -24,10 +24,6 @@ func _physics_process(delta: float) -> void:
 	if distance_travelled >= RANGE:
 		if following_parent and current_speed < SPEED:
 			look_at(controller_parent.position)
-			if rotation_degrees > 90 and rotation_degrees < 270:
-				scale.y = -1
-			else:
-				scale.y = 1
 				
 			current_speed += SPEED / TICKS_TO_ACCELERATE
 			

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d14rcndclxe2l"
+path="res://.godot/imported/pew 5-shooting sound 2.mp3-15db99f949f333ff0a3d46733c7ff43c.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/pews/pew 5-shooting sound 2.mp3"
+dest_files=["res://.godot/imported/pew 5-shooting sound 2.mp3-15db99f949f333ff0a3d46733c7ff43c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -48,7 +48,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 color = Color(0.192157, 0.756863, 0, 1)
 
-[node name="ReferenceRect" type="ReferenceRect" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="SecondaryCDRef" type="ReferenceRect" parent="PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(25, 10)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -56,7 +56,7 @@ size_flags_vertical = 0
 border_color = Color(0, 0, 0, 1)
 border_width = 0.0
 
-[node name="GrenadeCD" type="ColorRect" parent="PanelContainer/MarginContainer/VBoxContainer/ReferenceRect"]
+[node name="SecondaryCD" type="ColorRect" parent="PanelContainer/MarginContainer/VBoxContainer/SecondaryCDRef"]
 custom_minimum_size = Vector2(25, 2)
 layout_mode = 1
 anchors_preset = 4
@@ -69,5 +69,5 @@ grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="GrenadeCDTimer" type="Timer" parent="PanelContainer/MarginContainer/VBoxContainer/ReferenceRect/GrenadeCD"]
+[node name="SecondaryCDTimer" type="Timer" parent="PanelContainer/MarginContainer/VBoxContainer/SecondaryCDRef/SecondaryCD"]
 one_shot = true

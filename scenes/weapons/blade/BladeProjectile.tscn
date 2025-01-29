@@ -5,10 +5,10 @@
 [ext_resource type="Script" path="res://scripts/weapons/grenade/RotateSprite.gd" id="3_vocht"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7wwsj"]
-radius = 30.1846
+radius = 70.0
 
 [sub_resource type="Gradient" id="Gradient_wqsyk"]
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+colors = PackedColorArray(1, 1, 1, 0.588235, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_3423l"]
 gradient = SubResource("Gradient_wqsyk")
@@ -20,6 +20,7 @@ fill_to = Vector2(0.96789, 0.495413)
 script = ExtResource("1_4wlsf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_vsy7o")
 script = ExtResource("3_vocht")
 

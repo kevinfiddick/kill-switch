@@ -1,7 +1,7 @@
 extends Sprite2D
 
 # Speed of rotation in degrees per second
-@export var ROTATION_DEGREES_PER_SEC: float = 90.0
+@export var ROTATION_DEGREES_PER_SEC: float = 360.0
 
 func deg2rad(degrees: float) -> float:
 	return degrees * (PI / 180)
