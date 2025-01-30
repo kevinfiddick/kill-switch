@@ -20,7 +20,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	# Debug -- switch primary weapon to whip (press 1)
 	if OS.is_debug_build() and Input.is_action_just_pressed("debug_switch_primary"):
-		pass
+		if primary_weapon.name != "WhipController":
+			print_debug("Switching to whip")
+			var whip_controller = load("res://scenes/weapons/whip/WhipController.tscn")
+			primary_weapon.queue_free()
+			add_child(whip_controller.instantiate())
+			primary_weapon = $WhipController
 		
 	# Debug -- switch secondary weapon to blade (press 2)
 	if OS.is_debug_build() and Input.is_action_just_pressed("debug_switch_secondary"):
