@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cij00c7mpiebk"
+path="res://.godot/imported/BGJ25_sfx_bulbGrenade_03.mp3-7a12855d683fe5c129859f23fd61eb3f.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/bulb grenade/BGJ25_sfx_bulbGrenade_03.mp3"
+dest_files=["res://.godot/imported/BGJ25_sfx_bulbGrenade_03.mp3-7a12855d683fe5c129859f23fd61eb3f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
