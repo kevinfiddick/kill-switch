@@ -547,7 +547,7 @@ script = ExtResource("5_1acw2")
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_ti0nb")
 animation = &"idle"
-frame_progress = 0.00404414
+frame_progress = 0.329815
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
@@ -555,10 +555,13 @@ shape = SubResource("CapsuleShape2D_snlun")
 
 [node name="Tail" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jwxi1")
-frame_progress = 0.580178
+frame_progress = 0.905947
 offset = Vector2(-35, 5)
 
 [node name="RaycastContext" parent="." instance=ExtResource("8_jtnkv")]
+raycast_distance = 70
+danger_value = 7.0
+danger_buffer_value = 4.0
 
 [node name="Whip" type="AnimatedSprite2D" parent="."]
 visible = false
