@@ -1,9 +1,11 @@
-[gd_scene load_steps=56 format=3 uid="uid://livwjhvch2l5"]
+[gd_scene load_steps=58 format=3 uid="uid://livwjhvch2l5"]
 
 [ext_resource type="Script" path="res://scripts/enemies/lamp/EnemyLamp.gd" id="1_e8ihl"]
 [ext_resource type="PackedScene" uid="uid://c4d2o7kq4cvo8" path="res://scenes/state-machine/StateMachine.tscn" id="2_cty6b"]
 [ext_resource type="Script" path="res://scripts/enemies/lamp/FollowState.gd" id="3_3fokr"]
+[ext_resource type="Script" path="res://scripts/enemies/lamp/AttackState.gd" id="4_ep3or"]
 [ext_resource type="Texture2D" uid="uid://3xj1lqb6opqu" path="res://assets/lamp_enemy_dead.png" id="4_ql0gg"]
+[ext_resource type="Script" path="res://scripts/enemies/lamp/DeadState.gd" id="5_1acw2"]
 [ext_resource type="Texture2D" uid="uid://deqeshrbxvjm1" path="res://assets/enemy lamp.png" id="5_trwxq"]
 [ext_resource type="Texture2D" uid="uid://bvfd5bffdwg0m" path="res://assets/enemy lamp stunned.png" id="6_35s7i"]
 [ext_resource type="Texture2D" uid="uid://drbdoy1pw73xd" path="res://assets/plug_whip_idle.png" id="6_j1d8w"]
@@ -421,7 +423,7 @@ tracks/7/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_1fq6l"]
-resource_name = "Left Attack"
+resource_name = "attack"
 length = 1.33334
 step = 0.0666667
 tracks/0/type = "value"
@@ -511,8 +513,8 @@ tracks/6/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0lxkf"]
 _data = {
-"Left Attack": SubResource("Animation_1fq6l"),
-"RESET": SubResource("Animation_ny3v4")
+"RESET": SubResource("Animation_ny3v4"),
+"attack": SubResource("Animation_1fq6l")
 }
 
 [node name="EnemyLamp" type="CharacterBody2D"]
@@ -527,11 +529,17 @@ initial_state = NodePath("FollowState")
 [node name="FollowState" type="Node" parent="StateMachine"]
 script = ExtResource("3_3fokr")
 
+[node name="AttackState" type="Node" parent="StateMachine"]
+script = ExtResource("4_ep3or")
+
+[node name="DeadState" type="Node" parent="StateMachine"]
+script = ExtResource("5_1acw2")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_ti0nb")
 animation = &"idle"
-frame_progress = 0.466326
+frame_progress = 0.920804
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
@@ -539,7 +547,7 @@ shape = SubResource("CapsuleShape2D_snlun")
 
 [node name="Tail" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jwxi1")
-frame_progress = 0.0424437
+frame_progress = 0.496923
 offset = Vector2(-35, 5)
 
 [node name="RaycastContext" parent="." instance=ExtResource("8_jtnkv")]
