@@ -12,7 +12,6 @@ extends CharacterBody2D
 @onready var COLLISION_SHAPE = $CollisionShape2D
 
 var current_health: float = HEALTH
-var stunned: bool = false
 var stunned_timer: Timer = null
 var dead: bool = false
 var effects = {
@@ -24,9 +23,13 @@ var effects = {
 }
 
 
-func _ready() -> void:
-	SPRITE.play("idle")
-	TAIL.play("default")
+#func _ready() -> void:
+#	SPRITE.play("idle")
+#	TAIL.play("default")
+
+func set_facing_direction(facing_direction):
+	if not dead:
+		TAIL.set_rotation(facing_direction.angle())
 
 
 # Function to handle movement and velocity
@@ -34,11 +37,10 @@ func movement_and_velocity(move_direction):
 	if not dead:
 		if current_health == 0:
 			velocity = 0 * move_direction
-		elif stunned:
+		elif effects.shock.is_shocked:
 			velocity = STUN_SPEED * move_direction
 		else:
 			velocity = SPEED * move_direction
-		TAIL.set_rotation(velocity.angle())
 		move_and_slide()  # Apply the calculated velocity to the character
 
 func _process(delta: float) -> void:
