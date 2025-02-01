@@ -10,6 +10,7 @@ var current_health = MAX_HEALTH
 
 var primary_weapon: Node2D
 var secondary_weapon: Node2D
+var interaction_ref: Node2D
 
 
 func _ready() -> void:
@@ -75,3 +76,11 @@ func resume_input() -> void:
 func pickup(resource_ref: Resource) -> void:
 	var node_ref = load(resource_ref.get_path())
 	add_child(node_ref.instantiate())
+
+
+func entered_interaction(ref: Node2D) -> void:
+	interaction_ref = ref
+
+
+func exited_interaction() -> void:
+	interaction_ref = null

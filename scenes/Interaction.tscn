@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj5lojgbfnuxx"]
+
+[ext_resource type="Script" path="res://scripts/Interaction.gd" id="1_33cbk"]
+[ext_resource type="Texture2D" uid="uid://bo7xm7gmyj48p" path="res://icon.svg" id="2_w1dc0"]
+
+[node name="Interaction" type="Node2D"]
+script = ExtResource("1_33cbk")
+
+[node name="InteractionIcon" type="Sprite2D" parent="."]
+visible = false
+z_index = 90
+position = Vector2(0, -48)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_w1dc0")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://c0h1yc846ndk2"]
+[gd_scene load_steps=17 format=4 uid="uid://c0h1yc846ndk2"]
 
 [ext_resource type="Script" path="res://scripts/Game.gd" id="1_nkdow"]
 [ext_resource type="Texture2D" uid="uid://bio0cehn3s4gk" path="res://assets/Simple interior sprite sheet.png" id="1_osbuq"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://cy573ju1okiii" path="res://scenes/weapons/blade/BladeController.tscn" id="7_4inqs"]
 [ext_resource type="Texture2D" uid="uid://bo7xm7gmyj48p" path="res://icon.svg" id="8_cdbg1"]
 [ext_resource type="PackedScene" uid="uid://dsl6chfqwt4kh" path="res://scenes/weapons/whip/WhipController.tscn" id="9_xtlhq"]
+[ext_resource type="PackedScene" uid="uid://bj5lojgbfnuxx" path="res://scenes/Interaction.tscn" id="10_heek6"]
+[ext_resource type="PackedScene" uid="uid://7cama73mlqg2" path="res://scenes/Dialogue.tscn" id="11_g2l8e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fq6nj"]
 texture = ExtResource("1_osbuq")
@@ -153,6 +155,9 @@ texture = ExtResource("1_osbuq")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_8rvng")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wamf"]
+size = Vector2(56, 59)
+
 [node name="TestLevel" type="Node2D"]
 script = ExtResource("1_nkdow")
 
@@ -166,6 +171,9 @@ offset_left = -723.0
 offset_top = -462.0
 offset_right = 2067.0
 offset_bottom = 1497.0
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -228,9 +236,6 @@ player_reference = NodePath("../Player")
 position = Vector2(123, 363)
 player_reference = NodePath("../Player")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0, 0, 0, 1)
-
 [node name="PickupEntity" parent="." instance=ExtResource("6_cb8qa")]
 position = Vector2(313, 155)
 pickup_reference = ExtResource("7_4inqs")
@@ -246,3 +251,24 @@ pickup_reference = ExtResource("9_xtlhq")
 [node name="Sprite2D" type="Sprite2D" parent="PickupEntity2"]
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("8_cdbg1")
+
+[node name="Interaction" parent="." node_paths=PackedStringArray("area_ref") instance=ExtResource("10_heek6")]
+position = Vector2(321, 47)
+area_ref = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="Interaction"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction/Area2D"]
+z_index = 1
+position = Vector2(0, 13.5)
+shape = SubResource("RectangleShape2D_6wamf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Interaction"]
+scale = Vector2(0.5, 0.25)
+texture = ExtResource("8_cdbg1")
+
+[node name="Dialogue" parent="Interaction" node_paths=PackedStringArray("interact_ref") instance=ExtResource("11_g2l8e")]
+interact_ref = NodePath("..")
+dialogue_text = "This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text This is some cool text "
+text_speed = 5
