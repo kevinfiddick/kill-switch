@@ -41,16 +41,16 @@ func _physics_process(_delta):
 
 
 func on_take_damage(damage: float) -> void:
-	if !invincibility_timer.is_stopped():
-		print_debug(invincibility_timer.time_left)
-	else: 
-		invincibility_timer.start(300 / 60)
-		current_health -= damage
+	#if !invincibility_timer.is_stopped():
+	#	print_debug(invincibility_timer.time_left)
+	#else: 
+	#	invincibility_timer.start(300 / 60)
+	#	current_health -= damage
+	current_health -= damage
 	if current_health <= 0:
 		current_health = 0
 	
 	print_debug(current_health)
-	print_debug(MAX_HEALTH)
 	HUD.set_health_percent(current_health / MAX_HEALTH)
 
 func freeze_input() -> void:

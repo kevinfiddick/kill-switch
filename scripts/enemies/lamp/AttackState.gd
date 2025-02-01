@@ -5,7 +5,7 @@ extends State
 var is_playing = false
 var has_played = false
 var attack_timer = 0.0
-var ATTACK_TIMEOUT = 1.333333333
+var ATTACK_TIMEOUT = 0.7666666666
 
 func Enter():
 	has_played = false
