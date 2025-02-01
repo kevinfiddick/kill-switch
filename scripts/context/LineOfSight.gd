@@ -2,7 +2,7 @@ extends Node2D
 class_name LineOfSight2D
 
 @export var line_distance = 100.0
-@export var player_reference : Node2D  # Player reference
+@onready var player_reference = owner.player_reference
 var in_los = false
 
 signal enter_los
@@ -21,7 +21,7 @@ func get_los_vector():
 		local_vector = local_vector.normalized() * line_distance
 		return local_vector
 
-func check_los():
+func check_los() -> bool:
 	if player_reference:
 		var vector = get_los_vector()
 		# print(vector)
@@ -39,7 +39,8 @@ func check_los():
 			if in_los:
 				in_los = false
 				exit_los.emit()
-	
+	return in_los
+
 func _process(delta):
 	if player_reference:
 		check_los()

@@ -46,12 +46,10 @@ func Physics_Update(delta):
 		animation_player.play("attack")
 		is_playing = true
 		attack_timer = ATTACK_TIMEOUT
-		# elif player and animation_player.is_playing() and !has_played: 
-		var local_vector = get_local_vector()
-		var movement_direction = local_vector
-		# if owner.collision_shape is disabled:
-		owner.movement_and_velocity(movement_direction)
-		owner.set_attack_direction(movement_direction)
+		var player_position = player.get_global_position()
+		var owner_position = owner.get_global_position()
+		var facing_direction = (player_position - owner_position).normalized()
+		owner.set_attack_direction(facing_direction)
 	elif has_played: 
 		animation_player.stop()
 		Transitioned.emit(self, "FollowState")

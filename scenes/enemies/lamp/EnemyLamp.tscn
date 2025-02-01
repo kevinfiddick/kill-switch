@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://livwjhvch2l5"]
+[gd_scene load_steps=59 format=3 uid="uid://livwjhvch2l5"]
 
 [ext_resource type="Script" path="res://scripts/enemies/lamp/EnemyLamp.gd" id="1_e8ihl"]
 [ext_resource type="PackedScene" uid="uid://c4d2o7kq4cvo8" path="res://scenes/state-machine/StateMachine.tscn" id="2_cty6b"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://drbdoy1pw73xd" path="res://assets/plug_whip_idle.png" id="6_j1d8w"]
 [ext_resource type="PackedScene" uid="uid://cnvk77gq7qq6r" path="res://scenes/context/RaycastContext.tscn" id="8_jtnkv"]
 [ext_resource type="Texture2D" uid="uid://bdupwkhrksjcy" path="res://assets/whip attack.png" id="9_ijcwm"]
+[ext_resource type="PackedScene" uid="uid://ew8e5oj7btxt" path="res://scenes/context/LineOfSight.tscn" id="12_5fh0s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i7inx"]
 atlas = ExtResource("5_trwxq")
@@ -539,7 +540,7 @@ script = ExtResource("5_1acw2")
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_ti0nb")
 animation = &"idle"
-frame_progress = 0.920804
+frame_progress = 0.815211
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
@@ -547,7 +548,7 @@ shape = SubResource("CapsuleShape2D_snlun")
 
 [node name="Tail" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jwxi1")
-frame_progress = 0.496923
+frame_progress = 0.391348
 offset = Vector2(-35, 5)
 
 [node name="RaycastContext" parent="." instance=ExtResource("8_jtnkv")]
@@ -571,5 +572,7 @@ disabled = true
 libraries = {
 "": SubResource("AnimationLibrary_0lxkf")
 }
+
+[node name="LineOfSight" parent="." instance=ExtResource("12_5fh0s")]
 
 [connection signal="body_entered" from="WhipArea2D" to="." method="_on_area_2d_body_entered"]

@@ -4,6 +4,7 @@ extends State
 @onready var RaycastContext = owner.get_node("RaycastContext")
 @onready var SPRITE = owner.get_node("AnimatedSprite2D")
 @onready var TAIL = owner.get_node("Tail")
+@onready var LOS = owner.get_node("LineOfSight")
 @export var in_range_distance = 50.0
 
 func Enter():
@@ -19,8 +20,7 @@ func Update(delta):
 	if player:
 		var player_position = player.get_global_position()
 		var owner_position = owner.get_global_position()
-		if owner_position.distance_to(player_position) < in_range_distance:
-			print_debug("In Attack Range")
+		if owner_position.distance_to(player_position) < in_range_distance and LOS.check_los():
 			Transitioned.emit(self, "AttackState")
 
 func Physics_Update(delta):

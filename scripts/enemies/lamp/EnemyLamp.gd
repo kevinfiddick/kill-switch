@@ -73,13 +73,12 @@ func angle_diff_degrees(a: Vector2, b: Vector2):
 
 func reset_rotation():
 	set_rotation_degrees(0.0)
+	SPRITE.set_rotation_degrees(0.0)
 
-func set_attack_direction(new_direction):
-		var curr_direction = get_curr_direction()  # Get the current direction
-		var angle_change = angle_diff_degrees(curr_direction, new_direction)
-		var new_rotation = get_rotation_degrees() + angle_change
-		set_rotation_degrees(new_rotation)  # Apply the new rotation to the sprite
-		
+func set_attack_direction(direction):
+	var new_rotation = direction.angle() + PI
+	set_rotation(new_rotation)  # Apply the new rotation to the sprite
+	SPRITE.set_rotation(0 - new_rotation)
 
 func _process(delta: float) -> void:
 	if not dead:
