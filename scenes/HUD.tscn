@@ -71,3 +71,51 @@ size_flags_vertical = 0
 
 [node name="SecondaryCDTimer" type="Timer" parent="PanelContainer/MarginContainer/VBoxContainer/SecondaryCDRef/SecondaryCD"]
 one_shot = true
+
+[node name="Special1CDRef" type="ReferenceRect" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 10)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+border_color = Color(0, 0, 0, 1)
+border_width = 0.0
+
+[node name="Special1CD" type="ColorRect" parent="PanelContainer/MarginContainer/VBoxContainer/Special1CDRef"]
+custom_minimum_size = Vector2(25, 2)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -5.0
+offset_right = 50.0
+offset_bottom = -3.0
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Special1CDTimer" type="Timer" parent="PanelContainer/MarginContainer/VBoxContainer/Special1CDRef/Special1CD"]
+one_shot = true
+
+[node name="Special2CDRef" type="ReferenceRect" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 10)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+border_color = Color(0, 0, 0, 1)
+border_width = 0.0
+
+[node name="Special2CD" type="ColorRect" parent="PanelContainer/MarginContainer/VBoxContainer/Special2CDRef"]
+custom_minimum_size = Vector2(25, 2)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -5.0
+offset_right = 50.0
+offset_bottom = -3.0
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Special2CDTimer" type="Timer" parent="PanelContainer/MarginContainer/VBoxContainer/Special2CDRef/Special2CD"]
+one_shot = true

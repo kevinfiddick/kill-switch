@@ -5,7 +5,11 @@ extends Node2D
 const BASE_ATTACK_SPEED = 35 # ticks between shots
 const DAMAGE = 20
 
-var last_shot = BASE_ATTACK_SPEED
+signal special_1_used
+
+@export var attack_speed: int = BASE_ATTACK_SPEED
+
+var last_shot = attack_speed
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,12 +24,13 @@ func _process(delta: float) -> void:
 		scale.y = 1
 		
 	# Primary fire shoots projectile
-	if Input.is_action_pressed("primary_fire"):
-		if last_shot < BASE_ATTACK_SPEED: return
+	if Input.is_action_pressed("special_1"):
+		if last_shot < attack_speed: return
 		else: last_shot = 0
 		
+		special_1_used.emit()
+		
 		animation_player.play("attack")
-
 
 func _physics_process(_delta: float) -> void:
 	last_shot += 1
