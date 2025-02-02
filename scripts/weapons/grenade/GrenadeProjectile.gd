@@ -46,7 +46,8 @@ func _physics_process(delta: float) -> void:
 					shrapnel_instance.scale.y = -1
 				else:
 					shrapnel_instance.scale.y = 1
-			sound_player.play()
+			if sound_player != null:
+				sound_player.play()
 			queue_free()
 			pass
 		

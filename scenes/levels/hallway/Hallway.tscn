@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" path="res://scenes/PlayerCamera.tscn" id="2_krbpa"]
 [ext_resource type="PackedScene" uid="uid://d0nma1jf6jsj4" path="res://scenes/levels/hallway/Stairs.tscn" id="2_trgas"]
 [ext_resource type="PackedScene" uid="uid://bxis7vrl8y14c" path="res://scenes/fight-rooms/FightRoom.tscn" id="4_y34ep"]
+[ext_resource type="PackedScene" uid="uid://b2yexskmjnho3" path="res://scenes/levels/office/Office.tscn" id="6_5v4h8"]
 [ext_resource type="PackedScene" uid="uid://bj5lojgbfnuxx" path="res://scenes/Interaction.tscn" id="6_jf5xx"]
 [ext_resource type="PackedScene" uid="uid://c18xey7ps4wji" path="res://scenes/fight-rooms/Objective.tscn" id="8_k2y1v"]
-[ext_resource type="PackedScene" uid="uid://c0h1yc846ndk2" path="res://scenes/TestLevel.tscn" id="8_rqja5"]
 [ext_resource type="SpriteFrames" uid="uid://cdy1sfra7ry1h" path="res://test_animated_sprite.tres" id="9_lptqn"]
 [ext_resource type="Texture2D" uid="uid://bo7xm7gmyj48p" path="res://icon.svg" id="10_1aq4m"]
 
@@ -37,7 +37,7 @@ position = Vector2(-319, -203)
 position = Vector2(637, -243)
 fight_room = NodePath("..")
 interaction = NodePath("Interaction")
-transition_to_scene = ExtResource("8_rqja5")
+transition_to_scene = ExtResource("6_5v4h8")
 
 [node name="Interaction" parent="FightRoom/RightDoor" node_paths=PackedStringArray("area_ref") instance=ExtResource("6_jf5xx")]
 area_ref = NodePath("..")
