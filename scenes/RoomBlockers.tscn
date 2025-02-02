@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://5jblmmslcm8a"]
+
+[ext_resource type="Script" path="res://scripts/RoomBlockers.gd" id="1_okxw2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e5ch"]
+size = Vector2(32, 32)
+
+[node name="RoomBlockers" type="StaticBody2D"]
+script = ExtResource("1_okxw2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0e5ch")

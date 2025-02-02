@@ -11,6 +11,7 @@ extends CanvasLayer
 
 var text_count = 0
 
+
 func _ready() -> void:
 	interact_ref.connect("interact", _on_interact)
 	texture_rect.texture = dialogue_icon
