@@ -8,6 +8,7 @@ const TICKS_TO_EXPIRE: int = 600
 const NUMBER_SHRAPNEL: int = 16
 
 @export var end_position: Vector2
+@export var sound_player: AudioStreamPlayer2D
 @onready var SPRITE = $Sprite2D
 
 var ticks = 0
@@ -45,6 +46,7 @@ func _physics_process(delta: float) -> void:
 					shrapnel_instance.scale.y = -1
 				else:
 					shrapnel_instance.scale.y = 1
+			sound_player.play()
 			queue_free()
 			pass
 		
