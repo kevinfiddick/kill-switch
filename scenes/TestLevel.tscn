@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://c0h1yc846ndk2"]
+[gd_scene load_steps=30 format=4 uid="uid://c0h1yc846ndk2"]
 
 [ext_resource type="Script" path="res://scripts/Game.gd" id="1_nkdow"]
 [ext_resource type="Texture2D" uid="uid://bio0cehn3s4gk" path="res://assets/sprites/Simple interior sprite sheet.png" id="1_osbuq"]
@@ -20,6 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://3xj1lqb6opqu" path="res://assets/sprites/enemies/lamp_enemy_dead.png" id="15_r0l2t"]
 [ext_resource type="SpriteFrames" uid="uid://cdy1sfra7ry1h" path="res://test_animated_sprite.tres" id="17_bavgg"]
 [ext_resource type="PackedScene" uid="uid://ryfya3rw863f" path="res://scenes/fight-rooms/RoomTrigger.tscn" id="18_jss4r"]
+[ext_resource type="PackedScene" uid="uid://cbq5cqvirqair" path="res://scenes/levels/bedroom/Door.tscn" id="21_46cux"]
+[ext_resource type="PackedScene" uid="uid://caue5yrw2kqe4" path="res://scenes/levels/hallway/Hallway.tscn" id="22_lo0o4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fq6nj"]
 texture = ExtResource("1_osbuq")
@@ -338,3 +340,11 @@ fight_room = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FightRoom/RoomTrigger"]
 shape = SubResource("RectangleShape2D_5w07u")
+
+[node name="Door" parent="." node_paths=PackedStringArray("interaction") instance=ExtResource("21_46cux")]
+position = Vector2(330, 352)
+interaction = NodePath("Interaction")
+transition_to_scene = ExtResource("22_lo0o4")
+
+[node name="Interaction" parent="Door" node_paths=PackedStringArray("area_ref") instance=ExtResource("10_heek6")]
+area_ref = NodePath("..")
