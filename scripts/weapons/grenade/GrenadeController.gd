@@ -7,6 +7,7 @@ const RANGE: float = 100.0 # px ?
 signal secondary_used
 
 @export var attack_speed: int = BASE_ATTACK_SPEED
+@onready var grenade_throw: AudioStreamPlayer2D = $GrenadeThrow
 
 var last_shot = attack_speed
 
@@ -33,6 +34,7 @@ func _process(_delta: float) -> void:
 		var projectile_instance = PROJECTILE.instantiate()
 		projectile_instance.end_position = get_global_mouse_position()
 		get_tree().root.add_child(projectile_instance)
+		grenade_throw.play()
 		projectile_instance.global_position = global_position
 		projectile_instance.rotation_degrees = rotation_degrees
 		if rotation_degrees > 90 and rotation_degrees < 270:
