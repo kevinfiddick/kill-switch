@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cs522bqt8rsfi" path="res://scenes/Interaction.tscn" id="1_ajawo"]
 [ext_resource type="Texture2D" uid="uid://cpv0x8wvkbuc0" path="res://assets/sprites/levels/bedroom/tv.png" id="1_ykbbd"]
-[ext_resource type="PackedScene" path="res://scenes/Dialogue.tscn" id="2_0jrm7"]
+[ext_resource type="PackedScene" uid="uid://jimiv81dvvfp" path="res://scenes/Dialogue.tscn" id="2_0jrm7"]
 [ext_resource type="Texture2D" uid="uid://cmsuwwpuy44nx" path="res://assets/sprites/levels/bedroom/lore-letter-icon.png" id="3_82uuw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m0u3w"]
