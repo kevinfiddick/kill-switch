@@ -1,0 +1,72 @@
+[gd_scene load_steps=34 format=3 uid="uid://bcaw77tu5lob"]
+
+[ext_resource type="AudioStream" uid="uid://c4e1dgwqyaa0b" path="res://assets/sounds/pews/pew 1-shooting sound 2.mp3" id="1_s7hl7"]
+[ext_resource type="AudioStream" uid="uid://c7hv37rq3qflx" path="res://assets/sounds/pews/pew 2-shooting sound 2.mp3" id="2_gys40"]
+[ext_resource type="AudioStream" uid="uid://d3hl5nx23e5eo" path="res://assets/sounds/pews/pew 3-shooting sound 2.mp3" id="3_3s4fj"]
+[ext_resource type="AudioStream" uid="uid://dp84vg720u2tb" path="res://assets/sounds/pews/pew 11-shooting sound 2.mp3" id="3_haf3q"]
+[ext_resource type="AudioStream" uid="uid://bdy2kcfl0x8te" path="res://assets/sounds/pews/pew 12-shooting sound 2.mp3" id="4_kbvew"]
+[ext_resource type="AudioStream" uid="uid://bbofe1fvxn8tq" path="res://assets/sounds/pews/pew 13-shooting sound 2.mp3" id="5_304rh"]
+[ext_resource type="AudioStream" uid="uid://de1exlrcnr16y" path="res://assets/sounds/pews/pew 14-shooting sound 2.mp3" id="6_sfgfn"]
+[ext_resource type="AudioStream" uid="uid://cbxe4c4momeb1" path="res://assets/sounds/pews/pew 15-shooting sound 2.mp3" id="7_ukr1y"]
+[ext_resource type="AudioStream" uid="uid://xwlov0brv1wo" path="res://assets/sounds/pews/pew 16-shooting sound 2.mp3" id="8_sar7d"]
+[ext_resource type="AudioStream" uid="uid://b5bcje1tfnpj8" path="res://assets/sounds/pews/pew 17-shooting sound 2.mp3" id="9_xjomn"]
+[ext_resource type="AudioStream" uid="uid://c1ulcw14yci8c" path="res://assets/sounds/pews/pew 18-shooting sound 2.mp3" id="10_wlg4o"]
+[ext_resource type="AudioStream" uid="uid://b1blweleccqhl" path="res://assets/sounds/pews/pew 19-shooting sound 2.mp3" id="11_xsv81"]
+[ext_resource type="AudioStream" uid="uid://c7gdfl3v873gi" path="res://assets/sounds/pews/pew 20-shooting sound 2.mp3" id="12_o7hcm"]
+[ext_resource type="AudioStream" uid="uid://cj01ymqxrkv41" path="res://assets/sounds/pews/pew 21-shooting sound 2.mp3" id="14_csbm6"]
+[ext_resource type="AudioStream" uid="uid://glukx7ugw5bg" path="res://assets/sounds/pews/pew 22-shooting sound 2.mp3" id="15_s51ho"]
+[ext_resource type="AudioStream" uid="uid://bvkxscq35niue" path="res://assets/sounds/pews/pew 23-shooting sound 2.mp3" id="16_1yo4b"]
+[ext_resource type="AudioStream" uid="uid://bu27laybbenam" path="res://assets/sounds/pews/pew 24-shooting sound 2.mp3" id="17_qypu5"]
+[ext_resource type="AudioStream" uid="uid://dioniuttwwp7g" path="res://assets/sounds/pews/pew 25-shooting sound 2.mp3" id="18_sdi2a"]
+[ext_resource type="AudioStream" uid="uid://cwvo5qxhxd2mp" path="res://assets/sounds/pews/pew 26-shooting sound 2.mp3" id="19_lsmpw"]
+[ext_resource type="AudioStream" uid="uid://b4xddc4uyqpw3" path="res://assets/sounds/pews/pew 27-shooting sound 2.mp3" id="20_qn2ri"]
+[ext_resource type="AudioStream" uid="uid://355ierqosap1" path="res://assets/sounds/pews/pew 28-shooting sound 2.mp3" id="21_i7wui"]
+[ext_resource type="AudioStream" uid="uid://cha8kjcsjckxj" path="res://assets/sounds/pews/pew 29-shooting sound 2.mp3" id="22_o0er3"]
+[ext_resource type="AudioStream" uid="uid://1ewbbsys64dc" path="res://assets/sounds/pews/pew 30-shooting sound 2.mp3" id="23_gflu3"]
+[ext_resource type="AudioStream" uid="uid://gnli5ir31xo" path="res://assets/sounds/pews/pew 4-shooting sound 2.mp3" id="24_2n1w2"]
+[ext_resource type="AudioStream" uid="uid://bwwgfkydjxyis" path="res://assets/sounds/pews/pew 31-shooting sound 2.mp3" id="25_5h6ut"]
+[ext_resource type="AudioStream" uid="uid://da52g5nafxrn3" path="res://assets/sounds/pews/pew 32-shooting sound 2.mp3" id="26_pl731"]
+[ext_resource type="AudioStream" uid="uid://d14rcndclxe2l" path="res://assets/sounds/pews/pew 5-shooting sound 2.mp3" id="27_ujmqx"]
+[ext_resource type="AudioStream" uid="uid://chflar2ohkyci" path="res://assets/sounds/pews/pew 6-shooting sound 2.mp3" id="28_ule2o"]
+[ext_resource type="AudioStream" uid="uid://dpe2a7nxm8xqq" path="res://assets/sounds/pews/pew 7-shooting sound 2.mp3" id="29_u0ekd"]
+[ext_resource type="AudioStream" uid="uid://bq6shb0awebn6" path="res://assets/sounds/pews/pew 8-shooting sound 2.mp3" id="30_ayol1"]
+[ext_resource type="AudioStream" uid="uid://c1rkgde7hua7n" path="res://assets/sounds/pews/pew 9-shooting sound 2.mp3" id="31_1h0gu"]
+[ext_resource type="AudioStream" uid="uid://qfgs6hh2u2xr" path="res://assets/sounds/pews/pew 10-shooting sound 2.mp3" id="32_qkmse"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_evqp8"]
+streams_count = 32
+stream_0/stream = ExtResource("1_s7hl7")
+stream_1/stream = ExtResource("2_gys40")
+stream_2/stream = ExtResource("3_3s4fj")
+stream_3/stream = ExtResource("24_2n1w2")
+stream_4/stream = ExtResource("27_ujmqx")
+stream_5/stream = ExtResource("28_ule2o")
+stream_6/stream = ExtResource("29_u0ekd")
+stream_7/stream = ExtResource("30_ayol1")
+stream_8/stream = ExtResource("31_1h0gu")
+stream_9/stream = ExtResource("32_qkmse")
+stream_10/stream = ExtResource("3_haf3q")
+stream_11/stream = ExtResource("4_kbvew")
+stream_12/stream = ExtResource("5_304rh")
+stream_13/stream = ExtResource("6_sfgfn")
+stream_14/stream = ExtResource("7_ukr1y")
+stream_15/stream = ExtResource("8_sar7d")
+stream_16/stream = ExtResource("9_xjomn")
+stream_17/stream = ExtResource("10_wlg4o")
+stream_18/stream = ExtResource("11_xsv81")
+stream_19/stream = ExtResource("12_o7hcm")
+stream_20/stream = ExtResource("14_csbm6")
+stream_21/stream = ExtResource("15_s51ho")
+stream_22/stream = ExtResource("16_1yo4b")
+stream_23/stream = ExtResource("17_qypu5")
+stream_24/stream = ExtResource("18_sdi2a")
+stream_25/stream = ExtResource("19_lsmpw")
+stream_26/stream = ExtResource("20_qn2ri")
+stream_27/stream = ExtResource("21_i7wui")
+stream_28/stream = ExtResource("22_o0er3")
+stream_29/stream = ExtResource("23_gflu3")
+stream_30/stream = ExtResource("25_5h6ut")
+stream_31/stream = ExtResource("26_pl731")
+
+[node name="GunSound" type="AudioStreamPlayer2D"]
+stream = SubResource("AudioStreamRandomizer_evqp8")

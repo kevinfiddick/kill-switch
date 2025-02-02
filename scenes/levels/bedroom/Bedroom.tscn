@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cbq5cqvirqair" path="res://scenes/levels/bedroom/Door.tscn" id="5_r6uyj"]
 [ext_resource type="AudioStream" uid="uid://bkh5k8xpeo0ko" path="res://assets/sounds/Bedroom/Intro.mp3" id="9_b6ely"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Bedroom Level" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -1595.0
@@ -43,6 +43,7 @@ visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("9_b6ely")
 volume_db = -20.0
 autoplay = true

@@ -1,12 +1,43 @@
-[gd_scene load_steps=3 format=3 uid="uid://chjsr61h22cyl"]
+[gd_scene load_steps=7 format=3 uid="uid://chjsr61h22cyl"]
 
+[ext_resource type="PackedScene" uid="uid://cs522bqt8rsfi" path="res://scenes/Interaction.tscn" id="1_ajawo"]
 [ext_resource type="Texture2D" uid="uid://cpv0x8wvkbuc0" path="res://assets/sprites/levels/bedroom/tv.png" id="1_ykbbd"]
+[ext_resource type="PackedScene" path="res://scenes/Dialogue.tscn" id="2_0jrm7"]
+[ext_resource type="Texture2D" uid="uid://cmsuwwpuy44nx" path="res://assets/sprites/levels/bedroom/lore-letter-icon.png" id="3_82uuw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0u3w"]
+size = Vector2(196, 95)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ynce"]
 size = Vector2(206.5, 44)
 
 [node name="TV" type="StaticBody2D"]
 z_index = 2
+
+[node name="Interaction" parent="." node_paths=PackedStringArray("area_ref") instance=ExtResource("1_ajawo")]
+position = Vector2(19, 109.5)
+area_ref = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="Interaction"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction/Area2D"]
+shape = SubResource("RectangleShape2D_m0u3w")
+
+[node name="Dialogue" parent="Interaction" node_paths=PackedStringArray("interact_ref") instance=ExtResource("2_0jrm7")]
+interact_ref = NodePath("..")
+dialogue_icon = ExtResource("3_82uuw")
+dialogue_text = "A letter from your husband:
+—————————————————
+I’m so sorry. I know things got… out of hand. Turning you into a lamp wasn’t part of the plan—I just wanted you to see things from my perspective! But now you’re throwing light bulbs at me, and the kids are using their power cords like whips. Honestly, it’s a bit much.
+
+Before I left, I tried to tell you how to fix this. The AI’s control is spreading, and it’s using every smart device plugged into the outlets to take over the house—and probably the world. You need to destroy all the smart devices and plug yourself into the outlets to restore control. You’re the only one who can do this.
+
+Again, I’m sorry. You’re the light of my world and I love you
+Good luck.
+
+P.S. Watch out for the blender in the kitchen. He’s gone rouge.
+
+————————————————— "
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ykbbd")
