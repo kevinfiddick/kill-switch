@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://da0klhtkfpfav"
+path="res://.godot/imported/Blender death sfx.mp3-cd8b98292145f983a5fb9efee9ca12aa.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/blender/Blender death sfx.mp3"
+dest_files=["res://.godot/imported/Blender death sfx.mp3-cd8b98292145f983a5fb9efee9ca12aa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
