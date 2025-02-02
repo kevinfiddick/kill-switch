@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3w1y4e51ffob"
+path="res://.godot/imported/Lamp death sfx.mp3-06a234e1ac57401e7b65aca581878327.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/lamp/Lamp death sfx.mp3"
+dest_files=["res://.godot/imported/Lamp death sfx.mp3-06a234e1ac57401e7b65aca581878327.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
