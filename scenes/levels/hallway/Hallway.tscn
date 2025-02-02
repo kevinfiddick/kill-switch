@@ -1,32 +1,90 @@
-[gd_scene load_steps=6 format=3 uid="uid://caue5yrw2kqe4"]
+[gd_scene load_steps=13 format=3 uid="uid://caue5yrw2kqe4"]
 
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="1_1ioms"]
 [ext_resource type="PackedScene" uid="uid://bcc2tn5bruqeb" path="res://scenes/levels/hallway/HallwayBackground.tscn" id="1_dof6n"]
 [ext_resource type="PackedScene" uid="uid://cbq5cqvirqair" path="res://scenes/levels/bedroom/Door.tscn" id="2_2i63k"]
-[ext_resource type="PackedScene" uid="uid://c0qem71h0llyd" path="res://scenes/PlayerCamera.tscn" id="2_krbpa"]
+[ext_resource type="PackedScene" path="res://scenes/PlayerCamera.tscn" id="2_krbpa"]
 [ext_resource type="PackedScene" uid="uid://d0nma1jf6jsj4" path="res://scenes/levels/hallway/Stairs.tscn" id="2_trgas"]
+[ext_resource type="PackedScene" uid="uid://bxis7vrl8y14c" path="res://scenes/fight-rooms/FightRoom.tscn" id="4_y34ep"]
+[ext_resource type="PackedScene" uid="uid://b4rcijuvagy4h" path="res://scenes/levels/bedroom/Bedroom.tscn" id="6_8ywr1"]
+[ext_resource type="PackedScene" uid="uid://bj5lojgbfnuxx" path="res://scenes/Interaction.tscn" id="6_jf5xx"]
+[ext_resource type="PackedScene" uid="uid://c18xey7ps4wji" path="res://scenes/fight-rooms/Objective.tscn" id="8_k2y1v"]
+[ext_resource type="SpriteFrames" uid="uid://cdy1sfra7ry1h" path="res://test_animated_sprite.tres" id="9_lptqn"]
+[ext_resource type="Texture2D" uid="uid://bo7xm7gmyj48p" path="res://icon.svg" id="10_1aq4m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f68iq"]
+size = Vector2(128, 128)
 
 [node name="Hallway" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -2362.0
-offset_top = -1554.0
-offset_right = 2393.0
-offset_bottom = 1584.0
+offset_left = -2370.0
+offset_top = -1621.0
+offset_right = 2385.0
+offset_bottom = 1517.0
 color = Color(0, 0, 0, 1)
+
+[node name="HallwayBackground" parent="." instance=ExtResource("1_dof6n")]
 
 [node name="Player" parent="." instance=ExtResource("1_1ioms")]
 position = Vector2(-319, -203)
 
 [node name="Camera2D" parent="Player" instance=ExtResource("2_krbpa")]
 
-[node name="HallwayBackground" parent="." instance=ExtResource("1_dof6n")]
+[node name="FightRoom" parent="." instance=ExtResource("4_y34ep")]
 
-[node name="Door" parent="." instance=ExtResource("2_2i63k")]
+[node name="LeftDoor" parent="FightRoom" node_paths=PackedStringArray("fight_room", "interaction") instance=ExtResource("2_2i63k")]
 position = Vector2(-377, -243)
+fight_room = NodePath("..")
+interaction = NodePath("Interaction")
+transition_to_scene = ExtResource("6_8ywr1")
 
-[node name="Door2" parent="." instance=ExtResource("2_2i63k")]
+[node name="Interaction" parent="FightRoom/LeftDoor" node_paths=PackedStringArray("area_ref") instance=ExtResource("6_jf5xx")]
+area_ref = NodePath("..")
+
+[node name="RightDoor" parent="FightRoom" node_paths=PackedStringArray("fight_room", "interaction") instance=ExtResource("2_2i63k")]
 position = Vector2(637, -243)
+fight_room = NodePath("..")
+interaction = NodePath("Interaction")
 
-[node name="Stairs" parent="." instance=ExtResource("2_trgas")]
+[node name="Interaction" parent="FightRoom/RightDoor" node_paths=PackedStringArray("area_ref") instance=ExtResource("6_jf5xx")]
+area_ref = NodePath("..")
+
+[node name="Stairs" parent="FightRoom" instance=ExtResource("2_trgas")]
 z_index = 3
+
+[node name="Objective" parent="FightRoom" node_paths=PackedStringArray("fight_room", "objective_sprite", "destroyed_sprite") instance=ExtResource("8_k2y1v")]
+position = Vector2(-63, -327)
+fight_room = NodePath("..")
+objective_sprite = NodePath("ObjectiveSprite")
+destroyed_sprite = NodePath("DestroyedSprite")
+
+[node name="ObjectiveSprite" type="AnimatedSprite2D" parent="FightRoom/Objective"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("9_lptqn")
+
+[node name="DestroyedSprite" type="Sprite2D" parent="FightRoom/Objective"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_1aq4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FightRoom/Objective"]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_f68iq")
+
+[node name="Objective2" parent="FightRoom" node_paths=PackedStringArray("fight_room", "objective_sprite", "destroyed_sprite") instance=ExtResource("8_k2y1v")]
+position = Vector2(201, -327)
+fight_room = NodePath("..")
+objective_sprite = NodePath("ObjectiveSprite")
+destroyed_sprite = NodePath("DestroyedSprite")
+
+[node name="ObjectiveSprite" type="AnimatedSprite2D" parent="FightRoom/Objective2"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("9_lptqn")
+
+[node name="DestroyedSprite" type="Sprite2D" parent="FightRoom/Objective2"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_1aq4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FightRoom/Objective2"]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_f68iq")

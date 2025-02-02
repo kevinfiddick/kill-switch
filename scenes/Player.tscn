@@ -1,14 +1,24 @@
-[gd_scene load_steps=26 format=3 uid="uid://c2160l6nbot3u"]
+[gd_scene load_steps=33 format=3 uid="uid://c2160l6nbot3u"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_6ykmx"]
 [ext_resource type="PackedScene" uid="uid://ducuap6fxn2su" path="res://scenes/weapons/primary/PrimaryWeapon.tscn" id="3_xwcbc"]
+[ext_resource type="Texture2D" uid="uid://40fbnoyqfjcs" path="res://assets/sprites/player/player_death.png" id="4_4h7ht"]
 [ext_resource type="PackedScene" uid="uid://dhee5osoh26s3" path="res://scenes/weapons/grenade/GrenadeController.tscn" id="4_r2l2v"]
 [ext_resource type="Texture2D" uid="uid://eu7phvumyog0" path="res://assets/sprites/player/lamp_chick_walking.png" id="5_184p7"]
 [ext_resource type="PackedScene" uid="uid://cg2j6hgvxv842" path="res://scenes/HUD.tscn" id="5_urac5"]
 [ext_resource type="Texture2D" uid="uid://dg3p4mql38kox" path="res://GradientLighting.tres" id="6_du2i2"]
+[ext_resource type="PackedScene" uid="uid://cveemh0qwmwsw" path="res://scenes/menus/PlayerDeathScreen.tscn" id="8_diojh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d2tsv"]
 height = 46.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stwfa"]
+atlas = ExtResource("4_4h7ht")
+region = Rect2(0, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvlk5"]
+atlas = ExtResource("4_4h7ht")
+region = Rect2(72, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2dfj3"]
 atlas = ExtResource("5_184p7")
@@ -80,6 +90,17 @@ region = Rect2(256, 64, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7sqig"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stwfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvlk5")
+}],
+"loop": true,
+"name": &"death",
+"speed": 6.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2dfj3")
@@ -157,6 +178,46 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="Animation" id="Animation_ww3yy"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_43p5c"]
+resource_name = "death"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"death"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerDeathScreen")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"pause"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nam6c"]
+_data = {
+"RESET": SubResource("Animation_ww3yy"),
+"death": SubResource("Animation_43p5c")
+}
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
 collision_layer = 2
@@ -176,7 +237,7 @@ one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7sqig")
-animation = &"idle"
+animation = &"death"
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 scale = Vector2(7.22656, 7.22656)
@@ -184,3 +245,11 @@ texture = ExtResource("6_du2i2")
 
 [node name="PrimaryWeapon" parent="." instance=ExtResource("3_xwcbc")]
 position = Vector2(1, -2)
+
+[node name="PlayerDeathScreen" parent="." instance=ExtResource("8_diojh")]
+process_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nam6c")
+}

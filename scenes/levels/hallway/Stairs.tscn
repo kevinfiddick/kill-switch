@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0nma1jf6jsj4"]
+[gd_scene load_steps=4 format=3 uid="uid://d0nma1jf6jsj4"]
 
-[ext_resource type="PackedScene" uid="uid://cs522bqt8rsfi" path="res://scenes/Interaction.tscn" id="1_ydhtc"]
 [ext_resource type="Texture2D" uid="uid://wedh73tljb7m" path="res://assets/sprites/levels/hallway/Railing.png" id="2_p6wva"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73a8q"]
@@ -10,10 +9,6 @@ size = Vector2(1277.5, 119.5)
 size = Vector2(155, 223)
 
 [node name="Stairs" type="StaticBody2D"]
-
-[node name="Interaction" parent="." node_paths=PackedStringArray("area_ref") instance=ExtResource("1_ydhtc")]
-position = Vector2(576, 43)
-area_ref = NodePath("../Area2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_p6wva")

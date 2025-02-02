@@ -9,6 +9,7 @@ var heal_rate = 0.0
 @onready var HUD = $HUD
 @onready var invincibility_timer = $InvincibilityCD
 @onready var SPRITE = $AnimatedSprite2D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var primary_weapon: Node2D
 var secondary_weapon: Node2D
@@ -78,6 +79,8 @@ func on_take_damage(damage: float) -> void:
 	current_health -= damage
 	if current_health <= 0:
 		current_health = 0
+		
+		animation_player.play("death")
 	
 	HUD.set_health_percent(current_health / MAX_HEALTH)
 
@@ -114,3 +117,8 @@ func begin_heal() -> void:
 func end_heal() -> void:
 	print_debug("Ending heal")
 	heal_rate = 0.0
+
+
+func death() -> void:
+	print_debug("Player death")
+	SPRITE.animation = "death"
