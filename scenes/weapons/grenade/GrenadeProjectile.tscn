@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bm4q6vcpqdgdo"]
 
 [ext_resource type="Script" path="res://scripts/weapons/grenade/GrenadeProjectile.gd" id="1_xdhrd"]
-[ext_resource type="Texture2D" uid="uid://dogk5q66gyfrh" path="res://assets/Light Bulb.png" id="2_wohu6"]
+[ext_resource type="Texture2D" uid="uid://dogk5q66gyfrh" path="res://assets/sprites/weapons/Light Bulb.png" id="2_wohu6"]
 [ext_resource type="Script" path="res://scripts/weapons/grenade/RotateSprite.gd" id="3_hb15k"]
 
 [sub_resource type="Gradient" id="Gradient_lxara"]

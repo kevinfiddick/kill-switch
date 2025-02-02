@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfknml4lya6k6"
-path="res://.godot/imported/Light Bulb Shrapnel.png-0a2be45d9084bb751e5821ed9fa927a2.ctex"
+uid="uid://dogk5q66gyfrh"
+path="res://.godot/imported/Light Bulb.png-a5d01fb8a310faf8e5df3be2ff4b1355.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Light Bulb Shrapnel.png"
-dest_files=["res://.godot/imported/Light Bulb Shrapnel.png-0a2be45d9084bb751e5821ed9fa927a2.ctex"]
+source_file="res://assets/sprites/weapons/Light Bulb.png"
+dest_files=["res://.godot/imported/Light Bulb.png-a5d01fb8a310faf8e5df3be2ff4b1355.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s6x255lgv5a8"
-path="res://.godot/imported/nightstand.png-ce52a1705b8d43dff106716c43d84ed6.ctex"
+uid="uid://3xj1lqb6opqu"
+path="res://.godot/imported/lamp_enemy_dead.png-c8232a54c3bc0f0cfc64654234ee89ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/LEVELS/bedroom/nightstand.png"
-dest_files=["res://.godot/imported/nightstand.png-ce52a1705b8d43dff106716c43d84ed6.ctex"]
+source_file="res://assets/sprites/enemies/lamp_enemy_dead.png"
+dest_files=["res://.godot/imported/lamp_enemy_dead.png-c8232a54c3bc0f0cfc64654234ee89ee.ctex"]
 
 [params]
 

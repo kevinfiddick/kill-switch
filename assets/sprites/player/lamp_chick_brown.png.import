@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpv0x8wvkbuc0"
-path="res://.godot/imported/tv.png-97cda6c0baac5abfb9c4140ab97a0638.ctex"
+uid="uid://b3faj8mtbi3xx"
+path="res://.godot/imported/lamp_chick_brown.png-eeadc80f1943c23ac9d851fb8bba11e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/LEVELS/bedroom/tv.png"
-dest_files=["res://.godot/imported/tv.png-97cda6c0baac5abfb9c4140ab97a0638.ctex"]
+source_file="res://assets/sprites/player/lamp_chick_brown.png"
+dest_files=["res://.godot/imported/lamp_chick_brown.png-eeadc80f1943c23ac9d851fb8bba11e2.ctex"]
 
 [params]
 

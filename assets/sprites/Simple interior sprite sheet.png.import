@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eu7phvumyog0"
-path="res://.godot/imported/lamp_chick_walking.png-fd8e3733a70f057b2b345c10e0ba14ba.ctex"
+uid="uid://bio0cehn3s4gk"
+path="res://.godot/imported/Simple interior sprite sheet.png-c5a6857eec6189ddcf48c0e1906f5ceb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/lamp_chick_walking.png"
-dest_files=["res://.godot/imported/lamp_chick_walking.png-fd8e3733a70f057b2b345c10e0ba14ba.ctex"]
+source_file="res://assets/sprites/Simple interior sprite sheet.png"
+dest_files=["res://.godot/imported/Simple interior sprite sheet.png-c5a6857eec6189ddcf48c0e1906f5ceb.ctex"]
 
 [params]
 

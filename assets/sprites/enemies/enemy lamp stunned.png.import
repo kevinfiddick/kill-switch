@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq85j0ci8lrss"
-path="res://.godot/imported/bed.png-9916e107bef0e2f83580f9f5f243bea5.ctex"
+uid="uid://bvfd5bffdwg0m"
+path="res://.godot/imported/enemy lamp stunned.png-ddbcd71c24bdf277eb6c2dc7bd688b2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/LEVELS/bedroom/bed.png"
-dest_files=["res://.godot/imported/bed.png-9916e107bef0e2f83580f9f5f243bea5.ctex"]
+source_file="res://assets/sprites/enemies/enemy lamp stunned.png"
+dest_files=["res://.godot/imported/enemy lamp stunned.png-ddbcd71c24bdf277eb6c2dc7bd688b2d.ctex"]
 
 [params]
 

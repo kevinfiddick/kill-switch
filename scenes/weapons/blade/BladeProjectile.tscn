@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://nopvv78qfx45"]
 
 [ext_resource type="Script" path="res://scripts/weapons/blade/BladeProjectile.gd" id="1_4wlsf"]
-[ext_resource type="Texture2D" uid="uid://dls042obbp82k" path="res://assets/Blade.png" id="2_vsy7o"]
+[ext_resource type="Texture2D" uid="uid://dls042obbp82k" path="res://assets/sprites/weapons/Blade.png" id="2_vsy7o"]
 [ext_resource type="Script" path="res://scripts/weapons/grenade/RotateSprite.gd" id="3_vocht"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7wwsj"]

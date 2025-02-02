@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drbdoy1pw73xd"
-path="res://.godot/imported/plug_whip_idle.png-5bb30d17db72fe99f2cd525b853c52d0.ctex"
+uid="uid://ceo4fg8lq4rqy"
+path="res://.godot/imported/lamp_enemy_1.png-56ae7a00e28a60621836ed2563cedea4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/plug_whip_idle.png"
-dest_files=["res://.godot/imported/plug_whip_idle.png-5bb30d17db72fe99f2cd525b853c52d0.ctex"]
+source_file="res://assets/sprites/enemies/lamp_enemy_1.png"
+dest_files=["res://.godot/imported/lamp_enemy_1.png-56ae7a00e28a60621836ed2563cedea4.ctex"]
 
 [params]
 

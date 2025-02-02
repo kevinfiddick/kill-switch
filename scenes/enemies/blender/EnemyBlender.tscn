@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://b00lwkjbjs7xc"]
 
-[ext_resource type="Texture2D" uid="uid://4i50ijum181x" path="res://assets/blender_enemy.png" id="1_d4x5o"]
+[ext_resource type="Texture2D" uid="uid://4i50ijum181x" path="res://assets/sprites/enemies/blender_enemy.png" id="1_d4x5o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ykfy7"]
 radius = 15.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3faj8mtbi3xx"
-path="res://.godot/imported/lamp_chick_brown.png-4a723537682bc1e32195a43bf85b0fa7.ctex"
+uid="uid://4i50ijum181x"
+path="res://.godot/imported/blender_enemy.png-4fc12e3cd65f063041a4d5fcdeaa118f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/lamp_chick_brown.png"
-dest_files=["res://.godot/imported/lamp_chick_brown.png-4a723537682bc1e32195a43bf85b0fa7.ctex"]
+source_file="res://assets/sprites/enemies/blender_enemy.png"
+dest_files=["res://.godot/imported/blender_enemy.png-4fc12e3cd65f063041a4d5fcdeaa118f.ctex"]
 
 [params]
 

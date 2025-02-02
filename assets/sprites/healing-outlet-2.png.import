@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceo4fg8lq4rqy"
-path="res://.godot/imported/lamp_enemy_1.png-d1dca1851da5db0372415f2420ceb545.ctex"
+uid="uid://dijt3li8pvy05"
+path="res://.godot/imported/healing-outlet-2.png-d0278c31534718e5929fe15e45e6b368.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/lamp_enemy_1.png"
-dest_files=["res://.godot/imported/lamp_enemy_1.png-d1dca1851da5db0372415f2420ceb545.ctex"]
+source_file="res://assets/sprites/healing-outlet-2.png"
+dest_files=["res://.godot/imported/healing-outlet-2.png-d0278c31534718e5929fe15e45e6b368.ctex"]
 
 [params]
 

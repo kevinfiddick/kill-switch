@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bio0cehn3s4gk"
-path="res://.godot/imported/Simple interior sprite sheet.png-5ba373f0feea199d0a0c20ea1528a951.ctex"
+uid="uid://bdupwkhrksjcy"
+path="res://.godot/imported/whip attack.png-7194ebe1eb5775552e7cc7385d0bdc51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Simple interior sprite sheet.png"
-dest_files=["res://.godot/imported/Simple interior sprite sheet.png-5ba373f0feea199d0a0c20ea1528a951.ctex"]
+source_file="res://assets/sprites/whip attack.png"
+dest_files=["res://.godot/imported/whip attack.png-7194ebe1eb5775552e7cc7385d0bdc51.ctex"]
 
 [params]
 

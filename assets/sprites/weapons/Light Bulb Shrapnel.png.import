@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b577bonj15wda"
-path="res://.godot/imported/loose wires.png-d30b0215bc314fbbc94cc06ff276a8f3.ctex"
+uid="uid://cfknml4lya6k6"
+path="res://.godot/imported/Light Bulb Shrapnel.png-141a56f7f328bc41ba31451f793bfbb7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/loose wires.png"
-dest_files=["res://.godot/imported/loose wires.png-d30b0215bc314fbbc94cc06ff276a8f3.ctex"]
+source_file="res://assets/sprites/weapons/Light Bulb Shrapnel.png"
+dest_files=["res://.godot/imported/Light Bulb Shrapnel.png-141a56f7f328bc41ba31451f793bfbb7.ctex"]
 
 [params]
 

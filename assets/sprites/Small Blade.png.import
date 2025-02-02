@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dogk5q66gyfrh"
-path="res://.godot/imported/Light Bulb.png-cefdc76c0ec408345866f7a4dd7f503b.ctex"
+uid="uid://w8ou7d4ywmeq"
+path="res://.godot/imported/Small Blade.png-b847b5a91e80914685d16207b66f77a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Light Bulb.png"
-dest_files=["res://.godot/imported/Light Bulb.png-cefdc76c0ec408345866f7a4dd7f503b.ctex"]
+source_file="res://assets/sprites/Small Blade.png"
+dest_files=["res://.godot/imported/Small Blade.png-b847b5a91e80914685d16207b66f77a4.ctex"]
 
 [params]
 

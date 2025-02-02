@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdupwkhrksjcy"
-path="res://.godot/imported/whip attack.png-34d283313d5a6d79444f56cc76026646.ctex"
+uid="uid://dls042obbp82k"
+path="res://.godot/imported/Blade.png-ebe338389c2a0430f8736cf36ffebf4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/whip attack.png"
-dest_files=["res://.godot/imported/whip attack.png-34d283313d5a6d79444f56cc76026646.ctex"]
+source_file="res://assets/sprites/weapons/Blade.png"
+dest_files=["res://.godot/imported/Blade.png-ebe338389c2a0430f8736cf36ffebf4c.ctex"]
 
 [params]
 

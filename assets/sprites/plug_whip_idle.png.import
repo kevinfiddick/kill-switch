@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg4g1bngigwsf"
-path="res://.godot/imported/dresser.png-c2620f758ad2a9797a6b182462ea615f.ctex"
+uid="uid://drbdoy1pw73xd"
+path="res://.godot/imported/plug_whip_idle.png-6370d8ab93f5a382995e2614a022c756.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/LEVELS/bedroom/dresser.png"
-dest_files=["res://.godot/imported/dresser.png-c2620f758ad2a9797a6b182462ea615f.ctex"]
+source_file="res://assets/sprites/plug_whip_idle.png"
+dest_files=["res://.godot/imported/plug_whip_idle.png-6370d8ab93f5a382995e2614a022c756.ctex"]
 
 [params]
 

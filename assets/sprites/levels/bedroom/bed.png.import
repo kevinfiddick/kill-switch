@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dls042obbp82k"
-path="res://.godot/imported/Blade.png-38273a48d992e9ba260f5156f53c220b.ctex"
+uid="uid://bq85j0ci8lrss"
+path="res://.godot/imported/bed.png-206eed5bc897c93f9879e9ac720a38e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Blade.png"
-dest_files=["res://.godot/imported/Blade.png-38273a48d992e9ba260f5156f53c220b.ctex"]
+source_file="res://assets/sprites/levels/bedroom/bed.png"
+dest_files=["res://.godot/imported/bed.png-206eed5bc897c93f9879e9ac720a38e7.ctex"]
 
 [params]
 

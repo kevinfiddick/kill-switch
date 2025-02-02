@@ -1,7 +1,7 @@
-[gd_scene load_steps=27 format=4 uid="uid://c0h1yc846ndk2"]
+[gd_scene load_steps=28 format=4 uid="uid://c0h1yc846ndk2"]
 
 [ext_resource type="Script" path="res://scripts/Game.gd" id="1_nkdow"]
-[ext_resource type="Texture2D" uid="uid://bio0cehn3s4gk" path="res://assets/Simple interior sprite sheet.png" id="1_osbuq"]
+[ext_resource type="Texture2D" uid="uid://bio0cehn3s4gk" path="res://assets/sprites/Simple interior sprite sheet.png" id="1_osbuq"]
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="2_juyo5"]
 [ext_resource type="PackedScene" uid="uid://livwjhvch2l5" path="res://scenes/enemies/lamp/EnemyLamp.tscn" id="3_tf5gl"]
 [ext_resource type="PackedScene" uid="uid://btj2bihvk14tt" path="res://scenes/menus/PauseMenu.tscn" id="4_5ej2v"]
@@ -12,11 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://bj5lojgbfnuxx" path="res://scenes/Interaction.tscn" id="10_heek6"]
 [ext_resource type="PackedScene" uid="uid://7cama73mlqg2" path="res://scenes/Dialogue.tscn" id="11_g2l8e"]
 [ext_resource type="PackedScene" uid="uid://bxis7vrl8y14c" path="res://scenes/fight-rooms/FightRoom.tscn" id="12_5tuvr"]
+[ext_resource type="Texture2D" uid="uid://dijt3li8pvy05" path="res://assets/sprites/healing-outlet-2.png" id="12_jfkm5"]
 [ext_resource type="PackedScene" uid="uid://ouclaarxh7rq" path="res://scenes/HealingStation.tscn" id="12_y1hfw"]
 [ext_resource type="PackedScene" uid="uid://5jblmmslcm8a" path="res://scenes/fight-rooms/RoomBlockers.tscn" id="13_42833"]
 [ext_resource type="PackedScene" uid="uid://c18xey7ps4wji" path="res://scenes/fight-rooms/Objective.tscn" id="13_gfsrx"]
-[ext_resource type="Texture2D" uid="uid://ceo4fg8lq4rqy" path="res://assets/lamp_enemy_1.png" id="14_v6tid"]
-[ext_resource type="Texture2D" uid="uid://3xj1lqb6opqu" path="res://assets/lamp_enemy_dead.png" id="15_r0l2t"]
+[ext_resource type="Texture2D" uid="uid://ceo4fg8lq4rqy" path="res://assets/sprites/enemies/lamp_enemy_1.png" id="14_v6tid"]
+[ext_resource type="Texture2D" uid="uid://3xj1lqb6opqu" path="res://assets/sprites/enemies/lamp_enemy_dead.png" id="15_r0l2t"]
 [ext_resource type="SpriteFrames" uid="uid://bpaps68sjekfg" path="res://test_animated_sprite.tres" id="17_bavgg"]
 [ext_resource type="PackedScene" uid="uid://ryfya3rw863f" path="res://scenes/fight-rooms/RoomTrigger.tscn" id="18_jss4r"]
 
@@ -188,7 +189,6 @@ offset_bottom = 1497.0
 color = Color(0, 0, 0, 1)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -291,7 +291,7 @@ dialogue_text = "This is some cool text This is some cool text This is some cool
 text_speed = 5
 
 [node name="HealInteraction" parent="." node_paths=PackedStringArray("area_ref") instance=ExtResource("10_heek6")]
-position = Vector2(200, 48)
+position = Vector2(209, 47)
 area_ref = NodePath("Area2D")
 
 [node name="Area2D" type="Area2D" parent="HealInteraction"]
@@ -303,8 +303,7 @@ position = Vector2(0, 13.5)
 shape = SubResource("RectangleShape2D_6wamf")
 
 [node name="Sprite2D" type="Sprite2D" parent="HealInteraction"]
-scale = Vector2(0.5, 0.25)
-texture = ExtResource("8_cdbg1")
+texture = ExtResource("12_jfkm5")
 
 [node name="HealingStation" parent="HealInteraction" node_paths=PackedStringArray("interact_ref") instance=ExtResource("12_y1hfw")]
 interact_ref = NodePath("..")

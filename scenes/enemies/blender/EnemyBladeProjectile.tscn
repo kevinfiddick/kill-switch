@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cttj1j6v7nge0"]
 
-[ext_resource type="Texture2D" uid="uid://w8ou7d4ywmeq" path="res://assets/Small Blade.png" id="1_vhg2p"]
+[ext_resource type="Texture2D" uid="uid://w8ou7d4ywmeq" path="res://assets/sprites/Small Blade.png" id="1_vhg2p"]
 [ext_resource type="Script" path="res://scripts/weapons/grenade/RotateSprite.gd" id="2_nbre8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j2ewe"]

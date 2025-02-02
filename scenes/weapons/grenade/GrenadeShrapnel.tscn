@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ci5hcs8ndfpeb"]
 
 [ext_resource type="Script" path="res://scripts/weapons/grenade/GrenadeShrapnel.gd" id="1_x1wcg"]
-[ext_resource type="Texture2D" uid="uid://cfknml4lya6k6" path="res://assets/Light Bulb Shrapnel.png" id="2_xjrew"]
+[ext_resource type="Texture2D" uid="uid://cfknml4lya6k6" path="res://assets/sprites/weapons/Light Bulb Shrapnel.png" id="2_xjrew"]
 
 [sub_resource type="Gradient" id="Gradient_2iad5"]
 colors = PackedColorArray(1, 1, 1, 0.458824, 1, 1, 1, 0)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3xj1lqb6opqu"
-path="res://.godot/imported/lamp_enemy_dead.png-2e6d2c80a70304a7b8defa7bbd68f391.ctex"
+uid="uid://b577bonj15wda"
+path="res://.godot/imported/loose wires.png-66d2d6883ffdd856d01a83f812fbf949.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/lamp_enemy_dead.png"
-dest_files=["res://.godot/imported/lamp_enemy_dead.png-2e6d2c80a70304a7b8defa7bbd68f391.ctex"]
+source_file="res://assets/sprites/weapons/loose wires.png"
+dest_files=["res://.godot/imported/loose wires.png-66d2d6883ffdd856d01a83f812fbf949.ctex"]
 
 [params]
 

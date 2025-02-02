@@ -60,7 +60,8 @@ func _physics_process(_delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
 	if direction:
 		velocity = direction * SPEED
-		end_heal()
+		if heal_rate > 0:
+			end_heal()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)

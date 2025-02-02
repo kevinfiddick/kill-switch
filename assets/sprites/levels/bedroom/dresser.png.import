@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w8ou7d4ywmeq"
-path="res://.godot/imported/Small Blade.png-a9a0166303f72dd1d2be73b0043ac721.ctex"
+uid="uid://dg4g1bngigwsf"
+path="res://.godot/imported/dresser.png-5d28a327371b5274a6fece3b3035e537.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Small Blade.png"
-dest_files=["res://.godot/imported/Small Blade.png-a9a0166303f72dd1d2be73b0043ac721.ctex"]
+source_file="res://assets/sprites/levels/bedroom/dresser.png"
+dest_files=["res://.godot/imported/dresser.png-5d28a327371b5274a6fece3b3035e537.ctex"]
 
 [params]
 

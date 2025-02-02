@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4i50ijum181x"
-path="res://.godot/imported/blender_enemy.png-eaee4110d103f02852d0324afa64de1d.ctex"
+uid="uid://eu7phvumyog0"
+path="res://.godot/imported/lamp_chick_walking.png-bd1edb474688fffa232222ec04db1be4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/blender_enemy.png"
-dest_files=["res://.godot/imported/blender_enemy.png-eaee4110d103f02852d0324afa64de1d.ctex"]
+source_file="res://assets/sprites/player/lamp_chick_walking.png"
+dest_files=["res://.godot/imported/lamp_chick_walking.png-bd1edb474688fffa232222ec04db1be4.ctex"]
 
 [params]
 
