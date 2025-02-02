@@ -7,7 +7,7 @@ var objective_count = 0
 
 
 func _ready() -> void:
-	unlock_room()
+	lock_room()
 
 
 func add_objective() -> void:

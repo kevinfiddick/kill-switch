@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://jimiv81dvvfp"]
+[gd_scene load_steps=6 format=3 uid="uid://7cama73mlqg2"]
 
 [ext_resource type="Script" path="res://scripts/Dialogue.gd" id="1_g1cew"]
 [ext_resource type="AudioStream" uid="uid://crqq1311mr4jw" path="res://assets/sounds/lore moment/BGJ25_sfx_LoreMoment_01.mp3" id="2_vhdj3"]

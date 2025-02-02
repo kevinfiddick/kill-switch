@@ -11,6 +11,7 @@ extends CanvasLayer
 @export var text_speed: int
 @export var play_lore_sound: bool = true
 
+var is_open = false
 var text_count = 0
 
 
@@ -21,7 +22,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("dialogue_click"):
+	if Input.is_action_just_pressed("dialogue_click") and is_open:
 		end_dialogue()
 
 
@@ -34,8 +35,10 @@ func _on_interact(_player_ref: CharacterBody2D) -> void:
 func play_dialogue() -> void:
 	get_tree().paused = true
 	animation_player.play("show")
+	is_open = true
 
 
 func end_dialogue() -> void:
 	get_tree().paused = false
 	animation_player.play("RESET")
+	is_open = false
