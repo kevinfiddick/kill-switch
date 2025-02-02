@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://chjsr61h22cyl"]
+
+[ext_resource type="Texture2D" uid="uid://cpv0x8wvkbuc0" path="res://assets/sprites/levels/bedroom/tv.png" id="1_ykbbd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ynce"]
+size = Vector2(206.5, 44)
+
+[node name="TV" type="StaticBody2D"]
+z_index = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ykbbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18.75, 176)
+shape = SubResource("RectangleShape2D_4ynce")

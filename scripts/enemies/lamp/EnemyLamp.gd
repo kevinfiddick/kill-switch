@@ -149,7 +149,14 @@ func _on_timer_timeout():
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print_debug("AREA ENTERED")
+	# print_debug("AREA ENTERED")
 	if body == player_reference:
 		body.on_take_damage(5)
+	pass # Replace with function body.
+
+
+func _on_whip_area_2d_area_entered(area: Area2D) -> void:
+	print_debug("AREA ENTERED")
+	print_debug(player_reference)
+	print_debug(area)
 	pass # Replace with function body.

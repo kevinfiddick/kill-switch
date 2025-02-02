@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqcpv4iu1qjbh"]
+[gd_scene load_steps=12 format=3 uid="uid://cqcpv4iu1qjbh"]
 
 [ext_resource type="Script" path="res://scripts/weapons/primary/PrimaryProjectile.gd" id="1_s5y8m"]
+[ext_resource type="Texture2D" uid="uid://bij025yjq2a7e" path="res://assets/electric pulse.png" id="2_4hrds"]
+[ext_resource type="Script" path="res://scripts/weapons/grenade/RotateAnimatedSprite.gd" id="3_jqibu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c1eko"]
 radius = 12.0
@@ -14,6 +16,42 @@ fill = 1
 fill_from = Vector2(0.513761, 0.513761)
 fill_to = Vector2(0.761468, 0.275229)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_82cvr"]
+atlas = ExtResource("2_4hrds")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7v7lx"]
+atlas = ExtResource("2_4hrds")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nlfu"]
+atlas = ExtResource("2_4hrds")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v75us"]
+atlas = ExtResource("2_4hrds")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mj231"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82cvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7v7lx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nlfu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v75us")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]
+
 [node name="PrimaryProjectile" type="Node2D"]
 script = ExtResource("1_s5y8m")
 
@@ -26,5 +64,12 @@ shape = SubResource("CircleShape2D_c1eko")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 scale = Vector2(2, 2)
 texture = SubResource("GradientTexture2D_7ohxa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 0.959931
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_mj231")
+frame_progress = 0.0861087
+script = ExtResource("3_jqibu")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
