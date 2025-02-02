@@ -2,8 +2,10 @@ extends CanvasLayer
 
 @onready var rich_text_label: RichTextLabel = $PanelContainer/HBoxContainer/MarginContainer/RichTextLabel
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var texture_rect: TextureRect = $PanelContainer/HBoxContainer/TextureRect
 
 @export var interact_ref: Node2D
+@export var dialogue_icon: Resource
 @export var dialogue_text: String
 @export var text_speed: int
 
@@ -11,6 +13,7 @@ var text_count = 0
 
 func _ready() -> void:
 	interact_ref.connect("interact", _on_interact)
+	texture_rect.texture = dialogue_icon
 
 
 func _process(delta: float) -> void:
