@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bj5lojgbfnuxx" path="res://scenes/Interaction.tscn" id="7_p4b6y"]
 [ext_resource type="AudioStream" uid="uid://bkh5k8xpeo0ko" path="res://assets/sounds/Bedroom/Intro.mp3" id="9_b6ely"]
 
-[node name="Bedroom Level" type="Node2D"]
+[node name="BedroomLevel" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -1595.0
