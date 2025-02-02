@@ -1,13 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://b4rcijuvagy4h"]
+[gd_scene load_steps=12 format=3 uid="uid://b4rcijuvagy4h"]
 
 [ext_resource type="PackedScene" uid="uid://b37gnti0k5ntk" path="res://scenes/levels/bedroom/Bed.tscn" id="1_p7pwi"]
 [ext_resource type="PackedScene" uid="uid://ebkbcxrrkw0d" path="res://scenes/levels/bedroom/BedroomBackground.tscn" id="1_ug3wd"]
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="2_hp501"]
-[ext_resource type="PackedScene" uid="uid://c0qem71h0llyd" path="res://scenes/PlayerCamera.tscn" id="3_7471b"]
+[ext_resource type="PackedScene" path="res://scenes/PlayerCamera.tscn" id="3_7471b"]
 [ext_resource type="PackedScene" uid="uid://dwu56r4jhrocf" path="res://scenes/levels/bedroom/Nightstand.tscn" id="3_e7trs"]
 [ext_resource type="PackedScene" uid="uid://bb70871ceqa7x" path="res://scenes/levels/bedroom/Dressers.tscn" id="4_pori4"]
 [ext_resource type="PackedScene" uid="uid://chjsr61h22cyl" path="res://scenes/levels/bedroom/TV.tscn" id="4_x0eg8"]
 [ext_resource type="PackedScene" uid="uid://cbq5cqvirqair" path="res://scenes/levels/bedroom/Door.tscn" id="5_r6uyj"]
+[ext_resource type="PackedScene" uid="uid://caue5yrw2kqe4" path="res://scenes/levels/hallway/Hallway.tscn" id="6_3mk04"]
+[ext_resource type="PackedScene" uid="uid://bj5lojgbfnuxx" path="res://scenes/Interaction.tscn" id="7_p4b6y"]
 [ext_resource type="AudioStream" uid="uid://bkh5k8xpeo0ko" path="res://assets/sounds/Bedroom/Intro.mp3" id="9_b6ely"]
 
 [node name="Bedroom Level" type="Node2D"]
@@ -30,7 +32,12 @@ position = Vector2(-163, 0)
 
 [node name="Dressers" parent="." instance=ExtResource("4_pori4")]
 
-[node name="Door" parent="." instance=ExtResource("5_r6uyj")]
+[node name="Door" parent="." node_paths=PackedStringArray("interaction") instance=ExtResource("5_r6uyj")]
+interaction = NodePath("Interaction")
+transition_to_scene = ExtResource("6_3mk04")
+
+[node name="Interaction" parent="Door" node_paths=PackedStringArray("area_ref") instance=ExtResource("7_p4b6y")]
+area_ref = NodePath("..")
 
 [node name="Player" parent="." instance=ExtResource("2_hp501")]
 
@@ -39,7 +46,6 @@ position = Vector2(-163, 0)
 [node name="TV" parent="." instance=ExtResource("4_x0eg8")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
