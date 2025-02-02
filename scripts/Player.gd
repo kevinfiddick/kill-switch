@@ -7,6 +7,7 @@ var current_health = MAX_HEALTH
 
 @onready var HUD = $HUD
 @onready var invincibility_timer = $InvincibilityCD
+@onready var SPRITE = $AnimatedSprite2D
 
 var primary_weapon: Node2D
 var secondary_weapon: Node2D
@@ -16,7 +17,27 @@ var interaction_ref: Node2D
 func _ready() -> void:
 	primary_weapon = $PrimaryWeapon
 	secondary_weapon = $GrenadeController
+	SPRITE.play("idle")
 
+func set_sprite_direction(velocity):
+	var direction = velocity.normalized()
+	if direction.x < 0: 
+		SPRITE.set_flip_h(true)
+	else: 
+		SPRITE.set_flip_h(false)
+	
+	if abs(direction.x) < 0.25 and abs(direction.y) < 0.25:
+		SPRITE.play("idle")
+	elif abs(direction.x) < 0.25:
+		if direction.y > 0:
+			SPRITE.play("walk_S")
+		else: 
+			SPRITE.play("walk_N")
+	else:
+		if direction.y >= 0:
+			SPRITE.play("walk_SE")
+		else: 
+			SPRITE.play("walk_NE")
 
 func _process(delta: float) -> void:
 	# Debug -- freeze or unfreeze player input
@@ -36,7 +57,7 @@ func _physics_process(_delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
-
+	set_sprite_direction(velocity)
 	move_and_slide()
 
 
