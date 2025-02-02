@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqmvguygq62mq"
-path="res://.godot/imported/lamp_enemy_dead1.png-ce4b590df1bdb36c677222aaf8ee43b1.ctex"
+uid="uid://bdupwkhrksjcy"
+path="res://.godot/imported/whip attack.png-34d283313d5a6d79444f56cc76026646.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/context/lamp_enemy_dead1.png"
-dest_files=["res://.godot/imported/lamp_enemy_dead1.png-ce4b590df1bdb36c677222aaf8ee43b1.ctex"]
+source_file="res://assets/whip attack.png"
+dest_files=["res://.godot/imported/whip attack.png-34d283313d5a6d79444f56cc76026646.ctex"]
 
 [params]
 

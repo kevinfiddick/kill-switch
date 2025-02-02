@@ -12,7 +12,6 @@ extends CharacterBody2D
 @onready var COLLISION_SHAPE = $CollisionShape2D
 
 var current_health: float = HEALTH
-var stunned: bool = false
 var stunned_timer: Timer = null
 var dead: bool = false
 var effects = {
@@ -24,9 +23,13 @@ var effects = {
 }
 
 
-func _ready() -> void:
-	SPRITE.play("idle")
-	TAIL.play("default")
+#func _ready() -> void:
+#	SPRITE.play("idle")
+#	TAIL.play("default")
+
+func set_facing_direction(facing_direction):
+	if not dead:
+		TAIL.set_rotation(facing_direction.angle())
 
 
 # Function to handle movement and velocity
@@ -34,12 +37,48 @@ func movement_and_velocity(move_direction):
 	if not dead:
 		if current_health == 0:
 			velocity = 0 * move_direction
-		elif stunned:
+		elif effects.shock.is_shocked:
 			velocity = STUN_SPEED * move_direction
 		else:
 			velocity = SPEED * move_direction
-		TAIL.set_rotation(velocity.angle())
 		move_and_slide()  # Apply the calculated velocity to the character
+
+
+# Utility function for rounding numbers to a specified number of decimal places
+func round_place(num, places):
+	return (round(num * pow(10, places)) / pow(10, places))
+
+# Function to get the current direction of the character based on its rotation
+func get_curr_direction():
+	var angle = get_rotation()  # Get current rotation in radians
+	# Calculate direction vector from angle, rounded to 4 decimal places for precision
+	var direction = Vector2(round_place(cos(angle), 4), round_place(sin(angle), 4)).normalized()
+	return direction
+
+# Function to calculate the difference in degrees between two vectors
+func angle_diff_degrees(a: Vector2, b: Vector2):
+	# Calculate the signed angle in radians between two vectors
+	var signed_angle = atan2(b.y, b.x) - atan2(a.y, a.x)
+
+	# Convert angle to degrees
+	var angle_degrees = rad_to_deg(signed_angle)
+
+	# Normalize the angle to be within the range of -180 to 180 degrees
+	while angle_degrees > 180:
+		angle_degrees -= 360
+	while angle_degrees < -180:
+		angle_degrees += 360
+
+	return angle_degrees
+
+func reset_rotation():
+	set_rotation_degrees(0.0)
+	SPRITE.set_rotation_degrees(0.0)
+
+func set_attack_direction(direction):
+	var new_rotation = direction.angle() + PI
+	set_rotation(new_rotation)  # Apply the new rotation to the sprite
+	SPRITE.set_rotation(0 - new_rotation)
 
 func _process(delta: float) -> void:
 	if not dead:

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://btj2bihvk14tt"]
 
 [ext_resource type="Shader" path="res://shaders/PauseMenu.gdshader" id="1_fwc0a"]
-[ext_resource type="Script" path="res://scripts/PauseMenu.gd" id="1_mjl6j"]
+[ext_resource type="Script" path="res://scripts/menus/PauseMenu.gd" id="1_mjl6j"]
 [ext_resource type="FontFile" uid="uid://bbwgbeipobag8" path="res://assets/fonts/IBMPlexMono-Regular.ttf" id="1_ykggo"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_w0u7x"]
