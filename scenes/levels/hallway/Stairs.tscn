@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0nma1jf6jsj4"]
+
+[ext_resource type="PackedScene" uid="uid://cs522bqt8rsfi" path="res://scenes/Interaction.tscn" id="1_ydhtc"]
+[ext_resource type="Texture2D" uid="uid://wedh73tljb7m" path="res://assets/sprites/levels/hallway/Railing.png" id="2_p6wva"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73a8q"]
+size = Vector2(1277.5, 119.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqcig"]
+size = Vector2(155, 223)
+
+[node name="Stairs" type="StaticBody2D"]
+
+[node name="Interaction" parent="." node_paths=PackedStringArray("area_ref") instance=ExtResource("1_ydhtc")]
+position = Vector2(576, 43)
+area_ref = NodePath("../Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_p6wva")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, 127.75)
+shape = SubResource("RectangleShape2D_73a8q")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(565.5, 101.5)
+shape = SubResource("RectangleShape2D_uqcig")

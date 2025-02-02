@@ -8,6 +8,7 @@ signal secondary_used
 
 @export var attack_speed: int = BASE_ATTACK_SPEED
 @onready var grenade_throw: AudioStreamPlayer2D = $GrenadeThrow
+@onready var grenade_explode_sound: AudioStreamPlayer2D = $GrenadeExplodeSound
 
 var last_shot = attack_speed
 
@@ -32,6 +33,7 @@ func _process(_delta: float) -> void:
 		else: last_shot = 0
 		
 		var projectile_instance = PROJECTILE.instantiate()
+		projectile_instance.sound_player = grenade_explode_sound
 		projectile_instance.end_position = get_global_mouse_position()
 		get_tree().root.add_child(projectile_instance)
 		grenade_throw.play()
