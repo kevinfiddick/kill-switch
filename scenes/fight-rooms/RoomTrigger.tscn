@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ryfya3rw863f"]
+
+[ext_resource type="Script" path="res://scripts/fight-rooms/RoomTrigger.gd" id="1_dsjis"]
+
+[node name="RoomTrigger" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_dsjis")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

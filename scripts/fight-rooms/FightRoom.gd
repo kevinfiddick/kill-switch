@@ -7,7 +7,7 @@ var objective_count = 0
 
 
 func _ready() -> void:
-	lock_room()
+	unlock_room()
 
 
 func add_objective() -> void:
@@ -24,7 +24,8 @@ func remove_objective() -> void:
 
 
 func lock_room() -> void:
-	lock.emit()
+	if objective_count > 0:
+		lock.emit()
 
 
 func unlock_room() -> void:

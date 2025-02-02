@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://c0h1yc846ndk2"]
+[gd_scene load_steps=26 format=4 uid="uid://c0h1yc846ndk2"]
 
 [ext_resource type="Script" path="res://scripts/Game.gd" id="1_nkdow"]
 [ext_resource type="Texture2D" uid="uid://bio0cehn3s4gk" path="res://assets/Simple interior sprite sheet.png" id="1_osbuq"]
@@ -11,12 +11,13 @@
 [ext_resource type="PackedScene" uid="uid://dsl6chfqwt4kh" path="res://scenes/weapons/whip/WhipController.tscn" id="9_xtlhq"]
 [ext_resource type="PackedScene" uid="uid://bj5lojgbfnuxx" path="res://scenes/Interaction.tscn" id="10_heek6"]
 [ext_resource type="PackedScene" uid="uid://7cama73mlqg2" path="res://scenes/Dialogue.tscn" id="11_g2l8e"]
-[ext_resource type="PackedScene" uid="uid://bxis7vrl8y14c" path="res://scenes/FightRoom.tscn" id="12_5tuvr"]
-[ext_resource type="PackedScene" uid="uid://5jblmmslcm8a" path="res://scenes/RoomBlockers.tscn" id="13_42833"]
-[ext_resource type="PackedScene" uid="uid://c18xey7ps4wji" path="res://scenes/Objective.tscn" id="13_gfsrx"]
+[ext_resource type="PackedScene" uid="uid://bxis7vrl8y14c" path="res://scenes/fight-rooms/FightRoom.tscn" id="12_5tuvr"]
+[ext_resource type="PackedScene" uid="uid://5jblmmslcm8a" path="res://scenes/fight-rooms/RoomBlockers.tscn" id="13_42833"]
+[ext_resource type="PackedScene" uid="uid://c18xey7ps4wji" path="res://scenes/fight-rooms/Objective.tscn" id="13_gfsrx"]
 [ext_resource type="Texture2D" uid="uid://ceo4fg8lq4rqy" path="res://assets/lamp_enemy_1.png" id="14_v6tid"]
 [ext_resource type="Texture2D" uid="uid://3xj1lqb6opqu" path="res://assets/lamp_enemy_dead.png" id="15_r0l2t"]
 [ext_resource type="SpriteFrames" uid="uid://bpaps68sjekfg" path="res://test_animated_sprite.tres" id="17_bavgg"]
+[ext_resource type="PackedScene" uid="uid://ryfya3rw863f" path="res://scenes/fight-rooms/RoomTrigger.tscn" id="18_jss4r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fq6nj"]
 texture = ExtResource("1_osbuq")
@@ -167,6 +168,9 @@ size = Vector2(56, 59)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5lxw"]
 size = Vector2(128, 128)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5w07u"]
+size = Vector2(274, 82)
+
 [node name="TestLevel" type="Node2D"]
 script = ExtResource("1_nkdow")
 
@@ -303,6 +307,14 @@ destroyed_sprite = NodePath("DestroyedSprite")
 sprite_frames = ExtResource("17_bavgg")
 
 [node name="DestroyedSprite" type="Sprite2D" parent="FightRoom/Objective"]
+texture = ExtResource("8_cdbg1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FightRoom/Objective"]
 shape = SubResource("RectangleShape2D_o5lxw")
+
+[node name="RoomTrigger" parent="FightRoom" node_paths=PackedStringArray("fight_room") instance=ExtResource("18_jss4r")]
+position = Vector2(621, 327)
+fight_room = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FightRoom/RoomTrigger"]
+shape = SubResource("RectangleShape2D_5w07u")

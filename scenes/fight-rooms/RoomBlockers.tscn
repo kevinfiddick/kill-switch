@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://5jblmmslcm8a"]
 
-[ext_resource type="Script" path="res://scripts/RoomBlockers.gd" id="1_okxw2"]
+[ext_resource type="Script" path="res://scripts/fight-rooms/RoomBlockers.gd" id="1_okxw2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0e5ch"]
 size = Vector2(32, 32)
