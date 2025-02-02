@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://7cama73mlqg2"]
+[gd_scene load_steps=6 format=3 uid="uid://jimiv81dvvfp"]
 
 [ext_resource type="Script" path="res://scripts/Dialogue.gd" id="1_g1cew"]
+[ext_resource type="AudioStream" uid="uid://crqq1311mr4jw" path="res://assets/sounds/lore moment/BGJ25_sfx_LoreMoment_01.mp3" id="2_vhdj3"]
 
 [sub_resource type="Animation" id="Animation_6ha47"]
 length = 0.001
@@ -100,3 +101,6 @@ size_flags_horizontal = 3
 libraries = {
 "": SubResource("AnimationLibrary_w30kd")
 }
+
+[node name="LoreSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_vhdj3")
