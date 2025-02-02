@@ -30,7 +30,7 @@ func _process(delta: float) -> void:
 			text_count += text_speed
 
 
-func _on_interact() -> void:
+func _on_interact(_player_ref: CharacterBody2D) -> void:
 	play_dialogue()
 
 

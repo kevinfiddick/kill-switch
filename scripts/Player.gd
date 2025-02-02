@@ -4,13 +4,13 @@ const SPEED = 100.0
 
 @export var MAX_HEALTH = 100.0
 var current_health = MAX_HEALTH
+var heal_rate = 0.0
 
 @onready var HUD = $HUD
 @onready var invincibility_timer = $InvincibilityCD
 
 var primary_weapon: Node2D
 var secondary_weapon: Node2D
-var interaction_ref: Node2D
 
 
 func _ready() -> void:
@@ -25,6 +25,12 @@ func _process(delta: float) -> void:
 			freeze_input()
 		else:
 			resume_input()
+	
+	current_health += heal_rate * delta
+	if current_health > MAX_HEALTH:
+		current_health = MAX_HEALTH
+		end_heal()
+	HUD.set_health_percent(current_health / MAX_HEALTH)
 
 
 func _physics_process(_delta):
@@ -33,6 +39,7 @@ func _physics_process(_delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
 	if direction:
 		velocity = direction * SPEED
+		end_heal()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
@@ -50,7 +57,6 @@ func on_take_damage(damage: float) -> void:
 	if current_health <= 0:
 		current_health = 0
 	
-	print_debug(current_health)
 	HUD.set_health_percent(current_health / MAX_HEALTH)
 
 func freeze_input() -> void:
@@ -78,9 +84,11 @@ func pickup(resource_ref: Resource) -> void:
 	add_child(node_ref.instantiate())
 
 
-func entered_interaction(ref: Node2D) -> void:
-	interaction_ref = ref
+func begin_heal() -> void:
+	print_debug("Beginning heal")
+	heal_rate = 20.0
 
 
-func exited_interaction() -> void:
-	interaction_ref = null
+func end_heal() -> void:
+	print_debug("Ending heal")
+	heal_rate = 0.0
