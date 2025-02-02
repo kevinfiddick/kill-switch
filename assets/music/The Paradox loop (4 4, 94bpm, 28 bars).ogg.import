@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bpd2s7aghc1y"
+path="res://.godot/imported/The Paradox loop (4 4, 94bpm, 28 bars).ogg-d2e90add1c64b435033bdc2f699fce7e.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/The Paradox loop (4 4, 94bpm, 28 bars).ogg"
+dest_files=["res://.godot/imported/The Paradox loop (4 4, 94bpm, 28 bars).ogg-d2e90add1c64b435033bdc2f699fce7e.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=94.0
+beat_count=112
+bar_beats=4
