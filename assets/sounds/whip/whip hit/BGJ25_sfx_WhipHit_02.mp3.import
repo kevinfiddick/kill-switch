@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0dp4ic0lb5v2"
+path="res://.godot/imported/BGJ25_sfx_WhipHit_02.mp3-042367a4b3dc8e47605ec15a28f2849d.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/whip/whip hit/BGJ25_sfx_WhipHit_02.mp3"
+dest_files=["res://.godot/imported/BGJ25_sfx_WhipHit_02.mp3-042367a4b3dc8e47605ec15a28f2849d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
