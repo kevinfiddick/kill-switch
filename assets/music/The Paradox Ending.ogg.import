@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bnd0f4wuwp7tr"
+path="res://.godot/imported/The Paradox Ending.ogg-3f72cc4af2843cb777642caf642119e6.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/The Paradox Ending.ogg"
+dest_files=["res://.godot/imported/The Paradox Ending.ogg-3f72cc4af2843cb777642caf642119e6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

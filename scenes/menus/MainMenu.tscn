@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://br083d4hveye7"]
+[gd_scene load_steps=5 format=3 uid="uid://br083d4hveye7"]
 
 [ext_resource type="Script" path="res://scripts/menus/MainMenu.gd" id="1_bicx4"]
 [ext_resource type="FontFile" uid="uid://bbwgbeipobag8" path="res://assets/fonts/IBMPlexMono-Regular.ttf" id="2_ghywp"]
+[ext_resource type="AudioStream" uid="uid://bpd2s7aghc1y" path="res://assets/music/The Paradox loop (4 4, 94bpm, 28 bars).ogg" id="3_l7exv"]
+[ext_resource type="AudioStream" uid="uid://bnd0f4wuwp7tr" path="res://assets/music/The Paradox Ending.ogg" id="4_r4f75"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -43,6 +45,12 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ghywp")
 text = "Quit"
+
+[node name="Main Menu Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_l7exv")
+
+[node name="Main Menu Music End" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_r4f75")
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
