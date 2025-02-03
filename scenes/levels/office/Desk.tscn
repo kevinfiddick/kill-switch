@@ -1,39 +1,75 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5mpcn1cft73q"]
+[gd_scene load_steps=9 format=3 uid="uid://c5mpcn1cft73q"]
 
-[ext_resource type="Texture2D" uid="uid://cmqppya3qedc5" path="res://assets/sprites/levels/office/Desk.png" id="1_chije"]
-[ext_resource type="Texture2D" uid="uid://sws4iqwxhysp" path="res://assets/sprites/levels/office/Papers.png" id="2_qnc22"]
+[ext_resource type="Texture2D" uid="uid://bw7po26uern34" path="res://assets/sprites/levels/office/OfficeDesk.png" id="1_gpyie"]
 [ext_resource type="Texture2D" uid="uid://bex1gp5r1p7qo" path="res://assets/sprites/levels/office/Glow.png" id="3_rvs7j"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmxsc"]
-size = Vector2(156, 49)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyy4t"]
+atlas = ExtResource("1_gpyie")
+region = Rect2(0, 0, 600, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bh6t1"]
+atlas = ExtResource("1_gpyie")
+region = Rect2(0, 500, 600, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2fdo"]
+atlas = ExtResource("1_gpyie")
+region = Rect2(0, 500, 600, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8cqxa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyy4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bh6t1")
+}],
+"loop": true,
+"name": &"desk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2fdo")
+}],
+"loop": true,
+"name": &"papers",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_87q31"]
-radius = 26.395
+radius = 20.595
 height = 111.766
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmxsc"]
+size = Vector2(147, 45)
 
 [node name="Desk" type="StaticBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_chije")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, 38.5)
-shape = SubResource("RectangleShape2D_wmxsc")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Papers" type="AnimatedSprite2D" parent="."]
 z_index = 3
-texture = ExtResource("2_qnc22")
+sprite_frames = SubResource("SpriteFrames_8cqxa")
+animation = &"papers"
+frame_progress = 0.505474
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
+[node name="Desk" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8cqxa")
+animation = &"desk"
+
+[node name="Glow" type="Sprite2D" parent="."]
 z_index = 3
 texture = ExtResource("3_rvs7j")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(-111, 53)
+position = Vector2(-105, 53)
 rotation = 1.09956
 shape = SubResource("CapsuleShape2D_87q31")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(103, 53)
+position = Vector2(96, 54)
 rotation = -1.09956
 shape = SubResource("CapsuleShape2D_87q31")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7.5, 40.5)
+shape = SubResource("RectangleShape2D_wmxsc")

@@ -8,11 +8,13 @@ size = Vector2(972, 55)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ei0m"]
 size = Vector2(204, 497.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_afqh8"]
-size = Vector2(146, 42)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vs0bx"]
+radius = 61.0
+height = 308.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_50jl5"]
-size = Vector2(413.355, 157.607)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pn4f1"]
+radius = 14.0
+height = 28.0
 
 [node name="OfficeBackground" type="StaticBody2D"]
 
@@ -27,26 +29,30 @@ color = Color(0, 0, 0, 1)
 texture = ExtResource("1_e1ucy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, -191.5)
+position = Vector2(0, -171)
 shape = SubResource("RectangleShape2D_foke3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(4, 251)
+position = Vector2(6, 274)
 shape = SubResource("RectangleShape2D_foke3")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(-380, 29.75)
+position = Vector2(-400, 30)
 shape = SubResource("RectangleShape2D_3ei0m")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
 position = Vector2(402, 31)
 shape = SubResource("RectangleShape2D_3ei0m")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
-position = Vector2(91, -164)
-shape = SubResource("RectangleShape2D_afqh8")
-
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
-position = Vector2(-118, -172)
-rotation = 2.87979
-shape = SubResource("RectangleShape2D_50jl5")
+position = Vector2(-270, -120)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_vs0bx")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+position = Vector2(-64, 102)
+shape = SubResource("CapsuleShape2D_pn4f1")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
+position = Vector2(-117, -68)
+shape = SubResource("CapsuleShape2D_pn4f1")
