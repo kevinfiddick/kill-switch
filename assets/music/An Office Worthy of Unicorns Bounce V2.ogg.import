@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b0yu42n1lgwrv"
+path="res://.godot/imported/An Office Worthy of Unicorns Bounce V2.ogg-1683c15b9adb883f05d6c600545606bf.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/An Office Worthy of Unicorns Bounce V2.ogg"
+dest_files=["res://.godot/imported/An Office Worthy of Unicorns Bounce V2.ogg-1683c15b9adb883f05d6c600545606bf.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

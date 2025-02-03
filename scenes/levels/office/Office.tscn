@@ -1,7 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2yexskmjnho3"]
+[gd_scene load_steps=12 format=3 uid="uid://b2yexskmjnho3"]
 
 [ext_resource type="PackedScene" uid="uid://cpr3sps5dpbiy" path="res://scenes/levels/office/OfficeBackground.tscn" id="1_sc620"]
-[ext_resource type="PackedScene" path="res://scenes/PlayerCamera.tscn" id="2_rp11f"]
+[ext_resource type="PackedScene" uid="uid://c0qem71h0llyd" path="res://scenes/PlayerCamera.tscn" id="2_rp11f"]
 [ext_resource type="PackedScene" uid="uid://c6l1flw5tsviq" path="res://scenes/levels/office/Chair.tscn" id="2_uwpc5"]
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="3_7ca7i"]
 [ext_resource type="PackedScene" uid="uid://c5mpcn1cft73q" path="res://scenes/levels/office/Desk.tscn" id="3_runp5"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bj5lojgbfnuxx" path="res://scenes/Interaction.tscn" id="4_s8p0e"]
 [ext_resource type="PackedScene" uid="uid://7cama73mlqg2" path="res://scenes/Dialogue.tscn" id="5_5q2gc"]
 [ext_resource type="Texture2D" uid="uid://cmsuwwpuy44nx" path="res://assets/sprites/levels/bedroom/lore-letter-icon.png" id="6_68ekg"]
+[ext_resource type="AudioStream" uid="uid://b0yu42n1lgwrv" path="res://assets/music/An Office Worthy of Unicorns Bounce V2.ogg" id="10_8vo1y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jq0uf"]
 radius = 40.0
@@ -48,3 +49,7 @@ position = Vector2(-3, 189)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
+
+[node name="Office Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_8vo1y")
+autoplay = true
