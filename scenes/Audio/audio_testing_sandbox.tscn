@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://d2qabq35t1mki" path="res://assets/sounds/bulb grenade/explode/BGJ25_sfx_bulbGrenade_01.mp3" id="2_i5f6d"]
 [ext_resource type="AudioStream" uid="uid://8pmoopjchv7q" path="res://assets/sounds/bulb grenade/explode/BGJ25_sfx_bulbGrenade_02.mp3" id="3_wxaix"]
 [ext_resource type="AudioStream" uid="uid://cij00c7mpiebk" path="res://assets/sounds/bulb grenade/explode/BGJ25_sfx_bulbGrenade_03.mp3" id="4_a7nsa"]
-[ext_resource type="AudioStream" uid="uid://tdenwcfnk4me" path="res://assets/music/Gassed loop (4 4, 96bpm, 24 bars).ogg" id="5_ab5oc"]
+[ext_resource type="AudioStream" uid="uid://d3svltimq8mpq" path="res://assets/music/Darkness Ambience loop (4 4, 90bpm, 4 bars).ogg" id="5_m101u"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_q6atd"]
 streams_count = 3
@@ -28,5 +28,5 @@ stream = ExtResource("3_wxaix")
 stream = ExtResource("4_a7nsa")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_ab5oc")
+stream = ExtResource("5_m101u")
 volume_db = 4.436
