@@ -22,7 +22,8 @@ height = 128.0
 [node name="Desk" parent="." instance=ExtResource("3_runp5")]
 
 [node name="Door" parent="." instance=ExtResource("4_8xjq3")]
-position = Vector2(374, -13)
+position = Vector2(459, 19)
+scale = Vector2(1.5, 1.26)
 transition_to_scene = ExtResource("5_3rcg0")
 
 [node name="Interaction" parent="." node_paths=PackedStringArray("area_ref") instance=ExtResource("4_s8p0e")]

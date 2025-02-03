@@ -50,7 +50,7 @@ size = Vector2(147, 45)
 z_index = 3
 sprite_frames = SubResource("SpriteFrames_8cqxa")
 animation = &"papers"
-frame_progress = 0.505474
+frame_progress = 0.556729
 
 [node name="Desk" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8cqxa")
