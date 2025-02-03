@@ -86,7 +86,6 @@ player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
