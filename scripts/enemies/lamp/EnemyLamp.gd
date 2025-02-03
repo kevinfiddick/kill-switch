@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 @export var player_reference : Node2D 
 @export var fight_room: Node2D
 @export var SPEED = 75.0
@@ -178,5 +177,5 @@ func _on_whip_area_2d_area_entered(area: Area2D) -> void:
 	pass # Replace with function body.
 
 
-func _ready() -> void:	
+func _ready() -> void:
 	fight_room.add_objective()

@@ -1,9 +1,24 @@
 [gd_scene load_steps=2 format=3 uid="uid://ctbg28pvdnq7k"]
 
-[ext_resource type="PackedScene" uid="uid://livwjhvch2l5" path="res://scenes/enemies/lamp/EnemyLamp.tscn" id="1_iu7ua"]
+[sub_resource type="GDScript" id="GDScript_3od54"]
+script/source = "extends EnemyLamp
 
-[node name="EnemyFASTLAMP" type="Node2D"]
+const ENEMYLAMP = preload(\"res://scenes/enemies/lamp/EnemyLamp.tscn\")
 
-[node name="EnemyLamp" parent="." instance=ExtResource("1_iu7ua")]
-modulate = Color(1, 0, 0, 1)
+func _ready():
+	var enemy_lamp = ENEMYLAMP.instantiate()
+	enemy_lamp.player_reference = player_reference
+	enemy_lamp.fight_room = fight_room
+	enemy_lamp.SPEED = SPEED
+	enemy_lamp.STUN_TIMEOUT = STUN_TIMEOUT
+	enemy_lamp.STUN_SPEED = STUN_SPEED
+	enemy_lamp.STUN_DMG = STUN_DMG
+	enemy_lamp.HEALTH = HEALTH
+	enemy_lamp.DAMAGE = DAMAGE
+	enemy_lamp.global_position = global_position
+	get_tree().root.add_child(enemy_lamp)
+"
+
+[node name="EnemyFASTLAMP" type="CharacterBody2D"]
+script = SubResource("GDScript_3od54")
 SPEED = 300.0
