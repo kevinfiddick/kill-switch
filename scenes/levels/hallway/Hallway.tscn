@@ -105,4 +105,5 @@ position = Vector2(-44, -240)
 player_reference = NodePath("../Player")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)

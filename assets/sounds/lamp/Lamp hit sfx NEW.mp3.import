@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cs6iavjsby2lv"
+path="res://.godot/imported/Lamp hit sfx NEW.mp3-537e66a2753a2a42bfdd20208aec2517.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/lamp/Lamp hit sfx NEW.mp3"
+dest_files=["res://.godot/imported/Lamp hit sfx NEW.mp3-537e66a2753a2a42bfdd20208aec2517.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

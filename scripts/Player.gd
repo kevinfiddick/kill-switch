@@ -5,6 +5,7 @@ const SPEED = 100.0
 @export var MAX_HEALTH = 100.0
 var current_health = MAX_HEALTH
 var heal_rate = 0.0
+var is_dead = false
 
 @onready var HUD = $HUD
 @onready var invincibility_timer = $InvincibilityCD
@@ -30,7 +31,9 @@ func set_sprite_direction(velocity):
 	else: 
 		SPRITE.set_flip_h(false)
 	
-	if abs(direction.x) < 0.25 and abs(direction.y) < 0.25:
+	if is_dead:
+		SPRITE.play("death")
+	elif abs(direction.x) < 0.25 and abs(direction.y) < 0.25:
 		SPRITE.play("idle")
 	elif abs(direction.x) < 0.25:
 		if direction.y > 0:
@@ -90,7 +93,7 @@ func on_take_damage(damage: float) -> void:
 	current_health -= damage
 	if current_health <= 0:
 		current_health = 0
-		
+		is_dead = true
 		animation_player.play("death")
 	
 	HUD.set_health_percent(current_health / MAX_HEALTH)
@@ -128,8 +131,3 @@ func begin_heal() -> void:
 func end_heal() -> void:
 	print_debug("Ending heal")
 	heal_rate = 0.0
-
-
-func death() -> void:
-	print_debug("Player death")
-	SPRITE.animation = "death"
