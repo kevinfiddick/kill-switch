@@ -73,6 +73,7 @@ size_flags_vertical = 0
 one_shot = true
 
 [node name="Special1CDRef" type="ReferenceRect" parent="PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(25, 10)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -97,6 +98,7 @@ size_flags_vertical = 0
 one_shot = true
 
 [node name="Special2CDRef" type="ReferenceRect" parent="PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(25, 10)
 layout_mode = 2
 size_flags_horizontal = 0

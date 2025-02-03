@@ -31,9 +31,7 @@ func set_sprite_direction(velocity):
 	else: 
 		SPRITE.set_flip_h(false)
 	
-	if is_dead:
-		SPRITE.play("death")
-	elif abs(direction.x) < 0.25 and abs(direction.y) < 0.25:
+	if abs(direction.x) < 0.25 and abs(direction.y) < 0.25:
 		SPRITE.play("idle")
 	elif abs(direction.x) < 0.25:
 		if direction.y > 0:
@@ -54,6 +52,10 @@ func _process(delta: float) -> void:
 		else:
 			resume_input()
 	
+	
+	if is_dead:
+		SPRITE.play("death")
+		
 	current_health += heal_rate * delta
 	if current_health > MAX_HEALTH:
 		current_health = MAX_HEALTH
@@ -95,6 +97,7 @@ func on_take_damage(damage: float) -> void:
 		current_health = 0
 		is_dead = true
 		animation_player.play("death")
+		freeze_input()
 	
 	HUD.set_health_percent(current_health / MAX_HEALTH)
 
