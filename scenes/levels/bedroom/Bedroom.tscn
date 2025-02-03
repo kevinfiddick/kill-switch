@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ebkbcxrrkw0d" path="res://scenes/levels/bedroom/BedroomBackground.tscn" id="1_ug3wd"]
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="2_hp501"]
-[ext_resource type="PackedScene" uid="uid://c0qem71h0llyd" path="res://scenes/PlayerCamera.tscn" id="3_7471b"]
+[ext_resource type="PackedScene" path="res://scenes/PlayerCamera.tscn" id="3_7471b"]
 [ext_resource type="PackedScene" uid="uid://chjsr61h22cyl" path="res://scenes/levels/bedroom/TV.tscn" id="4_x0eg8"]
 [ext_resource type="PackedScene" uid="uid://cbq5cqvirqair" path="res://scenes/levels/bedroom/Door.tscn" id="5_r6uyj"]
 [ext_resource type="PackedScene" uid="uid://caue5yrw2kqe4" path="res://scenes/levels/hallway/Hallway.tscn" id="6_3mk04"]

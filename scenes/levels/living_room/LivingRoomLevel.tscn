@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dvw11noctqyos"]
 
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="1_emt81"]
-[ext_resource type="PackedScene" uid="uid://c0qem71h0llyd" path="res://scenes/PlayerCamera.tscn" id="2_4eyck"]
+[ext_resource type="PackedScene" path="res://scenes/PlayerCamera.tscn" id="2_4eyck"]
 [ext_resource type="PackedScene" uid="uid://r8o0nc2lf3oh" path="res://scenes/levels/living_room/LivingRoomBackground.tscn" id="2_do67i"]
 [ext_resource type="PackedScene" uid="uid://bxis7vrl8y14c" path="res://scenes/fight-rooms/FightRoom.tscn" id="4_rew12"]
 [ext_resource type="PackedScene" uid="uid://cbq5cqvirqair" path="res://scenes/levels/bedroom/Door.tscn" id="5_8xlbe"]

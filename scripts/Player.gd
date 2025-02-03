@@ -94,12 +94,13 @@ func on_take_damage(damage: float) -> void:
 	#	invincibility_timer.start(300 / 60)
 	#	current_health -= damage
 	current_health -= damage
-	if current_health <= 0 and not is_dead:
+	if current_health <= 0:
 		current_health = 0
-		is_dead = true
-		player_death_sound.play()
-		print("death sound")
-		animation_player.play("death")
+		if !is_dead:
+			is_dead = true
+			player_death_sound.play()
+			print("death sound")
+			animation_player.play("death")
 	
 	HUD.set_health_percent(current_health / MAX_HEALTH)
 
