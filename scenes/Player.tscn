@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://eu7phvumyog0" path="res://assets/sprites/player/lamp_chick_walking.png" id="5_184p7"]
 [ext_resource type="PackedScene" uid="uid://cg2j6hgvxv842" path="res://scenes/HUD.tscn" id="5_urac5"]
 [ext_resource type="Texture2D" uid="uid://dg3p4mql38kox" path="res://GradientLighting.tres" id="6_du2i2"]
-[ext_resource type="PackedScene" path="res://scenes/menus/PlayerDeathScreen.tscn" id="8_diojh"]
+[ext_resource type="PackedScene" uid="uid://cveemh0qwmwsw" path="res://scenes/menus/PlayerDeathScreen.tscn" id="8_diojh"]
 [ext_resource type="AudioStream" uid="uid://bds6cqigvpsks" path="res://assets/sounds/footsteps/Footstep on wood1.mp3" id="9_ft2sx"]
 [ext_resource type="AudioStream" uid="uid://dn3pa21jq81ux" path="res://assets/sounds/footsteps/Footstep on wood2.mp3" id="10_16ooo"]
 [ext_resource type="AudioStream" uid="uid://hr3r1dgedygk" path="res://assets/sounds/footsteps/Footstep on wood3.mp3" id="11_wx0vm"]
@@ -190,24 +190,10 @@ resource_name = "death"
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".")
+tracks/0/path = NodePath("PlayerDeathScreen")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"death"
-}]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("PlayerDeathScreen")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(1),
 "transitions": PackedFloat32Array(1),
 "values": [{
