@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 @export var player_reference : Node2D 
 @export var fight_room: Node2D
 @export var SPEED = 75.0
