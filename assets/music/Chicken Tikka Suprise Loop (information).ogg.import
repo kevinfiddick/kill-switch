@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://msgc8sm1pj2u"
+path="res://.godot/imported/Chicken Tikka Suprise Loop (information).ogg-89066a335dc986d93885e9055fb76432.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Chicken Tikka Suprise Loop (information).ogg"
+dest_files=["res://.godot/imported/Chicken Tikka Suprise Loop (information).ogg-89066a335dc986d93885e9055fb76432.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
