@@ -40,6 +40,7 @@ P.S. Watch out for the blender in the kitchen. He’s gone rouge.
 ————————————————— "
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("1_ykbbd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
