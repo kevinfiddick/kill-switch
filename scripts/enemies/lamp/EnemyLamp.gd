@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var player_reference : Node2D 
+@export var fight_room: Node2D
 @export var SPEED = 75.0
 @export var STUN_TIMEOUT = 1.0
 @export var STUN_SPEED = 30.0
@@ -22,7 +23,7 @@ var effects = {
 	"shock": {
 		"is_shocked": false,
 		"shock_hit_count": 0,
-		"HITS_TO_SHOCK": 3,
+		"HITS_TO_SHOCK": 1,
 	}
 }
 
@@ -94,6 +95,7 @@ func _process(delta: float) -> void:
 			COLLISION_SHAPE.set_disabled(true)
 			TAIL.queue_free()
 			z_index = 0
+			fight_room.remove_objective()
 		elif effects.shock.is_shocked:
 			if SPRITE.get_animation() != "stunned":
 				SPRITE.play("stunned")
@@ -172,3 +174,7 @@ func _on_whip_area_2d_area_entered(area: Area2D) -> void:
 	print_debug(player_reference)
 	print_debug(area)
 	pass # Replace with function body.
+
+
+func _ready() -> void:	
+	fight_room.add_objective()

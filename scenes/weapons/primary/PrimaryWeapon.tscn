@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ducuap6fxn2su"]
 
 [ext_resource type="Script" path="res://scripts/weapons/primary/PrimaryWeapon.gd" id="1_sm83v"]
-[ext_resource type="PackedScene" uid="uid://bcaw77tu5lob" path="res://scenes/weapons/primary/GunSound.tscn" id="2_1tj1n"]
+[ext_resource type="PackedScene" path="res://scenes/weapons/primary/GunSound.tscn" id="2_1tj1n"]
 [ext_resource type="Texture2D" uid="uid://b577bonj15wda" path="res://assets/sprites/weapons/loose wires.png" id="2_s50eh"]
 
 [node name="PrimaryWeapon" type="Node2D"]

@@ -11,7 +11,7 @@ var is_dead = false
 @onready var invincibility_timer = $InvincibilityCD
 @onready var SPRITE = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var footstep_sounds: AudioStreamPlayer = $FootstepSounds
+@onready var footstep_sounds: AudioStreamPlayer2D = $FootstepSounds
 const FOOTSTEP_RATE = 3.0
 var current_step = 0.0
 
