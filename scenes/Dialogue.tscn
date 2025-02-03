@@ -105,3 +105,4 @@ libraries = {
 
 [node name="LoreSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_vhdj3")
+volume_db = -5.0

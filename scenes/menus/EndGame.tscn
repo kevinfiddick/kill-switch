@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxhbk5ec7kumt"]
+[gd_scene load_steps=4 format=3 uid="uid://cxhbk5ec7kumt"]
 
 [ext_resource type="Script" path="res://scripts/menus/EndGame.gd" id="1_ym0so"]
 [ext_resource type="FontFile" uid="uid://bbwgbeipobag8" path="res://assets/fonts/IBMPlexMono-Regular.ttf" id="2_wa2u3"]
+[ext_resource type="AudioStream" uid="uid://msgc8sm1pj2u" path="res://assets/music/Chicken Tikka Suprise Loop (information).ogg" id="3_jl1a5"]
 
 [node name="EndGame" type="Control"]
 layout_mode = 3
@@ -58,5 +59,10 @@ layout_mode = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wa2u3")
 text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jl1a5")
+volume_db = -12.0
+autoplay = true
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

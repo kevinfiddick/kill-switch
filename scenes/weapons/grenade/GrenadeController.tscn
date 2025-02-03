@@ -20,3 +20,4 @@ stream = ExtResource("2_c37kl")
 
 [node name="GrenadeExplodeSound" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_m1os5")
+volume_db = -10.0
