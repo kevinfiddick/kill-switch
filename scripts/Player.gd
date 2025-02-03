@@ -10,7 +10,7 @@ var heal_rate = 0.0
 @onready var invincibility_timer = $InvincibilityCD
 @onready var SPRITE = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var footstep_sounds: AudioStreamPlayer2D = $FootstepSounds
+@onready var footstep_sounds: AudioStreamPlayer = $FootstepSounds
 const FOOTSTEP_RATE = 3.0
 var current_step = 0.0
 

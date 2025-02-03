@@ -2,6 +2,9 @@ extends State
 
 @onready var animation_player = owner.get_node("AnimationPlayer")
 @onready var player = owner.player_reference
+@onready var whip_miss: AudioStreamPlayer2D = $"../../Audio/WhipMiss"
+
+
 var is_playing = false
 var has_played = false
 var attack_timer = 0.0
@@ -45,6 +48,7 @@ func Physics_Update(delta):
 		# owner.music_reference.PlayAttackSound()
 		animation_player.play("attack")
 		is_playing = true
+		whip_miss.play()
 		attack_timer = ATTACK_TIMEOUT
 		var player_position = player.get_global_position()
 		var owner_position = owner.get_global_position()

@@ -42,3 +42,7 @@ func on_child_transition(state, new_state_name):
 	new_state.Enter()
 
 	current_state = new_state
+
+
+func _on_whip_area_2d_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
