@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvw11noctqyos"]
+[gd_scene load_steps=9 format=3 uid="uid://dvw11noctqyos"]
 
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="1_emt81"]
-[ext_resource type="PackedScene" path="res://scenes/PlayerCamera.tscn" id="2_4eyck"]
+[ext_resource type="PackedScene" uid="uid://c0qem71h0llyd" path="res://scenes/PlayerCamera.tscn" id="2_4eyck"]
 [ext_resource type="PackedScene" uid="uid://r8o0nc2lf3oh" path="res://scenes/levels/living_room/LivingRoomBackground.tscn" id="2_do67i"]
 [ext_resource type="PackedScene" uid="uid://bxis7vrl8y14c" path="res://scenes/fight-rooms/FightRoom.tscn" id="4_rew12"]
 [ext_resource type="PackedScene" uid="uid://cbq5cqvirqair" path="res://scenes/levels/bedroom/Door.tscn" id="5_8xlbe"]
-[ext_resource type="PackedScene" uid="uid://cxhbk5ec7kumt" path="res://scenes/menus/EndGame.tscn" id="6_24sy6"]
+[ext_resource type="PackedScene" path="res://scenes/menus/EndGame.tscn" id="6_24sy6"]
 [ext_resource type="PackedScene" uid="uid://livwjhvch2l5" path="res://scenes/enemies/lamp/EnemyLamp.tscn" id="7_e1hac"]
+[ext_resource type="PackedScene" uid="uid://ctbg28pvdnq7k" path="res://scenes/enemies/lamp/EnemyFASTLAMP.tscn" id="8_p1bqm"]
 
 [node name="LivingRoomLevel" type="Node2D"]
 
@@ -91,3 +92,5 @@ fight_room = NodePath("..")
 position = Vector2(-449, -82)
 player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
+
+[node name="EnemyFASTLAMP" parent="FightRoom" instance=ExtResource("8_p1bqm")]

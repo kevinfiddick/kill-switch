@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctbg28pvdnq7k"]
+
+[ext_resource type="PackedScene" uid="uid://livwjhvch2l5" path="res://scenes/enemies/lamp/EnemyLamp.tscn" id="1_iu7ua"]
+
+[node name="EnemyFASTLAMP" type="Node2D"]
+
+[node name="EnemyLamp" parent="." instance=ExtResource("1_iu7ua")]
+modulate = Color(1, 0, 0, 1)
+SPEED = 300.0
