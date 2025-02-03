@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dvw11noctqyos"]
+[gd_scene load_steps=33 format=3 uid="uid://dvw11noctqyos"]
 
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="1_emt81"]
 [ext_resource type="PackedScene" path="res://scenes/PlayerCamera.tscn" id="2_4eyck"]
@@ -8,6 +8,169 @@
 [ext_resource type="PackedScene" uid="uid://cxhbk5ec7kumt" path="res://scenes/menus/EndGame.tscn" id="6_24sy6"]
 [ext_resource type="PackedScene" uid="uid://livwjhvch2l5" path="res://scenes/enemies/lamp/EnemyLamp.tscn" id="7_e1hac"]
 [ext_resource type="AudioStream" uid="uid://24heb7eevduf" path="res://assets/music/Gassed loop (4 4, 96bpm, 24 bars) V3.ogg" id="9_5acta"]
+[ext_resource type="Texture2D" uid="uid://besrblb10mks3" path="res://assets/sprites/levels/living_room/TV.png" id="9_eqfrh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csj0r"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(0, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wlrt"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(128, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cox54"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(256, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60jme"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(384, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emlp2"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(512, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yw5ie"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(640, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eov4h"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(768, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8c68"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(896, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4mly"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(1024, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhsk0"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(1152, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxruu"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(1280, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4o7ii"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(1408, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yd142"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(1536, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0506o"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(1664, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohx22"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(1792, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67gw0"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(1920, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mx4o"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(1920, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atrym"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(1792, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hglwh"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(1664, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0btw"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(1536, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84s6n"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(1408, 0, 128, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmj8w"]
+atlas = ExtResource("9_eqfrh")
+region = Rect2(1280, 0, 128, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y8h6l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csj0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wlrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cox54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60jme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emlp2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yw5ie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eov4h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8c68")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4mly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhsk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxruu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4o7ii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yd142")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0506o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohx22")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67gw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mx4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atrym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hglwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0btw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84s6n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmj8w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="LivingRoomLevel" type="Node2D"]
 
@@ -21,6 +184,18 @@ color = Color(0, 0, 0, 1)
 [node name="LivingRoomBackground" parent="." instance=ExtResource("2_do67i")]
 position = Vector2(-326.367, 49.2464)
 
+[node name="FastLamp2" parent="LivingRoomBackground" node_paths=PackedStringArray("player_reference", "fight_room") instance=ExtResource("7_e1hac")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(699.367, -247.246)
+player_reference = NodePath("../../Player")
+fight_room = NodePath("../../FightRoom")
+SPEED = 300.0
+
+[node name="EnemyLamp7" parent="LivingRoomBackground" node_paths=PackedStringArray("player_reference", "fight_room") instance=ExtResource("7_e1hac")]
+position = Vector2(267, -173)
+player_reference = NodePath("../../Player")
+fight_room = NodePath("../../FightRoom")
+
 [node name="Player" parent="." instance=ExtResource("1_emt81")]
 position = Vector2(-356, 481)
 
@@ -29,12 +204,12 @@ position = Vector2(-356, 481)
 [node name="FightRoom" parent="." instance=ExtResource("4_rew12")]
 
 [node name="Door" parent="FightRoom" node_paths=PackedStringArray("fight_room") instance=ExtResource("5_8xlbe")]
-position = Vector2(-587, -159)
+position = Vector2(-172, -158)
 fight_room = NodePath("..")
 transition_to_scene = ExtResource("6_24sy6")
 
 [node name="EnemyLamp" parent="FightRoom" node_paths=PackedStringArray("player_reference", "fight_room") instance=ExtResource("7_e1hac")]
-position = Vector2(-103, 308)
+position = Vector2(-164, 368)
 player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
@@ -44,7 +219,7 @@ player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
 [node name="EnemyLamp3" parent="FightRoom" node_paths=PackedStringArray("player_reference", "fight_room") instance=ExtResource("7_e1hac")]
-position = Vector2(-93, 137)
+position = Vector2(-133, 123)
 player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
@@ -59,22 +234,27 @@ player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
 [node name="EnemyLamp6" parent="FightRoom" node_paths=PackedStringArray("player_reference", "fight_room") instance=ExtResource("7_e1hac")]
-position = Vector2(-338, 283)
+position = Vector2(-313, 151)
+player_reference = NodePath("../../Player")
+fight_room = NodePath("..")
+
+[node name="EnemyLamp13" parent="FightRoom" node_paths=PackedStringArray("player_reference", "fight_room") instance=ExtResource("7_e1hac")]
+position = Vector2(-724, 118)
 player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
 [node name="EnemyLamp7" parent="FightRoom" node_paths=PackedStringArray("player_reference", "fight_room") instance=ExtResource("7_e1hac")]
-position = Vector2(-296, -177)
+position = Vector2(267, -173)
 player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
 [node name="EnemyLamp8" parent="FightRoom" node_paths=PackedStringArray("player_reference", "fight_room") instance=ExtResource("7_e1hac")]
-position = Vector2(59, 443)
+position = Vector2(261, 422)
 player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
 [node name="EnemyLamp9" parent="FightRoom" node_paths=PackedStringArray("player_reference", "fight_room") instance=ExtResource("7_e1hac")]
-position = Vector2(-550, 57)
+position = Vector2(-865, 61)
 player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
@@ -84,12 +264,12 @@ player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
 [node name="EnemyLamp11" parent="FightRoom" node_paths=PackedStringArray("player_reference", "fight_room") instance=ExtResource("7_e1hac")]
-position = Vector2(68, 101)
+position = Vector2(251, 234)
 player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
 [node name="EnemyLamp12" parent="FightRoom" node_paths=PackedStringArray("player_reference", "fight_room") instance=ExtResource("7_e1hac")]
-position = Vector2(-449, -82)
+position = Vector2(-220, -86)
 player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
@@ -100,10 +280,36 @@ player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 SPEED = 300.0
 
+[node name="FastLamp2" parent="FightRoom" node_paths=PackedStringArray("player_reference", "fight_room") instance=ExtResource("7_e1hac")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(-156, 236)
+player_reference = NodePath("../../Player")
+fight_room = NodePath("..")
+SPEED = 300.0
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_5acta")
 volume_db = -12.0
 autoplay = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
+
+[node name="TV" type="AnimatedSprite2D" parent="."]
+z_index = 3
+position = Vector2(-427, -83)
+sprite_frames = SubResource("SpriteFrames_y8h6l")
+frame_progress = 0.674769
+
+[node name="TV2" type="AnimatedSprite2D" parent="."]
+z_index = 3
+position = Vector2(-716, -291)
+sprite_frames = SubResource("SpriteFrames_y8h6l")
+frame_progress = 0.327217
+
+[node name="TV3" type="AnimatedSprite2D" parent="."]
+z_index = 3
+position = Vector2(-16, -293)
+sprite_frames = SubResource("SpriteFrames_y8h6l")
+frame_progress = 0.505017
