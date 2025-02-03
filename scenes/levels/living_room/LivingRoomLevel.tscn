@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cbq5cqvirqair" path="res://scenes/levels/bedroom/Door.tscn" id="5_8xlbe"]
 [ext_resource type="PackedScene" path="res://scenes/menus/EndGame.tscn" id="6_24sy6"]
 [ext_resource type="PackedScene" uid="uid://livwjhvch2l5" path="res://scenes/enemies/lamp/EnemyLamp.tscn" id="7_e1hac"]
-[ext_resource type="PackedScene" uid="uid://ctbg28pvdnq7k" path="res://scenes/enemies/lamp/EnemyFASTLAMP.tscn" id="8_p1bqm"]
+[ext_resource type="AudioStream" uid="uid://24heb7eevduf" path="res://assets/music/Gassed loop (4 4, 96bpm, 24 bars) V3.ogg" id="9_5acta"]
 
 [node name="LivingRoomLevel" type="Node2D"]
 
@@ -93,4 +93,6 @@ position = Vector2(-449, -82)
 player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
-[node name="EnemyFASTLAMP" parent="FightRoom" instance=ExtResource("8_p1bqm")]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_5acta")
+autoplay = true
