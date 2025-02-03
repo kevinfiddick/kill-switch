@@ -7,10 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://d0nma1jf6jsj4" path="res://scenes/levels/hallway/Stairs.tscn" id="2_trgas"]
 [ext_resource type="PackedScene" uid="uid://bxis7vrl8y14c" path="res://scenes/fight-rooms/FightRoom.tscn" id="4_y34ep"]
 [ext_resource type="PackedScene" uid="uid://b2yexskmjnho3" path="res://scenes/levels/office/Office.tscn" id="6_5v4h8"]
-[ext_resource type="PackedScene" uid="uid://bj5lojgbfnuxx" path="res://scenes/Interaction.tscn" id="6_jf5xx"]
 [ext_resource type="PackedScene" uid="uid://c18xey7ps4wji" path="res://scenes/fight-rooms/Objective.tscn" id="8_k2y1v"]
 [ext_resource type="SpriteFrames" uid="uid://cdy1sfra7ry1h" path="res://test_animated_sprite.tres" id="9_lptqn"]
 [ext_resource type="Texture2D" uid="uid://bo7xm7gmyj48p" path="res://icon.svg" id="10_1aq4m"]
+[ext_resource type="PackedScene" uid="uid://livwjhvch2l5" path="res://scenes/enemies/lamp/EnemyLamp.tscn" id="11_k2loo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f68iq"]
 size = Vector2(128, 128)
@@ -27,20 +27,16 @@ color = Color(0, 0, 0, 1)
 [node name="HallwayBackground" parent="." instance=ExtResource("1_dof6n")]
 
 [node name="Player" parent="." instance=ExtResource("1_1ioms")]
-position = Vector2(-319, -203)
+position = Vector2(-511, -310)
 
 [node name="Camera2D" parent="Player" instance=ExtResource("2_krbpa")]
 
 [node name="FightRoom" parent="." instance=ExtResource("4_y34ep")]
 
-[node name="RightDoor" parent="FightRoom" node_paths=PackedStringArray("fight_room", "interaction") instance=ExtResource("2_2i63k")]
+[node name="RightDoor" parent="FightRoom" node_paths=PackedStringArray("fight_room") instance=ExtResource("2_2i63k")]
 position = Vector2(637, -243)
 fight_room = NodePath("..")
-interaction = NodePath("Interaction")
 transition_to_scene = ExtResource("6_5v4h8")
-
-[node name="Interaction" parent="FightRoom/RightDoor" node_paths=PackedStringArray("area_ref") instance=ExtResource("6_jf5xx")]
-area_ref = NodePath("..")
 
 [node name="Stairs" parent="FightRoom" instance=ExtResource("2_trgas")]
 z_index = 3
@@ -80,3 +76,33 @@ texture = ExtResource("10_1aq4m")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FightRoom/Objective2"]
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_f68iq")
+
+[node name="EnemyLamp" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("11_k2loo")]
+player_reference = NodePath("../Player")
+
+[node name="EnemyLamp2" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("11_k2loo")]
+position = Vector2(-427, -1)
+player_reference = NodePath("../Player")
+
+[node name="EnemyLamp3" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("11_k2loo")]
+position = Vector2(411, -1)
+player_reference = NodePath("../Player")
+
+[node name="EnemyLamp4" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("11_k2loo")]
+position = Vector2(-257, -131)
+player_reference = NodePath("../Player")
+
+[node name="EnemyLamp5" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("11_k2loo")]
+position = Vector2(203, -129)
+player_reference = NodePath("../Player")
+
+[node name="EnemyLamp6" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("11_k2loo")]
+position = Vector2(522, -167)
+player_reference = NodePath("../Player")
+
+[node name="EnemyLamp7" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("11_k2loo")]
+position = Vector2(-44, -240)
+player_reference = NodePath("../Player")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)

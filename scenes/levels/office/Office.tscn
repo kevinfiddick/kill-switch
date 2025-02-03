@@ -22,12 +22,8 @@ height = 128.0
 
 [node name="Desk" parent="." instance=ExtResource("3_runp5")]
 
-[node name="Door" parent="." node_paths=PackedStringArray("interaction") instance=ExtResource("4_8xjq3")]
+[node name="Door" parent="." instance=ExtResource("4_8xjq3")]
 position = Vector2(382, -13)
-interaction = NodePath("Interaction")
-
-[node name="Interaction" parent="Door" node_paths=PackedStringArray("area_ref") instance=ExtResource("4_s8p0e")]
-area_ref = NodePath("..")
 
 [node name="Interaction" parent="." node_paths=PackedStringArray("area_ref") instance=ExtResource("4_s8p0e")]
 position = Vector2(-4, 60)
@@ -46,6 +42,9 @@ dialogue_icon = ExtResource("6_68ekg")
 dialogue_text = "Hmm... Looks like my husband has an AI girlfriend... TThese messages are disgusting."
 
 [node name="Player" parent="." instance=ExtResource("3_7ca7i")]
-position = Vector2(217, -94)
+position = Vector2(-3, 189)
 
 [node name="Camera2D" parent="Player" instance=ExtResource("2_rp11f")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)

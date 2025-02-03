@@ -1,7 +1,8 @@
 extends Area2D
 
+@onready var interaction: Node2D = $Interaction
+
 @export var fight_room: Node2D
-@export var interaction: Node2D
 @export var transition_to_scene: Resource
 
 var can_open = true

@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbq5cqvirqair"]
+[gd_scene load_steps=5 format=3 uid="uid://cbq5cqvirqair"]
 
+[ext_resource type="PackedScene" uid="uid://bj5lojgbfnuxx" path="res://scenes/Interaction.tscn" id="1_87ue8"]
 [ext_resource type="Texture2D" uid="uid://duswcnr4c4cwm" path="res://assets/sprites/levels/bedroom/door.png" id="1_yd02d"]
 [ext_resource type="Script" path="res://scripts/interactions/Door.gd" id="1_yo8e4"]
 
@@ -15,3 +16,7 @@ texture = ExtResource("1_yd02d")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-166.5, -148)
 shape = SubResource("RectangleShape2D_lwlvj")
+
+[node name="Interaction" parent="." node_paths=PackedStringArray("area_ref") instance=ExtResource("1_87ue8")]
+position = Vector2(-167, -187)
+area_ref = NodePath("..")

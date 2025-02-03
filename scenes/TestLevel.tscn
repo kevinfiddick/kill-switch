@@ -341,10 +341,9 @@ fight_room = NodePath("..")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FightRoom/RoomTrigger"]
 shape = SubResource("RectangleShape2D_5w07u")
 
-[node name="Door" parent="." node_paths=PackedStringArray("interaction") instance=ExtResource("21_46cux")]
+[node name="Door" parent="." instance=ExtResource("21_46cux")]
 position = Vector2(330, 352)
-interaction = NodePath("Interaction")
 transition_to_scene = ExtResource("22_lo0o4")
 
-[node name="Interaction" parent="Door" node_paths=PackedStringArray("area_ref") instance=ExtResource("10_heek6")]
+[node name="Interaction2" parent="Door" node_paths=PackedStringArray("area_ref") instance=ExtResource("10_heek6")]
 area_ref = NodePath("..")
