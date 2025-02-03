@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="1_1ioms"]
 [ext_resource type="PackedScene" uid="uid://bcc2tn5bruqeb" path="res://scenes/levels/hallway/HallwayBackground.tscn" id="1_dof6n"]
 [ext_resource type="PackedScene" uid="uid://cbq5cqvirqair" path="res://scenes/levels/bedroom/Door.tscn" id="2_2i63k"]
-[ext_resource type="PackedScene" path="res://scenes/PlayerCamera.tscn" id="2_krbpa"]
+[ext_resource type="PackedScene" uid="uid://c0qem71h0llyd" path="res://scenes/PlayerCamera.tscn" id="2_krbpa"]
 [ext_resource type="PackedScene" uid="uid://d0nma1jf6jsj4" path="res://scenes/levels/hallway/Stairs.tscn" id="2_trgas"]
 [ext_resource type="PackedScene" uid="uid://bxis7vrl8y14c" path="res://scenes/fight-rooms/FightRoom.tscn" id="4_y34ep"]
 [ext_resource type="PackedScene" uid="uid://b2yexskmjnho3" path="res://scenes/levels/office/Office.tscn" id="6_5v4h8"]
