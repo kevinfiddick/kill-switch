@@ -214,46 +214,68 @@ position_smoothing_enabled = true
 [node name="EnemyLamp" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("3_tf5gl")]
 position = Vector2(490, 100)
 player_reference = NodePath("../Player")
+SPEED = 75.0
+DAMAGE = 5.0
 
 [node name="EnemyLamp2" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("3_tf5gl")]
 position = Vector2(926, 111)
 player_reference = NodePath("../Player")
+SPEED = 75.0
+DAMAGE = 5.0
 
 [node name="EnemyLamp3" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("3_tf5gl")]
 position = Vector2(987, 434)
 player_reference = NodePath("../Player")
+SPEED = 75.0
+DAMAGE = 5.0
 
 [node name="EnemyLamp4" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("3_tf5gl")]
 position = Vector2(1005, 751)
 player_reference = NodePath("../Player")
+SPEED = 75.0
+DAMAGE = 5.0
 
 [node name="EnemyLamp5" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("3_tf5gl")]
 position = Vector2(126, 824)
 player_reference = NodePath("../Player")
+SPEED = 75.0
+DAMAGE = 5.0
 
 [node name="EnemyLamp6" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("3_tf5gl")]
 position = Vector2(110, 627)
 player_reference = NodePath("../Player")
+SPEED = 75.0
+DAMAGE = 5.0
 
 [node name="EnemyLamp7" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("3_tf5gl")]
 position = Vector2(453, 687)
 player_reference = NodePath("../Player")
+SPEED = 75.0
+DAMAGE = 5.0
 
 [node name="EnemyLamp8" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("3_tf5gl")]
 position = Vector2(1161, 646)
 player_reference = NodePath("../Player")
+SPEED = 75.0
+DAMAGE = 5.0
 
 [node name="EnemyLamp9" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("3_tf5gl")]
 position = Vector2(767, 636)
 player_reference = NodePath("../Player")
+SPEED = 75.0
+DAMAGE = 5.0
 
 [node name="EnemyLamp10" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("3_tf5gl")]
 position = Vector2(75, 134)
 player_reference = NodePath("../Player")
+SPEED = 75.0
+DAMAGE = 5.0
 
 [node name="EnemyLamp11" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("3_tf5gl")]
 position = Vector2(123, 363)
 player_reference = NodePath("../Player")
+SPEED = 75.0
+DAMAGE = 5.0
 
 [node name="PickupEntity" parent="." instance=ExtResource("6_cb8qa")]
 position = Vector2(313, 155)

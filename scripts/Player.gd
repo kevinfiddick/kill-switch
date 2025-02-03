@@ -97,7 +97,6 @@ func on_take_damage(damage: float) -> void:
 		current_health = 0
 		is_dead = true
 		animation_player.play("death")
-		freeze_input()
 	
 	HUD.set_health_percent(current_health / MAX_HEALTH)
 
