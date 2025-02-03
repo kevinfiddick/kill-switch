@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://livwjhvch2l5"]
+[gd_scene load_steps=74 format=3 uid="uid://livwjhvch2l5"]
 
 [ext_resource type="Script" path="res://scripts/enemies/lamp/EnemyLamp.gd" id="1_e8ihl"]
 [ext_resource type="PackedScene" uid="uid://c4d2o7kq4cvo8" path="res://scenes/state-machine/StateMachine.tscn" id="2_cty6b"]
@@ -12,6 +12,18 @@
 [ext_resource type="PackedScene" uid="uid://cnvk77gq7qq6r" path="res://scenes/context/RaycastContext.tscn" id="8_jtnkv"]
 [ext_resource type="Texture2D" uid="uid://bdupwkhrksjcy" path="res://assets/sprites/whip attack.png" id="9_ijcwm"]
 [ext_resource type="PackedScene" uid="uid://ew8e5oj7btxt" path="res://scenes/context/LineOfSight.tscn" id="12_5fh0s"]
+[ext_resource type="AudioStream" uid="uid://d3w1y4e51ffob" path="res://assets/sounds/lamp/Lamp death sfx.mp3" id="13_1hc8w"]
+[ext_resource type="AudioStream" uid="uid://dblshusql6nom" path="res://assets/sounds/lamp/Lamp hit sfx.mp3" id="14_cbxny"]
+[ext_resource type="AudioStream" uid="uid://dhyyff3ymhqd4" path="res://assets/sounds/whip/whip hit/BGJ25_sfx_WhipHit_01.mp3" id="15_dfq8b"]
+[ext_resource type="AudioStream" uid="uid://b0dp4ic0lb5v2" path="res://assets/sounds/whip/whip hit/BGJ25_sfx_WhipHit_02.mp3" id="16_wka08"]
+[ext_resource type="AudioStream" uid="uid://b0876abduqgtf" path="res://assets/sounds/whip/whip hit/BGJ25_sfx_WhipHit_03.mp3" id="17_i04l1"]
+[ext_resource type="AudioStream" uid="uid://bs5ejtqcam2pk" path="res://assets/sounds/whip/whip hit/BGJ25_sfx_WhipHit_04.mp3" id="18_qu2s7"]
+[ext_resource type="AudioStream" uid="uid://4d0xphxna6e3" path="res://assets/sounds/whip/whip hit/BGJ25_sfx_WhipHit_05.mp3" id="19_uenpc"]
+[ext_resource type="AudioStream" uid="uid://c7kn8cn6q17x6" path="res://assets/sounds/whip/whip miss/BGJ25_sfx_WhipMiss_01.mp3" id="20_enyoq"]
+[ext_resource type="AudioStream" uid="uid://dbkob0m7edhab" path="res://assets/sounds/whip/whip miss/BGJ25_sfx_WhipMiss_02.mp3" id="21_2qsjh"]
+[ext_resource type="AudioStream" uid="uid://c545ihe82ol7w" path="res://assets/sounds/whip/whip miss/BGJ25_sfx_WhipMiss_03.mp3" id="22_gilij"]
+[ext_resource type="AudioStream" uid="uid://cpv5n2fxyymbn" path="res://assets/sounds/whip/whip miss/BGJ25_sfx_WhipMiss_04.mp3" id="23_nm8wj"]
+[ext_resource type="AudioStream" uid="uid://2w03gws2l8jp" path="res://assets/sounds/whip/whip miss/BGJ25_sfx_WhipMiss_05.mp3" id="24_4jc48"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i7inx"]
 atlas = ExtResource("5_trwxq")
@@ -429,6 +441,18 @@ tracks/7/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = false
+tracks/8/path = NodePath("Audio/WhipMiss:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_1fq6l"]
 resource_name = "attack"
@@ -525,6 +549,22 @@ _data = {
 "attack": SubResource("Animation_1fq6l")
 }
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_n8rrw"]
+streams_count = 5
+stream_0/stream = ExtResource("15_dfq8b")
+stream_1/stream = ExtResource("16_wka08")
+stream_2/stream = ExtResource("17_i04l1")
+stream_3/stream = ExtResource("18_qu2s7")
+stream_4/stream = ExtResource("19_uenpc")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_e8vuw"]
+streams_count = 5
+stream_0/stream = ExtResource("20_enyoq")
+stream_1/stream = ExtResource("21_2qsjh")
+stream_2/stream = ExtResource("22_gilij")
+stream_3/stream = ExtResource("23_nm8wj")
+stream_4/stream = ExtResource("24_4jc48")
+
 [node name="EnemyLamp" type="CharacterBody2D"]
 z_index = 1
 collision_layer = 4
@@ -585,6 +625,23 @@ libraries = {
 speed_scale = 2.0
 
 [node name="LineOfSight" parent="." instance=ExtResource("12_5fh0s")]
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("13_1hc8w")
+
+[node name="HitSound" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("14_cbxny")
+volume_db = -29.855
+
+[node name="WhipHit" type="AudioStreamPlayer2D" parent="Audio"]
+stream = SubResource("AudioStreamRandomizer_n8rrw")
+volume_db = -10.0
+
+[node name="WhipMiss" type="AudioStreamPlayer2D" parent="Audio"]
+stream = SubResource("AudioStreamRandomizer_e8vuw")
+volume_db = -10.0
 
 [connection signal="area_entered" from="WhipArea2D" to="." method="_on_whip_area_2d_area_entered"]
 [connection signal="body_entered" from="WhipArea2D" to="." method="_on_area_2d_body_entered"]

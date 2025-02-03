@@ -39,7 +39,7 @@ shape = SubResource("CapsuleShape2D_jq0uf")
 [node name="Dialogue" parent="Interaction" node_paths=PackedStringArray("interact_ref") instance=ExtResource("5_5q2gc")]
 interact_ref = NodePath("..")
 dialogue_icon = ExtResource("6_68ekg")
-dialogue_text = "Hmm... Looks like my husband has an AI girlfriend... TThese messages are disgusting."
+dialogue_text = "Hmm... Looks like my husband has an AI girlfriend... These messages are disgusting."
 
 [node name="Player" parent="." instance=ExtResource("3_7ca7i")]
 position = Vector2(-3, 189)

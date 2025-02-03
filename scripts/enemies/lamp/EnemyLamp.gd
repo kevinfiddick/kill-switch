@@ -10,6 +10,10 @@ extends CharacterBody2D
 @onready var SPRITE = $AnimatedSprite2D
 @onready var TAIL = $Tail
 @onready var COLLISION_SHAPE = $CollisionShape2D
+@onready var death_sound: AudioStreamPlayer2D = $Audio/DeathSound
+@onready var hit_sound: AudioStreamPlayer = $Audio/HitSound
+@onready var whip_hit: AudioStreamPlayer2D = $Audio/WhipHit
+
 
 var current_health: float = HEALTH
 var stunned_timer: Timer = null
@@ -84,6 +88,7 @@ func _process(delta: float) -> void:
 	if not dead:
 		if current_health <= 0:
 			dead = true
+			death_sound.play()
 			SPRITE.play("dead")
 			SPRITE.z_index = 0
 			COLLISION_SHAPE.set_disabled(true)
@@ -110,13 +115,18 @@ func take_damage(damage: float, apply_effects: Array = []):
 	if current_health < 0:
 		current_health = 0
 	
-	print_debug('DAMAGED - ENEMY HEALTH REMAINING: ' + str(current_health) )
+	#print_debug('DAMAGED - ENEMY HEALTH REMAINING: ' + str(current_health) )
 	
 	# Apply effects
 	if apply_effects != null:
 		for effect in apply_effects:
 			if effect == "shock":
 				apply_shock()
+				
+	#Play Sound
+	if not dead and current_health > 0:
+		hit_sound.play()
+		
 
 
 # Apply shock effect to enemy
@@ -152,6 +162,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	# print_debug("AREA ENTERED")
 	if body == player_reference:
 		body.on_take_damage(5)
+
+		whip_hit.play()
 	pass # Replace with function body.
 
 
