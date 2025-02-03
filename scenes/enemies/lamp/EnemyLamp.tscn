@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bdupwkhrksjcy" path="res://assets/sprites/whip attack.png" id="9_ijcwm"]
 [ext_resource type="PackedScene" uid="uid://ew8e5oj7btxt" path="res://scenes/context/LineOfSight.tscn" id="12_5fh0s"]
 [ext_resource type="AudioStream" uid="uid://d3w1y4e51ffob" path="res://assets/sounds/lamp/Lamp death sfx.mp3" id="13_1hc8w"]
-[ext_resource type="AudioStream" uid="uid://dblshusql6nom" path="res://assets/sounds/lamp/Lamp hit sfx.mp3" id="14_cbxny"]
+[ext_resource type="AudioStream" uid="uid://cs6iavjsby2lv" path="res://assets/sounds/lamp/Lamp hit sfx NEW.mp3" id="14_cbxny"]
 [ext_resource type="AudioStream" uid="uid://dhyyff3ymhqd4" path="res://assets/sounds/whip/whip hit/BGJ25_sfx_WhipHit_01.mp3" id="15_dfq8b"]
 [ext_resource type="AudioStream" uid="uid://b0dp4ic0lb5v2" path="res://assets/sounds/whip/whip hit/BGJ25_sfx_WhipHit_02.mp3" id="16_wka08"]
 [ext_resource type="AudioStream" uid="uid://b0876abduqgtf" path="res://assets/sounds/whip/whip hit/BGJ25_sfx_WhipHit_03.mp3" id="17_i04l1"]
