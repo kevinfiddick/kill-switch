@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cxhbk5ec7kumt"]
 
-[ext_resource type="Script" path="res://EndGame.gd" id="1_ym0so"]
+[ext_resource type="Script" path="res://scripts/menus/EndGame.gd" id="1_ym0so"]
 [ext_resource type="FontFile" uid="uid://bbwgbeipobag8" path="res://assets/fonts/IBMPlexMono-Regular.ttf" id="2_wa2u3"]
 
 [sub_resource type="Animation" id="Animation_lm0hh"]
