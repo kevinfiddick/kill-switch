@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://r8o0nc2lf3oh"]
+
+[ext_resource type="Texture2D" uid="uid://8w03tmmev5n8" path="res://assets/sprites/levels/living_room/LivingRoom.png" id="1_tsp52"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o2iwa"]
+size = Vector2(1248, 211)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6uttw"]
+size = Vector2(171, 1133)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6u3yy"]
+size = Vector2(278.5, 206.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4v17"]
+size = Vector2(292, 241)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7dm2"]
+size = Vector2(292, 86.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muimo"]
+size = Vector2(73, 196)
+
+[node name="LivingRoomBackground" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tsp52")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-18, -482.5)
+shape = SubResource("RectangleShape2D_o2iwa")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-34, 579)
+shape = SubResource("RectangleShape2D_o2iwa")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-589, 65)
+shape = SubResource("RectangleShape2D_6uttw")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(585, 71)
+shape = SubResource("RectangleShape2D_6uttw")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(568, 185.25)
+shape = SubResource("RectangleShape2D_6u3yy")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(256.75, -140.5)
+shape = SubResource("RectangleShape2D_m4v17")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(-357, 210.75)
+shape = SubResource("RectangleShape2D_f7dm2")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+position = Vector2(-467.5, 77)
+shape = SubResource("RectangleShape2D_muimo")

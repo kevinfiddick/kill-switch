@@ -22,14 +22,14 @@ color = Color(0, 0, 0, 1)
 [node name="HallwayBackground" parent="." instance=ExtResource("1_dof6n")]
 
 [node name="Player" parent="." instance=ExtResource("1_1ioms")]
-position = Vector2(-511, -310)
+position = Vector2(-432, -248)
 
 [node name="Camera2D" parent="Player" instance=ExtResource("2_krbpa")]
 
 [node name="FightRoom" parent="." instance=ExtResource("4_y34ep")]
 
 [node name="RightDoor" parent="FightRoom" node_paths=PackedStringArray("fight_room") instance=ExtResource("2_2i63k")]
-position = Vector2(637, -243)
+position = Vector2(595, -163)
 fight_room = NodePath("..")
 transition_to_scene = ExtResource("6_5v4h8")
 
@@ -61,7 +61,7 @@ player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
 [node name="EnemyLamp6" parent="FightRoom" node_paths=PackedStringArray("player_reference", "fight_room") instance=ExtResource("11_k2loo")]
-position = Vector2(522, -167)
+position = Vector2(457, -151)
 player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
@@ -76,16 +76,17 @@ player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
 [node name="EnemyLamp9" parent="FightRoom" node_paths=PackedStringArray("player_reference", "fight_room") instance=ExtResource("11_k2loo")]
-position = Vector2(219, -301)
+position = Vector2(218, -291)
 player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
 [node name="EnemyLamp10" parent="FightRoom" node_paths=PackedStringArray("player_reference", "fight_room") instance=ExtResource("11_k2loo")]
-position = Vector2(605, -296)
+position = Vector2(476, -256)
 player_reference = NodePath("../../Player")
 fight_room = NodePath("..")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

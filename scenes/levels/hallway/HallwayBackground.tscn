@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cxu4ctqpp74e6" path="res://assets/sprites/levels/hallway/Hallway.png" id="1_hiknp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mt3ia"]
-size = Vector2(1311, 290)
+size = Vector2(1311, 323)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wx344"]
 size = Vector2(355.5, 510)
@@ -17,19 +17,19 @@ size = Vector2(72, 88)
 texture = ExtResource("1_hiknp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -547)
+position = Vector2(2, -468.5)
 shape = SubResource("RectangleShape2D_mt3ia")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(3, 240)
+position = Vector2(5, 196)
 shape = SubResource("RectangleShape2D_mt3ia")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(-818.75, -178)
+position = Vector2(-673, -176)
 shape = SubResource("RectangleShape2D_wx344")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(818, -146)
+position = Vector2(673, -135)
 shape = SubResource("RectangleShape2D_wx344")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
