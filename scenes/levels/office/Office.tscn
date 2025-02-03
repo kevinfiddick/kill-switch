@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://b2yexskmjnho3"]
 
 [ext_resource type="PackedScene" uid="uid://cpr3sps5dpbiy" path="res://scenes/levels/office/OfficeBackground.tscn" id="1_sc620"]
-[ext_resource type="PackedScene" uid="uid://c0qem71h0llyd" path="res://scenes/PlayerCamera.tscn" id="2_rp11f"]
+[ext_resource type="PackedScene" path="res://scenes/PlayerCamera.tscn" id="2_rp11f"]
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="3_7ca7i"]
 [ext_resource type="PackedScene" uid="uid://c5mpcn1cft73q" path="res://scenes/levels/office/Desk.tscn" id="3_runp5"]
 [ext_resource type="PackedScene" uid="uid://cbq5cqvirqair" path="res://scenes/levels/bedroom/Door.tscn" id="4_8xjq3"]
-[ext_resource type="PackedScene" uid="uid://cs522bqt8rsfi" path="res://scenes/Interaction.tscn" id="4_s8p0e"]
+[ext_resource type="PackedScene" uid="uid://bj5lojgbfnuxx" path="res://scenes/Interaction.tscn" id="4_s8p0e"]
 [ext_resource type="PackedScene" uid="uid://dvw11noctqyos" path="res://scenes/levels/living_room/LivingRoomLevel.tscn" id="5_3rcg0"]
 [ext_resource type="PackedScene" uid="uid://7cama73mlqg2" path="res://scenes/Dialogue.tscn" id="5_5q2gc"]
 [ext_resource type="Texture2D" uid="uid://bkyyqudomdy4c" path="res://assets/sprites/levels/office/lore-computer.png" id="8_gq1km"]
