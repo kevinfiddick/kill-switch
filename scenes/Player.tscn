@@ -257,3 +257,4 @@ stream = SubResource("AudioStreamRandomizer_dnjf6")
 
 [node name="Player Death Sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_3c6cc")
+volume_db = -6.0
