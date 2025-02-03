@@ -12,6 +12,7 @@ var is_dead = false
 @onready var SPRITE = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var footstep_sounds: AudioStreamPlayer2D = $FootstepSounds
+@onready var player_death_sound: AudioStreamPlayer = $"Player Death Sound"
 const FOOTSTEP_RATE = 3.0
 var current_step = 0.0
 
@@ -93,9 +94,11 @@ func on_take_damage(damage: float) -> void:
 	#	invincibility_timer.start(300 / 60)
 	#	current_health -= damage
 	current_health -= damage
-	if current_health <= 0:
+	if current_health <= 0 and not is_dead:
 		current_health = 0
 		is_dead = true
+		player_death_sound.play()
+		print("death sound")
 		animation_player.play("death")
 	
 	HUD.set_health_percent(current_health / MAX_HEALTH)

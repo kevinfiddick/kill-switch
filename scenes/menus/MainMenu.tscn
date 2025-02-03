@@ -48,6 +48,7 @@ text = "Quit"
 
 [node name="Main Menu Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_l7exv")
+volume_db = -5.272
 
 [node name="Main Menu Music End" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_r4f75")

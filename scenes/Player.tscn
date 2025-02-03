@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://c2160l6nbot3u"]
+[gd_scene load_steps=39 format=3 uid="uid://c2160l6nbot3u"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_6ykmx"]
 [ext_resource type="PackedScene" uid="uid://ducuap6fxn2su" path="res://scenes/weapons/primary/PrimaryWeapon.tscn" id="3_xwcbc"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://dn3pa21jq81ux" path="res://assets/sounds/footsteps/Footstep on wood2.mp3" id="10_16ooo"]
 [ext_resource type="AudioStream" uid="uid://hr3r1dgedygk" path="res://assets/sounds/footsteps/Footstep on wood3.mp3" id="11_wx0vm"]
 [ext_resource type="AudioStream" uid="uid://cq61wlx5bc1av" path="res://assets/sounds/footsteps/Footstep on wood4.mp3" id="12_ntq3w"]
+[ext_resource type="AudioStream" uid="uid://cana4ytem3l6v" path="res://assets/sounds/death/BGJ25_sfx_deathSound_01.mp3" id="13_3c6cc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d2tsv"]
 height = 46.0
@@ -253,3 +254,6 @@ libraries = {
 
 [node name="FootstepSounds" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_dnjf6")
+
+[node name="Player Death Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_3c6cc")
