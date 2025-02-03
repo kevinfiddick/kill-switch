@@ -7,6 +7,7 @@ extends CharacterBody2D
 @export var STUN_SPEED = 30.0
 @export var STUN_DMG = 4.0
 @export var HEALTH = 30.0
+@export var DAMAGE = 5.0
 
 @onready var SPRITE = $AnimatedSprite2D
 @onready var TAIL = $Tail
@@ -163,7 +164,7 @@ func _on_timer_timeout():
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	# print_debug("AREA ENTERED")
 	if body == player_reference:
-		body.on_take_damage(5)
+		body.on_take_damage(DAMAGE)
 
 		whip_hit.play()
 	pass # Replace with function body.

@@ -570,6 +570,8 @@ z_index = 1
 collision_layer = 4
 collision_mask = 5
 script = ExtResource("1_e8ihl")
+SPEED = 125.0
+DAMAGE = 15.0
 
 [node name="StateMachine" parent="." node_paths=PackedStringArray("initial_state") instance=ExtResource("2_cty6b")]
 initial_state = NodePath("FollowState")
