@@ -48,7 +48,6 @@ position = Vector2(-3, 189)
 [node name="Camera2D" parent="Player" instance=ExtResource("2_rp11f")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Office Music" type="AudioStreamPlayer" parent="."]
