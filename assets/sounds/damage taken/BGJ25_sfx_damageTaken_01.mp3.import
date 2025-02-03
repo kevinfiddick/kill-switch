@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://5fb3ev75kwu0"
+path="res://.godot/imported/BGJ25_sfx_damageTaken_01.mp3-3cbfe221bdbf458821d2b4eb30e7a554.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/damage taken/BGJ25_sfx_damageTaken_01.mp3"
+dest_files=["res://.godot/imported/BGJ25_sfx_damageTaken_01.mp3-3cbfe221bdbf458821d2b4eb30e7a554.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

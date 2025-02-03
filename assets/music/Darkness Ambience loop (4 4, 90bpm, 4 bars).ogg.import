@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d3svltimq8mpq"
+path="res://.godot/imported/Darkness Ambience loop (4 4, 90bpm, 4 bars).ogg-f986580937d7d1f5f2ff3de1c223f063.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Darkness Ambience loop (4 4, 90bpm, 4 bars).ogg"
+dest_files=["res://.godot/imported/Darkness Ambience loop (4 4, 90bpm, 4 bars).ogg-f986580937d7d1f5f2ff3de1c223f063.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
