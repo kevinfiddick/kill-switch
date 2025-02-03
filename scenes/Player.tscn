@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://c2160l6nbot3u"]
+[gd_scene load_steps=38 format=3 uid="uid://c2160l6nbot3u"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_6ykmx"]
 [ext_resource type="PackedScene" uid="uid://ducuap6fxn2su" path="res://scenes/weapons/primary/PrimaryWeapon.tscn" id="3_xwcbc"]
@@ -7,7 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://eu7phvumyog0" path="res://assets/sprites/player/lamp_chick_walking.png" id="5_184p7"]
 [ext_resource type="PackedScene" uid="uid://cg2j6hgvxv842" path="res://scenes/HUD.tscn" id="5_urac5"]
 [ext_resource type="Texture2D" uid="uid://dg3p4mql38kox" path="res://GradientLighting.tres" id="6_du2i2"]
-[ext_resource type="PackedScene" uid="uid://cveemh0qwmwsw" path="res://scenes/menus/PlayerDeathScreen.tscn" id="8_diojh"]
+[ext_resource type="PackedScene" path="res://scenes/menus/PlayerDeathScreen.tscn" id="8_diojh"]
+[ext_resource type="AudioStream" uid="uid://bds6cqigvpsks" path="res://assets/sounds/footsteps/Footstep on wood1.mp3" id="9_ft2sx"]
+[ext_resource type="AudioStream" uid="uid://dn3pa21jq81ux" path="res://assets/sounds/footsteps/Footstep on wood2.mp3" id="10_16ooo"]
+[ext_resource type="AudioStream" uid="uid://hr3r1dgedygk" path="res://assets/sounds/footsteps/Footstep on wood3.mp3" id="11_wx0vm"]
+[ext_resource type="AudioStream" uid="uid://cq61wlx5bc1av" path="res://assets/sounds/footsteps/Footstep on wood4.mp3" id="12_ntq3w"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d2tsv"]
 height = 46.0
@@ -218,6 +222,13 @@ _data = {
 "death": SubResource("Animation_43p5c")
 }
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dnjf6"]
+streams_count = 4
+stream_0/stream = ExtResource("9_ft2sx")
+stream_1/stream = ExtResource("10_16ooo")
+stream_2/stream = ExtResource("11_wx0vm")
+stream_3/stream = ExtResource("12_ntq3w")
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
 collision_layer = 2
@@ -253,3 +264,6 @@ process_mode = 3
 libraries = {
 "": SubResource("AnimationLibrary_nam6c")
 }
+
+[node name="FootstepSounds" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_dnjf6")

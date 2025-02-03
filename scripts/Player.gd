@@ -10,6 +10,9 @@ var heal_rate = 0.0
 @onready var invincibility_timer = $InvincibilityCD
 @onready var SPRITE = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var footstep_sounds: AudioStreamPlayer2D = $FootstepSounds
+const FOOTSTEP_RATE = 3.0
+var current_step = 0.0
 
 var primary_weapon: Node2D
 var secondary_weapon: Node2D
@@ -67,6 +70,14 @@ func _physics_process(_delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	set_sprite_direction(velocity)
+	if not (velocity == Vector2.ZERO):
+		if current_step == 0.0:
+			footstep_sounds.play()
+		current_step += FOOTSTEP_RATE * _delta
+		if current_step >= 1.0:
+			current_step = 0.0
+	else: 
+		current_step = 0.0
 	move_and_slide()
 
 
