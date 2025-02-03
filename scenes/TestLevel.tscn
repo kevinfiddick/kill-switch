@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="2_juyo5"]
 [ext_resource type="PackedScene" uid="uid://livwjhvch2l5" path="res://scenes/enemies/lamp/EnemyLamp.tscn" id="3_tf5gl"]
 [ext_resource type="PackedScene" uid="uid://btj2bihvk14tt" path="res://scenes/menus/PauseMenu.tscn" id="4_5ej2v"]
-[ext_resource type="PackedScene" path="res://scenes/PickupEntity.tscn" id="6_cb8qa"]
+[ext_resource type="PackedScene" uid="uid://51vmisoas6te" path="res://scenes/PickupEntity.tscn" id="6_cb8qa"]
 [ext_resource type="PackedScene" uid="uid://cy573ju1okiii" path="res://scenes/weapons/blade/BladeController.tscn" id="7_4inqs"]
 [ext_resource type="Texture2D" uid="uid://bo7xm7gmyj48p" path="res://icon.svg" id="8_cdbg1"]
 [ext_resource type="PackedScene" uid="uid://dsl6chfqwt4kh" path="res://scenes/weapons/whip/WhipController.tscn" id="9_xtlhq"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://b2yexskmjnho3"]
 
 [ext_resource type="PackedScene" uid="uid://cpr3sps5dpbiy" path="res://scenes/levels/office/OfficeBackground.tscn" id="1_sc620"]
-[ext_resource type="PackedScene" uid="uid://c0qem71h0llyd" path="res://scenes/PlayerCamera.tscn" id="2_rp11f"]
+[ext_resource type="PackedScene" path="res://scenes/PlayerCamera.tscn" id="2_rp11f"]
 [ext_resource type="PackedScene" uid="uid://c6l1flw5tsviq" path="res://scenes/levels/office/Chair.tscn" id="2_uwpc5"]
 [ext_resource type="PackedScene" uid="uid://c2160l6nbot3u" path="res://scenes/Player.tscn" id="3_7ca7i"]
 [ext_resource type="PackedScene" uid="uid://c5mpcn1cft73q" path="res://scenes/levels/office/Desk.tscn" id="3_runp5"]
