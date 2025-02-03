@@ -30,10 +30,11 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="PanelContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wa2u3")
-text = "Congratulations, you defeated an entire 23 enemies! Good job!
+text = "Congratulations, you defeated 23 lamps and
+saved the smart orphanage! Good job!
 
-Now you can quit the game because we never properly
-implemented restarting!
+Actually you killed 23 children that were turned into lamps,
+but close enough!
 
 Thanks for playing!"
 horizontal_alignment = 1
